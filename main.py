@@ -7,8 +7,10 @@ project_cache_dir.mkdir(exist_ok=True)
 os.environ.setdefault('MPLCONFIGDIR', str(project_cache_dir / 'matplotlib'))
 os.environ.setdefault('XDG_CACHE_HOME', str(project_cache_dir))
 os.environ.setdefault('MPLBACKEND', 'Agg')
-os.environ.setdefault('HF_HUB_OFFLINE', '1')
-os.environ.setdefault('TRANSFORMERS_OFFLINE', '1')
+
+if os.environ.get('MRP_OFFLINE') == '1':
+    os.environ.setdefault('HF_HUB_OFFLINE', '1')
+    os.environ.setdefault('TRANSFORMERS_OFFLINE', '1')
 
 import pandas as pd
 
@@ -212,7 +214,12 @@ if cached_merged_path.exists() or cached_final_path.exists():
             cached_path
         )
 
-    if not cached_merged_df.empty:
+    finbert_is_placeholder = (
+        'FinBERT_Sentiment' in cached_merged_df.columns
+        and cached_merged_df['FinBERT_Sentiment'].fillna(0).eq(0).all()
+    )
+
+    if not cached_merged_df.empty and not finbert_is_placeholder:
         print(f'Using cached merged dataset: {cached_path}')
         cached_merged_df['Date'] = pd.to_datetime(
             cached_merged_df['Date']
@@ -221,6 +228,9 @@ if cached_merged_path.exists() or cached_final_path.exists():
             cached_merged_df
         )
         sys.exit(0)
+
+    if finbert_is_placeholder:
+        print('Cached FinBERT sentiment is all neutral; rebuilding from raw data.')
 
     print('Cached merged datasets are empty; rebuilding from raw data.')
 
