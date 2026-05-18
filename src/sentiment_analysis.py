@@ -2,6 +2,8 @@ from vaderSentiment.vaderSentiment import (
     SentimentIntensityAnalyzer
 )
 
+import os
+
 from textblob import TextBlob
 
 
@@ -13,6 +15,8 @@ analyzer = SentimentIntensityAnalyzer()
 
 finbert_pipeline = None
 finbert_unavailable = False
+FINBERT_CHARS_PER_CHUNK = 1800
+FINBERT_MAX_CHUNKS = int(os.environ.get('FINBERT_MAX_CHUNKS', '2'))
 
 
 def get_finbert_pipeline():
@@ -26,12 +30,29 @@ def get_finbert_pipeline():
         return None
 
     try:
-        from transformers import pipeline
+        from transformers import (
+            AutoModelForSequenceClassification,
+            AutoTokenizer,
+            pipeline
+        )
+
+        local_files_only = os.environ.get('MRP_OFFLINE') == '1'
+        model_name = "ProsusAI/finbert"
+        tokenizer = AutoTokenizer.from_pretrained(
+            model_name,
+            local_files_only=local_files_only
+        )
+        model = AutoModelForSequenceClassification.from_pretrained(
+            model_name,
+            local_files_only=local_files_only
+        )
 
         finbert_pipeline = pipeline(
             "sentiment-analysis",
-            model="ProsusAI/finbert",
-            local_files_only=True
+            model=model,
+            tokenizer=tokenizer,
+            truncation=True,
+            max_length=512
         )
         return finbert_pipeline
 
@@ -88,21 +109,33 @@ def finbert_sentiment(text):
         if pipeline_model is None:
             return 0
 
-        result = pipeline_model(
-            str(text)
-        )[0]
+        text = str(text)
+        chunks = [
+            text[start:start + FINBERT_CHARS_PER_CHUNK]
+            for start in range(
+                0,
+                min(len(text), FINBERT_CHARS_PER_CHUNK * FINBERT_MAX_CHUNKS),
+                FINBERT_CHARS_PER_CHUNK
+            )
+        ] or ['']
 
-        label = result['label']
-        score = result['score']
+        results = pipeline_model(
+            chunks,
+            top_k=None
+        )
+        scores = []
 
-        if label == 'positive':
-            return score
+        for result in results:
+            probabilities = {
+                item['label'].lower(): item['score']
+                for item in result
+            }
+            scores.append(
+                probabilities.get('positive', 0)
+                - probabilities.get('negative', 0)
+            )
 
-        elif label == 'negative':
-            return -score
-
-        else:
-            return 0
+        return sum(scores) / len(scores)
 
     except:
 
@@ -164,7 +197,6 @@ def apply_daily_finbert(df):
     df['text'] = (
         df['text']
         .astype(str)
-        .str[:512]
     )
 
     df['FinBERT_Sentiment'] = (
