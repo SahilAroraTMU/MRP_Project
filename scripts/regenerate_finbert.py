@@ -48,9 +48,16 @@ def build_daily_text():
 
 def main():
     merged_path = PROJECT_ROOT / 'data/processed/merged_dataset.csv'
+    preprocessed_path = PROJECT_ROOT / 'data/processed/preprocessed_data_3.csv'
     final_path = PROJECT_ROOT / 'outputs/results/final_merged_dataset.csv'
 
-    merged = pd.read_csv(merged_path)
+    source_path = (
+        preprocessed_path
+        if preprocessed_path.exists()
+        else merged_path
+    )
+
+    merged = pd.read_csv(source_path)
     merged['Date'] = pd.to_datetime(merged['Date']).dt.date
 
     daily_text = build_daily_text()
@@ -76,6 +83,11 @@ def main():
 
     merged.to_csv(
         merged_path,
+        index=False
+    )
+
+    merged.to_csv(
+        preprocessed_path,
         index=False
     )
 
