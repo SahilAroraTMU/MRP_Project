@@ -9,3 +9,6 @@ transformers
 torch
 textblob
 yfinance
+pykalman
+openpyxl
+nrclex

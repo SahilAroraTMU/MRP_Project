@@ -29,6 +29,14 @@ def get_finbert_pipeline():
     if finbert_unavailable:
         return None
 
+    if os.environ.get('MRP_OFFLINE') == '1':
+        finbert_unavailable = True
+        print(
+            "FinBERT unavailable; using neutral FinBERT sentiment. "
+            "Reason: MRP_OFFLINE=1"
+        )
+        return None
+
     try:
         from transformers import (
             AutoModelForSequenceClassification,
@@ -36,8 +44,8 @@ def get_finbert_pipeline():
             pipeline
         )
 
-        local_files_only = os.environ.get('MRP_OFFLINE') == '1'
         model_name = "ProsusAI/finbert"
+        local_files_only = os.environ.get('MRP_FINBERT_LOCAL_ONLY') == '1'
         tokenizer = AutoTokenizer.from_pretrained(
             model_name,
             local_files_only=local_files_only
