@@ -1,5 +1,5 @@
-# MRP Full Project
-Unzip raw files
+# MRP Enhanced Full Project
+
 Place:
 - reddit_comments.csv
 - reddit_posts.csv

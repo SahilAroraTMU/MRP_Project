@@ -63,6 +63,7 @@ from src.preprocess_data import (
 # ===================================================
 
 from src.sentiment_analysis import (
+    vader_sentiment,
     apply_fast_sentiment,
     aggregate_daily_text,
     apply_daily_finbert
@@ -85,7 +86,13 @@ from src.eda import (
     plot_volume,
     plot_sentiment_distribution,
     boxplot_outlier_detection,
-    correlation_heatmap
+    correlation_heatmap,
+    duplicate_repost_distribution,
+    unique_author_distribution,
+    information_diffusion_distribution,
+    engagement_score_distribution,
+    engagement_score_vs_trading_volume,
+    engagement_score_vs_illiquidity
 )
 
 from src.lag_analysis import (
@@ -113,8 +120,8 @@ from src.evaluate_models import (
 from src.preprocessing.reddit_preprocessing import (
     load_reddit_data,
     preprocess_timestamps,
-    remove_post_duplicates,
-    remove_comment_duplicates
+    preprocess_post_reposts,
+    preprocess_comment_reposts
 )
 
 from src.preprocessing.relationship_preprocessing import (
@@ -124,7 +131,7 @@ from src.preprocessing.relationship_preprocessing import (
 )
 
 from src.preprocessing.engagement_preprocessing import (
-    calculate_engagement_factor
+    calculate_engagement_score
 )
 
 from src.preprocessing.topic_preprocessing import (
@@ -202,6 +209,30 @@ def run_outputs_and_models(merged_df):
         merged_df
     )
 
+    duplicate_repost_distribution(
+        merged_df
+    )
+
+    unique_author_distribution(
+        merged_df
+    )
+
+    information_diffusion_distribution(
+        merged_df
+    )
+
+    engagement_score_distribution(
+        merged_df
+    )
+
+    engagement_score_vs_trading_volume(
+        merged_df
+    )
+
+    engagement_score_vs_illiquidity(
+        merged_df
+    )
+
     lag_analysis(
         merged_df
     )
@@ -223,7 +254,9 @@ def run_outputs_and_models(merged_df):
         'Avg_Reddit_Score',
         'Sentiment_Lag_1',
         'Sentiment_Lag_2',
-        'engagement_factor',
+        'engagement_score',
+        'information_diffusion_score',
+        'sentiment_magnitude',
         'tesla_relevance'
     ]]
 
@@ -369,21 +402,16 @@ comments_df = preprocess_timestamps(
     comments_df
 )
 
-posts_df = remove_post_duplicates(
+posts_df = preprocess_post_reposts(
     posts_df
 )
 
-comments_df = remove_comment_duplicates(
+comments_df = preprocess_comment_reposts(
     comments_df
 )
 
-print(
-    f'Posts after duplicate removal: {len(posts_df)}'
-)
-
-print(
-    f'Comments after duplicate removal: {len(comments_df)}'
-)
+print(f'Cleaned posts after repost aggregation: {len(posts_df)}')
+print(f'Cleaned comments after repost aggregation: {len(comments_df)}')
 
 # ===================================================
 # STEP 3 - RELATIONSHIP ANALYSIS
@@ -419,7 +447,13 @@ print(
 # ===================================================
 
 posts_df['tesla_relevance'] = (
-    posts_df['title']
+    (
+        posts_df['title'].fillna('').astype(str) + ' ' +
+        posts_df.get(
+            'selftext',
+            pd.Series('', index=posts_df.index)
+        ).fillna('').astype(str)
+    )
     .apply(tesla_relevance)
 )
 
@@ -429,28 +463,7 @@ posts_df['context_topic'] = (
 )
 
 # ===================================================
-# STEP 5 - ENGAGEMENT FACTOR
-# ===================================================
-
-posts_df = calculate_engagement_factor(
-    posts_df
-)
-
-# ===================================================
-# STEP 6 - SAVE PREPROCESSED DATASET 1
-# ===================================================
-
-posts_df.to_excel(
-    'data/processed/preprocessed_data_1.xlsx',
-    index=False
-)
-
-print(
-    'Saved preprocessed_data_1.xlsx'
-)
-
-# ===================================================
-# STEP 7 - COMBINE REDDIT DATA
+# STEP 5 - COMBINE REDDIT DATA
 # ===================================================
 
 reddit_df = combine_reddit_data(
@@ -459,7 +472,7 @@ reddit_df = combine_reddit_data(
 )
 
 # ===================================================
-# STEP 8 - SENTIMENT ANALYSIS
+# STEP 6 - SENTIMENT ANALYSIS
 # ===================================================
 
 reddit_df = apply_fast_sentiment(
@@ -475,7 +488,7 @@ daily_text = apply_daily_finbert(
 )
 
 # ===================================================
-# STEP 8.5 - MERGE FINBERT BACK
+# STEP 6.5 - MERGE FINBERT BACK
 # ===================================================
 
 reddit_df = reddit_df.merge(
@@ -489,8 +502,53 @@ reddit_df = reddit_df.merge(
 
 )
 
+posts_df['VADER_Sentiment'] = (
+    (
+        posts_df['title'].fillna('').astype(str) + ' ' +
+        posts_df.get(
+            'selftext',
+            pd.Series('', index=posts_df.index)
+        ).fillna('').astype(str)
+    )
+    .apply(vader_sentiment)
+)
+
+posts_df = calculate_engagement_score(
+    posts_df
+)
+
 # ===================================================
-# STEP 9 - SENTIMENT VALIDATION
+# STEP 7 - SAVE PREPROCESSED DATASET 1
+# ===================================================
+
+with pd.ExcelWriter(
+    'data/processed/preprocessed_data_1.xlsx'
+) as writer:
+
+    posts_df.to_excel(
+        writer,
+        sheet_name='cleaned_posts',
+        index=False
+    )
+
+    comments_df.to_excel(
+        writer,
+        sheet_name='cleaned_comments',
+        index=False
+    )
+
+    merged_relation.to_excel(
+        writer,
+        sheet_name='post_comment_links',
+        index=False
+    )
+
+print(
+    'Saved preprocessed_data_1.xlsx'
+)
+
+# ===================================================
+# STEP 8 - SENTIMENT VALIDATION
 # ===================================================
 
 print(
@@ -532,7 +590,7 @@ print(
 )
 
 # ===================================================
-# STEP 10 - DAILY REDDIT AGGREGATION
+# STEP 9 - DAILY REDDIT AGGREGATION
 # ===================================================
 
 reddit_daily = (
@@ -584,14 +642,32 @@ advanced_daily = (
     .groupby('Date')
     .agg({
 
-        'engagement_factor': 'mean',
+        'engagement_score': 'mean',
 
         'tesla_relevance': 'mean',
 
-        'comment_count': 'mean'
+        'comment_count': 'mean',
+
+        'repost_count': 'mean',
+
+        'unique_author_count': 'mean',
+
+        'discussion_intensity': 'mean',
+
+        'information_diffusion_score': 'mean',
+
+        'sentiment_magnitude': 'mean',
+
+        'VADER_Sentiment': 'mean'
 
     })
     .reset_index()
+)
+
+advanced_daily = advanced_daily.rename(
+    columns={
+        'VADER_Sentiment': 'Post_VADER_Sentiment'
+    }
 )
 
 reddit_daily = reddit_daily.merge(

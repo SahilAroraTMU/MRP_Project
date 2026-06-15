@@ -32,7 +32,12 @@ def build_post_comment_relationship(posts_df, comments_df):
 
 def calculate_comment_counts(posts_df, merged_relation):
     comment_counts = (
-        merged_relation.groupby('link_id')
+        merged_relation[
+            merged_relation['id_post'].notna()
+            if 'id_post' in merged_relation.columns
+            else merged_relation['title'].notna()
+        ]
+        .groupby('link_id')
         .size()
         .reset_index(name='comment_count')
     )
@@ -45,11 +50,15 @@ def calculate_comment_counts(posts_df, merged_relation):
     )
 
     posts_df['comment_count'] = posts_df['comment_count'].fillna(0)
+    posts_df['discussion_intensity'] = (
+        posts_df['comment_count'] /
+        (posts_df.get('repost_count', 0) + 1)
+    )
 
     return posts_df
 
 def detect_orphan_comments(merged_relation):
-    merged_relation['has_parent_post'] = (
-        merged_relation['title'].notna()
-    )
+    parent_column = 'id_post' if 'id_post' in merged_relation.columns else 'title'
+
+    merged_relation['has_parent_post'] = merged_relation[parent_column].notna()
     return merged_relation

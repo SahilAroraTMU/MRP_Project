@@ -2,7 +2,8 @@
 tesla_keywords = [
     'tesla','tsla','elon','musk',
     'cybertruck','model 3','model y',
-    'gigafactory','fsd'
+    'autopilot','fsd','robotaxi',
+    'gigafactory'
 ]
 
 def tesla_relevance(text):
