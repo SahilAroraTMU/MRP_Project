@@ -6,9 +6,9 @@ from sklearn.metrics import (
     r2_score
 )
 
-def evaluate_model(model, X_test, y_test):
+def evaluate_model(model, X_test, y_test, prediction_scale=1.0):
 
-    predictions = model.predict(X_test)
+    predictions = model.predict(X_test) * prediction_scale
 
     mae = mean_absolute_error(
         y_test,

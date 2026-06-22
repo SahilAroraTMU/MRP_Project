@@ -170,6 +170,57 @@ from src.sentiment_validation_module.src.sentiment_validation.kappa_analysis imp
     calculate_kappa_scores
 )
 
+EDA_STORYTELLING_DIR = Path('outputs/eda_storytelling')
+DAILY_FINBERT_CANDIDATES = [
+    EDA_STORYTELLING_DIR / 'daily_finbert_sentiment.csv',
+    EDA_STORYTELLING_DIR / 'daily_aggregated_finbert.csv',
+]
+
+
+def load_external_daily_finbert():
+
+    finbert_path = next(
+        (path for path in DAILY_FINBERT_CANDIDATES if path.exists()),
+        DAILY_FINBERT_CANDIDATES[0]
+    )
+
+    if not finbert_path.exists():
+        return None
+
+    df = pd.read_csv(finbert_path)
+    df['Date'] = pd.to_datetime(df['Date'], errors='coerce').dt.date
+
+    if {'Avg_Comment_Sentiment', 'Comment_Count', 'Avg_Post_Sentiment', 'Post_Count'}.issubset(df.columns):
+
+        df['Comment_Count'] = pd.to_numeric(df['Comment_Count'], errors='coerce').fillna(0)
+        df['Post_Count'] = pd.to_numeric(df['Post_Count'], errors='coerce').fillna(0)
+        df['Avg_Comment_Sentiment'] = pd.to_numeric(df['Avg_Comment_Sentiment'], errors='coerce').fillna(0)
+        df['Avg_Post_Sentiment'] = pd.to_numeric(df['Avg_Post_Sentiment'], errors='coerce').fillna(0)
+
+        grouped = (
+            df.assign(
+                total_score=(
+                    df['Avg_Comment_Sentiment'] * df['Comment_Count'] +
+                    df['Avg_Post_Sentiment'] * df['Post_Count']
+                ),
+                total_count=df['Comment_Count'] + df['Post_Count'],
+            )
+            .groupby('Date', as_index=False)[['total_score', 'total_count']]
+            .sum()
+        )
+        grouped['FinBERT_Sentiment'] = grouped['total_score'] / grouped['total_count'].replace(0, pd.NA)
+        return grouped[['Date', 'FinBERT_Sentiment']]
+
+    if 'FinBERT_Sentiment' not in df.columns and 'Avg_FinBERT_Sentiment' in df.columns:
+        df = df.rename(columns={'Avg_FinBERT_Sentiment': 'FinBERT_Sentiment'})
+
+    return (
+        df[['Date', 'FinBERT_Sentiment']]
+        .dropna(subset=['Date'])
+        .groupby('Date', as_index=False)['FinBERT_Sentiment']
+        .mean()
+    )
+
 # ===================================================
 # OUTPUT + MODEL FUNCTION
 # ===================================================
@@ -247,16 +298,10 @@ def run_outputs_and_models(merged_df):
         'Return',
         'Volatility_7D',
         'Turnover_Ratio',
-        'Avg_Sentiment',
-        'TextBlob_Sentiment',
         'FinBERT_Sentiment',
-        'Comment_Count',
-        'Avg_Reddit_Score',
         'Sentiment_Lag_1',
         'Sentiment_Lag_2',
-        'engagement_score',
         'information_diffusion_score',
-        'sentiment_magnitude',
         'tesla_relevance'
     ]]
 
@@ -272,23 +317,26 @@ def run_outputs_and_models(merged_df):
         )
     )
 
+    target_scale = 1e10
+    y_train_scaled = y_train * target_scale
+
     # ---------------------------------------------------
     # TRAIN MODELS
     # ---------------------------------------------------
 
     lr_model = train_linear_regression(
         X_train,
-        y_train
+        y_train_scaled
     )
 
     rf_model = train_random_forest(
         X_train,
-        y_train
+        y_train_scaled
     )
 
     xgb_model = train_xgboost(
         X_train,
-        y_train
+        y_train_scaled
     )
 
     # ---------------------------------------------------
@@ -298,19 +346,22 @@ def run_outputs_and_models(merged_df):
     lr_results = evaluate_model(
         lr_model,
         X_test,
-        y_test
+        y_test,
+        prediction_scale=1 / target_scale
     )
 
     rf_results = evaluate_model(
         rf_model,
         X_test,
-        y_test
+        y_test,
+        prediction_scale=1 / target_scale
     )
 
     xgb_results = evaluate_model(
         xgb_model,
         X_test,
-        y_test
+        y_test,
+        prediction_scale=1 / target_scale
     )
 
     print('\nLinear Regression')
@@ -483,9 +534,21 @@ daily_text = aggregate_daily_text(
     reddit_df
 )
 
-daily_text = apply_daily_finbert(
-    daily_text
-)
+external_daily_finbert = load_external_daily_finbert()
+
+if external_daily_finbert is not None:
+
+    daily_text = daily_text.merge(
+        external_daily_finbert,
+        on='Date',
+        how='left'
+    )
+
+else:
+
+    daily_text = apply_daily_finbert(
+        daily_text
+    )
 
 # ===================================================
 # STEP 6.5 - MERGE FINBERT BACK

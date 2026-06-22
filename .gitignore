@@ -1,0 +1,6 @@
+data/processed/preprocessed_data_1.xlsx
+outputs/eda_storytelling/one-year-of-tsla-on-reddit-comments_finbert.csv
+
+.DS_Store
+__pycache__/
+*.pyc

@@ -7,8 +7,6 @@ ENGAGEMENT_INPUT_COLUMNS = [
     'comment_count',
     'score',
     'tesla_relevance',
-    'sentiment_magnitude',
-    'information_diffusion_score'
 ]
 
 def add_information_diffusion_score(df):
@@ -32,9 +30,9 @@ def add_sentiment_magnitude(df):
     df = df.copy()
 
     sentiment_column = (
-        'VADER_Sentiment'
-        if 'VADER_Sentiment' in df.columns
-        else 'FinBERT_Sentiment'
+        'FinBERT_Sentiment'
+        if 'FinBERT_Sentiment' in df.columns
+        else 'VADER_Sentiment'
     )
 
     if sentiment_column not in df.columns:
@@ -86,11 +84,10 @@ def calculate_engagement_score(df):
     # for this preprocessing path and FinBERT retained as a compatibility
     # fallback when older processed files are supplied.
     df['engagement_score'] = (
+        0.25 * df['repost_count_normalized'] +
         0.25 * df['comment_count_normalized'] +
-        0.20 * df['score_normalized'] +
-        0.20 * df['tesla_relevance_normalized'] +
-        0.20 * df['information_diffusion_score_normalized'] +
-        0.15 * df['sentiment_magnitude_normalized']
+        0.25 * df['score_normalized'] +
+        0.25 * df['tesla_relevance_normalized']
     )
 
     df['reddit_score'] = df['score']

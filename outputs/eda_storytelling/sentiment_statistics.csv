@@ -1,0 +1,4 @@
+Model,Mean,Median,StdDev,Negative_Share_pct
+VADER,0.1237,0.0,0.4569,25.16
+TextBlob,0.058,0.0,0.2399,22.03
+FinBERT,-0.0445,-0.0398,0.0357,91.51

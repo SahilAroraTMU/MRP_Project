@@ -26,12 +26,14 @@ def create_features(df):
     )
 
     # Lagged Sentiment Features
+    sentiment_column = 'FinBERT_Sentiment' if 'FinBERT_Sentiment' in df.columns else 'Avg_Sentiment'
+
     df['Sentiment_Lag_1'] = (
-        df['Avg_Sentiment'].shift(1)
+        df[sentiment_column].shift(1)
     )
 
     df['Sentiment_Lag_2'] = (
-        df['Avg_Sentiment'].shift(2)
+        df[sentiment_column].shift(2)
     )
 
     # Market Regime Classification
