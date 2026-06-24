@@ -163,6 +163,96 @@ def _attach_daily_finbert(df: pd.DataFrame, daily_finbert_df: pd.DataFrame) -> p
     return merged
 
 
+def _prepare_daily_sentiment_panel(raw_df: pd.DataFrame, daily_finbert_df: pd.DataFrame) -> pd.DataFrame:
+    sentiment_cols = {
+        'VADER': 'VADER_Sentiment',
+        'TextBlob': 'TextBlob_Sentiment',
+    }
+    daily_raw = (
+        raw_df.assign(Date=pd.to_datetime(raw_df['Date'], errors='coerce').dt.normalize())
+        [['Date'] + list(sentiment_cols.values())]
+        .dropna(subset=['Date'])
+        .groupby('Date', as_index=False)
+        .mean(numeric_only=True)
+        .sort_values('Date')
+    )
+
+    finbert_daily = daily_finbert_df[['Date', 'FinBERT_Sentiment']].copy()
+    finbert_daily['Date'] = pd.to_datetime(finbert_daily['Date'], errors='coerce').dt.normalize()
+    finbert_daily = finbert_daily.dropna(subset=['Date']).sort_values('Date')
+
+    panel_df = daily_raw.merge(finbert_daily, on='Date', how='outer').sort_values('Date')
+    return panel_df
+
+
+def _plot_sentiment_market_panel(
+    ax: plt.Axes,
+    df: pd.DataFrame,
+    sentiment_col: str,
+    sentiment_label: str,
+    market_col: str,
+    market_label: str,
+    sentiment_color: str,
+    market_color: str,
+    title: str,
+    metric_name: str,
+) -> None:
+    panel = df[['Date', market_col, sentiment_col]].copy()
+    panel[market_col] = pd.to_numeric(panel[market_col], errors='coerce')
+    panel[sentiment_col] = pd.to_numeric(panel[sentiment_col], errors='coerce')
+    panel = panel.dropna(subset=['Date', market_col, sentiment_col]).sort_values('Date')
+
+    ax2 = ax.twinx()
+    if panel.empty:
+        ax.text(0.5, 0.5, 'No overlapping data available', ha='center', va='center', transform=ax.transAxes)
+        ax.set_title(title)
+        ax.set_xlabel('Date')
+        ax.set_ylabel(market_label, color=market_color)
+        ax2.set_ylabel(sentiment_label, color=sentiment_color)
+        return
+
+    market_threshold = panel[market_col].quantile(0.9)
+    sentiment_threshold = panel[sentiment_col].quantile(0.9)
+
+    market_line, = ax.plot(panel['Date'], panel[market_col], color=market_color, linewidth=1.25, label=market_label)
+    market_spikes = ax.scatter(
+        panel.loc[panel[market_col] >= market_threshold, 'Date'],
+        panel.loc[panel[market_col] >= market_threshold, market_col],
+        s=26,
+        marker='x',
+        color='#f59e0b',
+        linewidth=1.0,
+        label=f'{metric_name} Spike',
+        zorder=4,
+    )
+    ax.axhline(market_threshold, color='#f59e0b', linestyle='--', linewidth=0.9, alpha=0.65, label='_nolegend_')
+    ax.set_xlabel('Date')
+    ax.set_ylabel(market_label, color=market_color)
+    ax.tick_params(axis='y', labelcolor=market_color)
+    ax.grid(alpha=0.25)
+
+    sentiment_line, = ax2.plot(panel['Date'], panel[sentiment_col], color=sentiment_color, linewidth=1.25, label=sentiment_label)
+    sentiment_spikes = ax2.scatter(
+        panel.loc[panel[sentiment_col] >= sentiment_threshold, 'Date'],
+        panel.loc[panel[sentiment_col] >= sentiment_threshold, sentiment_col],
+        s=18,
+        color='black',
+        alpha=0.85,
+        label='Sentiment Spike',
+        zorder=5,
+    )
+    ax2.axhline(sentiment_threshold, color='black', linestyle=':', linewidth=0.9, alpha=0.5, label='_nolegend_')
+    ax2.set_ylabel(sentiment_label, color=sentiment_color)
+    ax2.tick_params(axis='y', labelcolor=sentiment_color)
+    ax.set_title(title)
+    ax.legend(
+        [market_line, market_spikes, sentiment_line, sentiment_spikes],
+        [market_label, f'{metric_name} Spike', sentiment_label, 'Sentiment Spike'],
+        loc='upper left',
+        fontsize=8,
+    )
+
+
 def plot_duplicate_repost_impact(raw_posts: pd.DataFrame, deduped_posts: pd.DataFrame) -> None:
     raw_count = len(raw_posts)
     original_count = len(deduped_posts)
@@ -213,65 +303,61 @@ def plot_duplicate_repost_impact(raw_posts: pd.DataFrame, deduped_posts: pd.Data
 
 
 def plot_top20_contributors(deduped_posts: pd.DataFrame) -> None:
-    authors = deduped_posts['author_key'].astype(str).str.strip()
-    valid_idx = authors[authors.notna() & authors.str.len().gt(0) & ~authors.str.lower().isin(['[missing_author]', 'unknown', 'deleted'])].index
-    contributor_df = deduped_posts.loc[valid_idx, ['author_key', 'engagement_score']].copy()
-    contributor_df['engagement_score'] = pd.to_numeric(contributor_df['engagement_score'], errors='coerce').fillna(0.0)
-
-    author_groups = contributor_df.groupby('author_key', dropna=False).agg(
-        contributions=('author_key', 'size'),
-        total_engagement=('engagement_score', 'sum'),
-        avg_engagement=('engagement_score', 'mean'),
+    top_posts = deduped_posts.copy()
+    top_posts['engagement_score'] = pd.to_numeric(top_posts['engagement_score'], errors='coerce').fillna(0.0)
+    top_posts['title'] = top_posts.get('title', pd.Series('', index=top_posts.index)).fillna('').astype(str).str.strip()
+    top_posts['author_key'] = top_posts.get('author_key', pd.Series('', index=top_posts.index)).fillna('').astype(str).str.strip()
+    top_posts = top_posts[top_posts['engagement_score'].notna()].copy()
+    top_posts = top_posts.sort_values('engagement_score', ascending=False).head(20).reset_index(drop=True)
+    top_posts['Display_Title'] = top_posts['title'].replace('', pd.NA)
+    top_posts['Display_Title'] = top_posts['Display_Title'].fillna(top_posts['author_key'])
+    top_posts['Display_Title'] = top_posts['Display_Title'].fillna('Untitled post').astype(str)
+    top_posts['Display_Title'] = top_posts['Display_Title'].apply(
+        lambda value: value if len(value) <= 72 else f'{value[:69].rstrip()}...'
     )
-    author_groups = author_groups.sort_values('total_engagement', ascending=False)
-    top20 = author_groups.head(20)
-    total_engagement = author_groups['total_engagement'].sum()
+    top_posts['Display_Label'] = [
+        f'{rank}. {title}' for rank, title in zip(range(1, len(top_posts) + 1), top_posts['Display_Title'])
+    ]
+    total_engagement = pd.to_numeric(deduped_posts.get('engagement_score', pd.Series(dtype=float)), errors='coerce').fillna(0.0).sum()
 
-    fig, ax = plt.subplots(figsize=(10, 7))
-    fig.subplots_adjust(left=0.32, right=0.95)
-    ax.barh(top20.index[::-1], top20['total_engagement'][::-1], color='#2563eb', edgecolor='black')
-    ax.set_title('Top 20 Contributors by Total Engagement Score')
-    ax.set_xlabel('Total engagement score')
-    ax.set_ylabel('Author')
+    fig, ax = plt.subplots(figsize=(12, 8))
+    fig.subplots_adjust(left=0.38, right=0.95)
+    bars = ax.barh(top_posts['Display_Label'][::-1], top_posts['engagement_score'][::-1], color='#2563eb', edgecolor='black')
+    ax.set_title('Top 20 Posts by Engagement Score')
+    ax.set_xlabel('Engagement score')
+    ax.set_ylabel('Post')
     ax.grid(axis='x', alpha=0.25)
-    ax.set_xlim(0, top20['total_engagement'].max() * 1.12)
+    ax.set_xlim(0, top_posts['engagement_score'].max() * 1.12 if not top_posts.empty else 1)
 
-    for i, (contrib, total_eng, avg_eng) in enumerate(zip(
-        top20['contributions'][::-1],
-        top20['total_engagement'][::-1],
-        top20['avg_engagement'][::-1],
-    )):
+    for bar, score in zip(bars, top_posts['engagement_score'][::-1]):
         ax.text(
-            total_eng + max(top20['total_engagement'].max() * 0.008, 0.01),
-            i,
-            f'{contrib} posts | avg {avg_eng:.3f}',
+            bar.get_width() + max(top_posts['engagement_score'].max() * 0.008, 0.01),
+            bar.get_y() + bar.get_height() / 2,
+            f'{score:.3f}',
             va='center',
             fontsize=9,
             color='#111827'
         )
 
     caption = (
-        'Top contributors are ranked by total engagement score. Each bar is annotated with the number of posts and average engagement per post to reveal both reach and intensity.'
+        'The chart now ranks the 20 highest-engagement posts directly, using the post title as the label instead of rolling up to authors.'
     )
     fig.text(0.5, -0.08, caption, ha='center', fontsize=9)
     _save_figure(fig, OUTPUT_DIR / 'top20_contributors.png')
 
-    summary = top20.reset_index().rename(columns={
-        'author_key': 'Author',
-        'contributions': 'Contributions',
-        'total_engagement': 'Total_Engagement',
-        'avg_engagement': 'Average_Engagement',
-    })
-    summary['Engagement_Share_pct'] = [round(val / total_engagement * 100, 2) if total_engagement else 0.0 for val in summary['Total_Engagement']]
-    summary['Cumulative_Engagement_Share_pct'] = [round(summary['Total_Engagement'].iloc[:i + 1].sum() / total_engagement * 100, 2) if total_engagement else 0.0 for i in range(len(summary))]
+    summary = top_posts[['Display_Title', 'author_key', 'engagement_score']].copy()
     summary.insert(0, 'Rank', range(1, len(summary) + 1))
-
-    top5_pct = round(summary['Total_Engagement'].iloc[:5].sum() / total_engagement * 100, 2) if total_engagement else 0.0
-    top10_pct = round(summary['Total_Engagement'].iloc[:10].sum() / total_engagement * 100, 2) if total_engagement else 0.0
-    top20_pct = round(summary['Total_Engagement'].sum() / total_engagement * 100, 2) if total_engagement else 0.0
-    summary.loc[len(summary)] = ['', 'Top 5 engagement share', '', '', '', top5_pct, '']
-    summary.loc[len(summary)] = ['', 'Top 10 engagement share', '', '', '', top10_pct, '']
-    summary.loc[len(summary)] = ['', 'Top 20 engagement share', '', '', '', top20_pct, '']
+    summary = summary.rename(columns={
+        'Display_Title': 'Post_Title',
+        'author_key': 'Author',
+        'engagement_score': 'Engagement_Score',
+    })
+    summary['Engagement_Share_pct'] = [round(val / total_engagement * 100, 2) if total_engagement else 0.0 for val in summary['Engagement_Score']]
+    summary['Cumulative_Engagement_Share_pct'] = [
+        round(summary['Engagement_Score'].iloc[:i + 1].sum() / total_engagement * 100, 2)
+        if total_engagement else 0.0
+        for i in range(len(summary))
+    ]
     _save_csv(summary, OUTPUT_DIR / 'top20_contributors.csv')
 
 
@@ -459,150 +545,82 @@ def plot_daily_sentiment_trends(raw_df: pd.DataFrame, daily_finbert_df: pd.DataF
     _save_csv(export_df, OUTPUT_DIR / 'daily_sentiment.csv')
 
 
-def plot_sentiment_vs_volume(daily_finbert_df: pd.DataFrame, final_df: pd.DataFrame) -> None:
+def plot_sentiment_vs_volume(raw_df: pd.DataFrame, daily_finbert_df: pd.DataFrame, final_df: pd.DataFrame) -> None:
+    panel_df = _prepare_daily_sentiment_panel(raw_df=raw_df, daily_finbert_df=daily_finbert_df)
     volume_df = final_df[['Date', 'Volume']].copy()
-    volume_df['Date'] = pd.to_datetime(volume_df['Date'], errors='coerce')
-    volume_df['Date'] = volume_df['Date'].dt.normalize()
+    volume_df['Date'] = pd.to_datetime(volume_df['Date'], errors='coerce').dt.normalize()
+    volume_df['Volume'] = pd.to_numeric(volume_df['Volume'], errors='coerce')
+    panel_df = panel_df.merge(volume_df, on='Date', how='inner')
 
-    df = daily_finbert_df[['Date', 'FinBERT_Sentiment']].copy().dropna()
-    df = df.merge(volume_df, on='Date', how='inner')
-    df['Volume'] = pd.to_numeric(df['Volume'], errors='coerce')
-    df['FinBERT_Sentiment'] = pd.to_numeric(df['FinBERT_Sentiment'], errors='coerce')
-    df = df.dropna()
-    volume_threshold = df['Volume'].quantile(0.9)
-    sentiment_threshold = df['FinBERT_Sentiment'].quantile(0.9)
-    volume_spike_df = df[df['Volume'] >= volume_threshold].copy().sort_values('Volume', ascending=False)
-    sentiment_spike_df = df[df['FinBERT_Sentiment'] >= sentiment_threshold].copy().sort_values('FinBERT_Sentiment', ascending=False)
+    fig, axes = plt.subplots(3, 1, figsize=(14, 14), sharex=True)
+    fig.subplots_adjust(hspace=0.28)
+    panel_specs = [
+        ('VADER_Sentiment', 'VADER Sentiment', '#1d4ed8'),
+        ('TextBlob_Sentiment', 'TextBlob Sentiment', '#15803d'),
+        ('FinBERT_Sentiment', 'FinBERT Sentiment', '#dc2626'),
+    ]
+    for ax, (sentiment_col, sentiment_label, sentiment_color) in zip(axes, panel_specs):
+        _plot_sentiment_market_panel(
+            ax=ax,
+            df=panel_df,
+            sentiment_col=sentiment_col,
+            sentiment_label=sentiment_label,
+            market_col='Volume',
+            market_label='Trading Volume',
+            sentiment_color=sentiment_color,
+            market_color='#2563eb',
+            title=f'{sentiment_label} vs Trading Volume',
+            metric_name='Volume',
+        )
 
-    fig, ax1 = plt.subplots(figsize=(11, 5.5))
-    volume_line, = ax1.plot(df['Date'], df['Volume'], color='#2563eb', linewidth=1.3, label='Trading Volume')
-    volume_spikes = ax1.scatter(
-        volume_spike_df['Date'],
-        volume_spike_df['Volume'],
-        s=34,
-        marker='x',
-        color='#f59e0b',
-        linewidth=1.2,
-        label='Volume Spike',
-        zorder=4,
+    caption = (
+        'Each panel compares trading volume with one sentiment scoring method so the three sentiment series can be read side by side.'
     )
-    ax1.axhline(volume_threshold, color='#f59e0b', linestyle='--', linewidth=1.0, alpha=0.75, label='_nolegend_')
-    ax1.set_xlabel('Date')
-    ax1.set_ylabel('Trading Volume', color='#2563eb')
-    ax1.tick_params(axis='y', labelcolor='#2563eb')
-    ax1.grid(alpha=0.25)
-
-    ax2 = ax1.twinx()
-    sentiment_line, = ax2.plot(df['Date'], df['FinBERT_Sentiment'], color='#ef4444', linewidth=1.3, label='FinBERT Sentiment')
-    sentiment_spikes = ax2.scatter(
-        sentiment_spike_df['Date'],
-        sentiment_spike_df['FinBERT_Sentiment'],
-        s=20,
-        color='black',
-        alpha=0.9,
-        label='Sentiment Spike',
-        zorder=5,
-    )
-    ax2.axhline(sentiment_threshold, color='black', linestyle=':', linewidth=1.0, alpha=0.55, label='_nolegend_')
-    ax2.set_ylabel('FinBERT Sentiment', color='#ef4444')
-    ax2.tick_params(axis='y', labelcolor='#ef4444')
-
-    ax1.legend(
-        [volume_line, volume_spikes, sentiment_line, sentiment_spikes],
-        ['Trading Volume', 'Volume Spike', 'FinBERT Sentiment', 'Sentiment Spike'],
-        loc='upper left',
-        fontsize=8,
-    )
-    ax1.set_title('FinBERT Sentiment vs Trading Volume with Spike Markers')
-
-    caption = 'The dual-axis chart shows whether FinBERT sentiment spikes align with trading volume activity.'
     fig.text(0.5, -0.05, caption, ha='center', fontsize=9)
     _save_figure(fig, OUTPUT_DIR / 'sentiment_vs_volume.png')
 
-    spike_export = pd.concat([
-        volume_spike_df.assign(Spike_Type='Volume Spike'),
-        sentiment_spike_df.assign(Spike_Type='Sentiment Spike'),
-    ], ignore_index=True, sort=False)
-    spike_export = spike_export[['Date', 'Spike_Type', 'Volume', 'FinBERT_Sentiment']].copy()
-    spike_export['Date'] = spike_export['Date'].dt.strftime('%Y-%m-%d')
-    _save_csv(spike_export, OUTPUT_DIR / 'sentiment_volume_spikes.csv')
-
-    line_export = df[['Date', 'FinBERT_Sentiment', 'Volume']].copy().sort_values('Date')
-    line_export['Date'] = line_export['Date'].dt.strftime('%Y-%m-%d')
-    _save_csv(line_export, OUTPUT_DIR / 'finbert_sentiment_vs_volume_line.csv')
+    export_df = panel_df[['Date', 'Volume', 'VADER_Sentiment', 'TextBlob_Sentiment', 'FinBERT_Sentiment']].copy()
+    export_df['Date'] = export_df['Date'].dt.strftime('%Y-%m-%d')
+    _save_csv(export_df, OUTPUT_DIR / 'finbert_sentiment_vs_volume_line.csv')
 
 
-def plot_sentiment_vs_illiquidity(daily_finbert_df: pd.DataFrame, final_df: pd.DataFrame) -> None:
+def plot_sentiment_vs_illiquidity(raw_df: pd.DataFrame, daily_finbert_df: pd.DataFrame, final_df: pd.DataFrame) -> None:
+    panel_df = _prepare_daily_sentiment_panel(raw_df=raw_df, daily_finbert_df=daily_finbert_df)
     illiquidity_df = final_df[['Date', 'Illiquidity']].copy()
-    illiquidity_df['Date'] = pd.to_datetime(illiquidity_df['Date'], errors='coerce')
-    illiquidity_df['Date'] = illiquidity_df['Date'].dt.normalize()
+    illiquidity_df['Date'] = pd.to_datetime(illiquidity_df['Date'], errors='coerce').dt.normalize()
+    illiquidity_df['Illiquidity'] = pd.to_numeric(illiquidity_df['Illiquidity'], errors='coerce')
+    panel_df = panel_df.merge(illiquidity_df, on='Date', how='inner')
 
-    df = daily_finbert_df[['Date', 'FinBERT_Sentiment']].copy().dropna()
-    df = df.merge(illiquidity_df, on='Date', how='inner')
-    df['Illiquidity'] = pd.to_numeric(df['Illiquidity'], errors='coerce')
-    df['FinBERT_Sentiment'] = pd.to_numeric(df['FinBERT_Sentiment'], errors='coerce')
-    df = df.dropna()
-    illiquidity_threshold = df['Illiquidity'].quantile(0.9)
-    sentiment_threshold = df['FinBERT_Sentiment'].quantile(0.9)
-    illiquidity_spike_df = df[df['Illiquidity'] >= illiquidity_threshold].copy().sort_values('Illiquidity', ascending=False)
-    sentiment_spike_df = df[df['FinBERT_Sentiment'] >= sentiment_threshold].copy().sort_values('FinBERT_Sentiment', ascending=False)
+    fig, axes = plt.subplots(3, 1, figsize=(14, 14), sharex=True)
+    fig.subplots_adjust(hspace=0.28)
+    panel_specs = [
+        ('VADER_Sentiment', 'VADER Sentiment', '#1d4ed8'),
+        ('TextBlob_Sentiment', 'TextBlob Sentiment', '#15803d'),
+        ('FinBERT_Sentiment', 'FinBERT Sentiment', '#dc2626'),
+    ]
+    for ax, (sentiment_col, sentiment_label, sentiment_color) in zip(axes, panel_specs):
+        _plot_sentiment_market_panel(
+            ax=ax,
+            df=panel_df,
+            sentiment_col=sentiment_col,
+            sentiment_label=sentiment_label,
+            market_col='Illiquidity',
+            market_label='Illiquidity',
+            sentiment_color=sentiment_color,
+            market_color='#16a34a',
+            title=f'{sentiment_label} vs Illiquidity',
+            metric_name='Illiquidity',
+        )
 
-    fig, ax1 = plt.subplots(figsize=(11, 5.5))
-    illiquidity_line, = ax1.plot(df['Date'], df['Illiquidity'], color='#16a34a', linewidth=1.3, label='Illiquidity')
-    illiquidity_spikes = ax1.scatter(
-        illiquidity_spike_df['Date'],
-        illiquidity_spike_df['Illiquidity'],
-        s=34,
-        marker='x',
-        color='#f59e0b',
-        linewidth=1.2,
-        label='Illiquidity Spike',
-        zorder=4,
+    caption = (
+        'Each panel compares illiquidity with one sentiment scoring method so the three sentiment series can be read side by side.'
     )
-    ax1.axhline(illiquidity_threshold, color='#f59e0b', linestyle='--', linewidth=1.0, alpha=0.75, label='_nolegend_')
-    ax1.set_xlabel('Date')
-    ax1.set_ylabel('Illiquidity', color='#16a34a')
-    ax1.tick_params(axis='y', labelcolor='#16a34a')
-    ax1.grid(alpha=0.25)
-
-    ax2 = ax1.twinx()
-    sentiment_line, = ax2.plot(df['Date'], df['FinBERT_Sentiment'], color='#ef4444', linewidth=1.3, label='FinBERT Sentiment')
-    sentiment_spikes = ax2.scatter(
-        sentiment_spike_df['Date'],
-        sentiment_spike_df['FinBERT_Sentiment'],
-        s=20,
-        color='black',
-        alpha=0.9,
-        label='Sentiment Spike',
-        zorder=5,
-    )
-    ax2.axhline(sentiment_threshold, color='black', linestyle=':', linewidth=1.0, alpha=0.55, label='_nolegend_')
-    ax2.set_ylabel('FinBERT Sentiment', color='#ef4444')
-    ax2.tick_params(axis='y', labelcolor='#ef4444')
-
-    ax1.legend(
-        [illiquidity_line, illiquidity_spikes, sentiment_line, sentiment_spikes],
-        ['Illiquidity', 'Illiquidity Spike', 'FinBERT Sentiment', 'Sentiment Spike'],
-        loc='upper left',
-        fontsize=8,
-    )
-    ax1.set_title('FinBERT Sentiment vs Illiquidity with Spike Markers')
-
-    caption = 'The dual-axis chart shows whether FinBERT sentiment spikes align with market illiquidity.'
     fig.text(0.5, -0.05, caption, ha='center', fontsize=9)
     _save_figure(fig, OUTPUT_DIR / 'sentiment_vs_illiquidity.png')
 
-    spike_export = pd.concat([
-        illiquidity_spike_df.assign(Spike_Type='Illiquidity Spike'),
-        sentiment_spike_df.assign(Spike_Type='Sentiment Spike'),
-    ], ignore_index=True, sort=False)
-    spike_export = spike_export[['Date', 'Spike_Type', 'Illiquidity', 'FinBERT_Sentiment']].copy()
-    spike_export['Date'] = spike_export['Date'].dt.strftime('%Y-%m-%d')
-    _save_csv(spike_export, OUTPUT_DIR / 'sentiment_illiquidity_spikes.csv')
-
-    line_export = df[['Date', 'FinBERT_Sentiment', 'Illiquidity']].copy().sort_values('Date')
-    line_export['Date'] = line_export['Date'].dt.strftime('%Y-%m-%d')
-    _save_csv(line_export, OUTPUT_DIR / 'finbert_sentiment_vs_illiquidity_line.csv')
+    export_df = panel_df[['Date', 'Illiquidity', 'VADER_Sentiment', 'TextBlob_Sentiment', 'FinBERT_Sentiment']].copy()
+    export_df['Date'] = export_df['Date'].dt.strftime('%Y-%m-%d')
+    _save_csv(export_df, OUTPUT_DIR / 'finbert_sentiment_vs_illiquidity_line.csv')
 
 
 def plot_information_diffusion(daily_df: pd.DataFrame) -> None:
@@ -646,52 +664,83 @@ def plot_information_diffusion(daily_df: pd.DataFrame) -> None:
     _save_csv(pd.DataFrame(stats), OUTPUT_DIR / 'information_diffusion_statistics.csv')
 
 
-def plot_lag_analysis(final_df: pd.DataFrame, daily_finbert_df: pd.DataFrame) -> None:
+def plot_lag_analysis(raw_df: pd.DataFrame, final_df: pd.DataFrame, daily_finbert_df: pd.DataFrame) -> None:
+    sentiment_sources = [
+        ('VADER_Sentiment', 'VADER Sentiment', '#1d4ed8'),
+        ('TextBlob_Sentiment', 'TextBlob Sentiment', '#15803d'),
+        ('FinBERT_Sentiment', 'FinBERT Sentiment', '#dc2626'),
+    ]
+
     df = final_df[['Date', 'Illiquidity']].copy()
     df['Date'] = pd.to_datetime(df['Date'], errors='coerce').dt.normalize()
     df['Illiquidity'] = pd.to_numeric(df['Illiquidity'], errors='coerce')
-    df = df.merge(daily_finbert_df[['Date', 'FinBERT_Sentiment']], on='Date', how='inner')
     df = df.sort_values('Date')
-    df['Sentiment_Lag_1'] = df['FinBERT_Sentiment'].shift(1)
-    df['Sentiment_Lag_2'] = df['FinBERT_Sentiment'].shift(2)
-    lag1_df = df[['Sentiment_Lag_1', 'Illiquidity']].dropna()
-    lag2_df = df[['Sentiment_Lag_2', 'Illiquidity']].dropna()
+
+    daily_sentiment = (
+        _prepare_daily_sentiment_panel(raw_df=raw_df, daily_finbert_df=daily_finbert_df)
+        [['Date'] + [col for col, _, _ in sentiment_sources]]
+        .sort_values('Date')
+    )
+    df = df.merge(daily_sentiment, on='Date', how='inner')
 
     def pearson(x, y):
         if len(x) < 2:
             return np.nan
         return np.corrcoef(x, y)[0, 1]
 
-    r1 = pearson(lag1_df['Sentiment_Lag_1'], lag1_df['Illiquidity'])
-    r2 = pearson(lag2_df['Sentiment_Lag_2'], lag2_df['Illiquidity'])
+    fig, axes = plt.subplots(len(sentiment_sources), 2, figsize=(14, 16))
+    fig.subplots_adjust(hspace=0.35, wspace=0.22)
 
-    fig, axes = plt.subplots(1, 2, figsize=(14, 6))
+    stats = []
+    for row, (sentiment_col, sentiment_label, color) in enumerate(sentiment_sources):
+        row_df = df[['Date', 'Illiquidity', sentiment_col]].copy().sort_values('Date')
+        row_df[f'{sentiment_col}_Lag_1'] = row_df[sentiment_col].shift(1)
+        row_df[f'{sentiment_col}_Lag_2'] = row_df[sentiment_col].shift(2)
+        lag1_df = row_df[[f'{sentiment_col}_Lag_1', 'Illiquidity']].dropna()
+        lag2_df = row_df[[f'{sentiment_col}_Lag_2', 'Illiquidity']].dropna()
 
-    axes[0].scatter(lag1_df['Sentiment_Lag_1'], lag1_df['Illiquidity'], color='#2563eb', edgecolor='black', alpha=0.7)
-    axes[0].set_title('Lag 1: Sentiment(t-1) vs Illiquidity(t)')
-    axes[0].set_xlabel('Sentiment Lag 1')
-    axes[0].set_ylabel('Illiquidity')
-    axes[0].grid(alpha=0.25)
-    axes[0].text(0.05, 0.92, f'Pearson r = {r1:.3f}', transform=axes[0].transAxes, fontsize=10,
-                 bbox=dict(boxstyle='round', facecolor='white', alpha=0.8))
+        r1 = pearson(lag1_df[f'{sentiment_col}_Lag_1'], lag1_df['Illiquidity'])
+        r2 = pearson(lag2_df[f'{sentiment_col}_Lag_2'], lag2_df['Illiquidity'])
+        stats.extend([
+            {'Sentiment_Model': sentiment_label, 'Lag': 'Lag 1', 'Pearson_r': round(float(r1), 4), 'N': len(lag1_df)},
+            {'Sentiment_Model': sentiment_label, 'Lag': 'Lag 2', 'Pearson_r': round(float(r2), 4), 'N': len(lag2_df)},
+        ])
 
-    axes[1].scatter(lag2_df['Sentiment_Lag_2'], lag2_df['Illiquidity'], color='#dc2626', edgecolor='black', alpha=0.7)
-    axes[1].set_title('Lag 2: Sentiment(t-2) vs Illiquidity(t)')
-    axes[1].set_xlabel('Sentiment Lag 2')
-    axes[1].set_ylabel('Illiquidity')
-    axes[1].grid(alpha=0.25)
-    axes[1].text(0.05, 0.92, f'Pearson r = {r2:.3f}', transform=axes[1].transAxes, fontsize=10,
-                 bbox=dict(boxstyle='round', facecolor='white', alpha=0.8))
+        axes[row, 0].scatter(lag1_df[f'{sentiment_col}_Lag_1'], lag1_df['Illiquidity'], color=color, edgecolor='black', alpha=0.7)
+        axes[row, 0].set_title(f'{sentiment_label} Lag 1: Sentiment(t-1) vs Illiquidity(t)')
+        axes[row, 0].set_xlabel('Sentiment Lag 1')
+        axes[row, 0].set_ylabel('Illiquidity')
+        axes[row, 0].grid(alpha=0.25)
+        axes[row, 0].text(
+            0.05,
+            0.92,
+            f'Pearson r = {r1:.3f}',
+            transform=axes[row, 0].transAxes,
+            fontsize=10,
+            bbox=dict(boxstyle='round', facecolor='white', alpha=0.8),
+        )
 
-    caption = 'Lag analysis investigates whether sentiment effects on liquidity are immediate or delayed by one and two days.'
+        axes[row, 1].scatter(lag2_df[f'{sentiment_col}_Lag_2'], lag2_df['Illiquidity'], color=color, edgecolor='black', alpha=0.7)
+        axes[row, 1].set_title(f'{sentiment_label} Lag 2: Sentiment(t-2) vs Illiquidity(t)')
+        axes[row, 1].set_xlabel('Sentiment Lag 2')
+        axes[row, 1].set_ylabel('Illiquidity')
+        axes[row, 1].grid(alpha=0.25)
+        axes[row, 1].text(
+            0.05,
+            0.92,
+            f'Pearson r = {r2:.3f}',
+            transform=axes[row, 1].transAxes,
+            fontsize=10,
+            bbox=dict(boxstyle='round', facecolor='white', alpha=0.8),
+        )
+
+    caption = (
+        'Lag analysis investigates whether sentiment effects on liquidity are immediate or delayed by one and two days across VADER, TextBlob, and FinBERT.'
+    )
     fig.text(0.5, -0.05, caption, ha='center', fontsize=9)
     _save_figure(fig, OUTPUT_DIR / 'lag_analysis.png')
 
-    stats = pd.DataFrame([
-        {'Lag': 'Lag 1', 'Pearson_r': round(float(r1), 4), 'N': len(lag1_df)},
-        {'Lag': 'Lag 2', 'Pearson_r': round(float(r2), 4), 'N': len(lag2_df)},
-    ])
-    _save_csv(stats, OUTPUT_DIR / 'lag_statistics.csv')
+    _save_csv(pd.DataFrame(stats), OUTPUT_DIR / 'lag_statistics.csv')
 
 
 def plot_final_feature_heatmap(final_df: pd.DataFrame, daily_df: pd.DataFrame, daily_finbert_df: pd.DataFrame) -> None:
@@ -759,10 +808,10 @@ def generate_eda_storytelling() -> None:
     plot_raw_sentiment_trends(raw_sentiment_df, daily_finbert_df)
     plot_daily_sentiment_trends(raw_sentiment_df, daily_finbert_df)
     plot_finbert_distribution(daily_finbert_df)
-    plot_sentiment_vs_volume(daily_finbert_df, final_df)
-    plot_sentiment_vs_illiquidity(daily_finbert_df, final_df)
+    plot_sentiment_vs_volume(raw_sentiment_df, daily_finbert_df, final_df)
+    plot_sentiment_vs_illiquidity(raw_sentiment_df, daily_finbert_df, final_df)
     plot_information_diffusion(daily_df)
-    plot_lag_analysis(final_df, daily_finbert_df)
+    plot_lag_analysis(raw_sentiment_df, final_df, daily_finbert_df)
     plot_final_feature_heatmap(final_df, daily_df, daily_finbert_df)
 
 

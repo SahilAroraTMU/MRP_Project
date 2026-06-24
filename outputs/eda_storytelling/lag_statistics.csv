@@ -1,3 +1,7 @@
-Lag,Pearson_r,N
-Lag 1,-0.1194,221
-Lag 2,-0.156,220
+Sentiment_Model,Lag,Pearson_r,N
+VADER Sentiment,Lag 1,0.0314,163
+VADER Sentiment,Lag 2,0.1303,162
+TextBlob Sentiment,Lag 1,0.0534,163
+TextBlob Sentiment,Lag 2,0.066,162
+FinBERT Sentiment,Lag 1,0.0531,163
+FinBERT Sentiment,Lag 2,-0.014,162
