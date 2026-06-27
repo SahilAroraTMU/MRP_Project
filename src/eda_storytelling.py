@@ -57,9 +57,35 @@ def _load_raw_posts() -> pd.DataFrame:
     return df
 
 
+def _prepare_post_sentiment_frame(df: pd.DataFrame, *, use_existing_date: bool = False) -> pd.DataFrame:
+    frame = df.copy()
+    if use_existing_date:
+        frame['Date'] = pd.to_datetime(frame['Date'], errors='coerce').dt.normalize()
+    else:
+        frame['Date'] = pd.to_datetime(frame['created_utc'], errors='coerce').dt.normalize()
+
+    frame['text'] = (
+        frame.get('title', pd.Series('', index=frame.index)).fillna('').astype(str) + ' ' +
+        frame.get('selftext', pd.Series('', index=frame.index)).fillna('').astype(str)
+    ).str.strip()
+    frame = frame.dropna(subset=['Date']).copy()
+    frame = frame[frame['text'].ne('')].copy()
+    return apply_fast_sentiment(frame)
+
+
 def _load_deduped_posts() -> pd.DataFrame:
     df = pd.read_excel(PREPROCESSED_POSTS_PATH, engine='openpyxl')
     return df
+
+
+def _load_raw_post_finbert_scores() -> pd.DataFrame:
+    path = OUTPUT_DIR / 'one-year-of-tsla-on-reddit-posts_finbert.csv'
+    df = pd.read_csv(path)
+    df['Date'] = pd.to_datetime(df['Date'], errors='coerce').dt.normalize()
+    df['text'] = df.get('text', pd.Series('', index=df.index)).fillna('').astype(str)
+    df['normalized_title'] = df['text'].apply(_normalize_text)
+    df['FinBERT_Sentiment'] = pd.to_numeric(df['FinBERT_Sentiment'], errors='coerce')
+    return df.dropna(subset=['Date']).copy()
 
 
 def _load_preprocessed_daily() -> pd.DataFrame:
@@ -300,6 +326,108 @@ def plot_duplicate_repost_impact(raw_posts: pd.DataFrame, deduped_posts: pd.Data
         'Percentage': [round(p, 2) for p in percentages],
     })
     _save_csv(summary, OUTPUT_DIR / 'duplicate_repost_summary.csv')
+
+
+def plot_duplicate_repost_sentiment_trends(raw_posts: pd.DataFrame, deduped_posts: pd.DataFrame) -> None:
+    raw_sentiment = _prepare_post_sentiment_frame(raw_posts)
+    deduped_sentiment = _prepare_post_sentiment_frame(deduped_posts, use_existing_date=True)
+    raw_finbert_scores = _load_raw_post_finbert_scores()
+    deduped_finbert_scores = (
+        raw_finbert_scores
+        .sort_values('Date')
+        .drop_duplicates(subset=['normalized_title'], keep='first')
+        .sort_values('Date')
+    )
+
+    raw_daily = (
+        raw_sentiment[['Date', 'VADER_Sentiment', 'TextBlob_Sentiment']]
+        .groupby('Date', as_index=False)
+        .mean(numeric_only=True)
+        .rename(columns={
+            'VADER_Sentiment': 'VADER_With_Duplicates',
+            'TextBlob_Sentiment': 'TextBlob_With_Duplicates',
+        })
+        .sort_values('Date')
+    )
+    deduped_daily = (
+        deduped_sentiment[['Date', 'VADER_Sentiment', 'TextBlob_Sentiment']]
+        .groupby('Date', as_index=False)
+        .mean(numeric_only=True)
+        .rename(columns={
+            'VADER_Sentiment': 'VADER_Without_Duplicates',
+            'TextBlob_Sentiment': 'TextBlob_Without_Duplicates',
+        })
+        .sort_values('Date')
+    )
+
+    raw_finbert_daily = (
+        raw_finbert_scores[['Date', 'FinBERT_Sentiment']]
+        .groupby('Date', as_index=False)['FinBERT_Sentiment']
+        .mean()
+        .rename(columns={'FinBERT_Sentiment': 'FinBERT_With_Duplicates'})
+        .sort_values('Date')
+    )
+
+    deduped_finbert_daily = (
+        deduped_finbert_scores[['Date', 'FinBERT_Sentiment']]
+        .groupby('Date', as_index=False)['FinBERT_Sentiment']
+        .mean()
+        .rename(columns={'FinBERT_Sentiment': 'FinBERT_Without_Duplicates'})
+        .sort_values('Date')
+    )
+
+    panel = raw_daily.merge(deduped_daily, on='Date', how='outer')
+    panel = panel.merge(raw_finbert_daily, on='Date', how='outer')
+    panel = panel.merge(deduped_finbert_daily, on='Date', how='outer')
+    panel = panel.sort_values('Date')
+
+    fig, axes = plt.subplots(3, 1, figsize=(14, 14), sharex=True)
+    fig.subplots_adjust(hspace=0.28)
+    specs = [
+        ('VADER', 'VADER_With_Duplicates', 'VADER_Without_Duplicates', '#2563eb'),
+        ('TextBlob', 'TextBlob_With_Duplicates', 'TextBlob_Without_Duplicates', '#15803d'),
+        ('FinBERT', 'FinBERT_With_Duplicates', 'FinBERT_Without_Duplicates', '#dc2626'),
+    ]
+
+    for ax, (label, raw_col, dedup_col, base_color) in zip(axes, specs):
+        raw_series = panel[['Date', raw_col]].dropna(subset=[raw_col]).sort_values('Date')
+        dedup_series = panel[['Date', dedup_col]].dropna(subset=[dedup_col]).sort_values('Date')
+
+        ax.plot(
+            raw_series['Date'],
+            raw_series[raw_col],
+            color=base_color,
+            linewidth=1.4,
+            linestyle='--',
+            alpha=0.85,
+            label=f'{label} with reposts',
+        )
+        ax.plot(
+            dedup_series['Date'],
+            dedup_series[dedup_col],
+            color=base_color,
+            linewidth=1.8,
+            label=f'{label} without reposts',
+        )
+        ax.scatter(raw_series['Date'], raw_series[raw_col], s=7, color=base_color, alpha=0.18)
+        ax.scatter(dedup_series['Date'], dedup_series[dedup_col], s=7, color=base_color, alpha=0.18)
+        ax.set_title(f'{label} Sentiment Over Time')
+        ax.set_ylabel('Average sentiment score')
+        ax.grid(alpha=0.25)
+        ax.legend(loc='upper left', fontsize=8)
+
+    ax.set_xlabel('Date')
+    axes[-1].set_xlabel('Date')
+
+    caption = (
+        'Each panel compares the raw daily sentiment trend with reposts kept in place against the deduplicated daily trend after title-based duplicate removal.'
+    )
+    fig.text(0.5, -0.03, caption, ha='center', fontsize=9)
+    _save_figure(fig, OUTPUT_DIR / 'daily_sentiment_trend.png')
+
+    export_df = panel.copy()
+    export_df['Date'] = export_df['Date'].dt.strftime('%Y-%m-%d')
+    _save_csv(export_df, OUTPUT_DIR / 'duplicate_repost_sentiment_trends.csv')
 
 
 def plot_top20_contributors(deduped_posts: pd.DataFrame) -> None:
@@ -803,6 +931,7 @@ def generate_eda_storytelling() -> None:
     _save_csv(daily_finbert_df, OUTPUT_DIR / 'daily_finbert_sentiment.csv')
 
     plot_duplicate_repost_impact(raw_posts, deduped_posts)
+    plot_duplicate_repost_sentiment_trends(raw_posts, deduped_posts)
     plot_top20_contributors(deduped_posts)
     plot_sentiment_model_comparison(raw_sentiment_df, daily_finbert_df)
     plot_raw_sentiment_trends(raw_sentiment_df, daily_finbert_df)

@@ -1,6 +1,8 @@
 import numpy as np
 
-def create_features(df):
+
+def create_features(df, sentiment_column=None):
+    df = df.copy()
 
     # Daily Returns
     df['Return'] = (
@@ -26,7 +28,11 @@ def create_features(df):
     )
 
     # Lagged Sentiment Features
-    sentiment_column = 'FinBERT_Sentiment' if 'FinBERT_Sentiment' in df.columns else 'Avg_Sentiment'
+    if sentiment_column is None:
+        sentiment_column = 'FinBERT_Sentiment' if 'FinBERT_Sentiment' in df.columns else 'Avg_Sentiment'
+
+    if sentiment_column not in df.columns:
+        raise KeyError(f"Sentiment column '{sentiment_column}' not found in dataframe.")
 
     df['Sentiment_Lag_1'] = (
         df[sentiment_column].shift(1)
