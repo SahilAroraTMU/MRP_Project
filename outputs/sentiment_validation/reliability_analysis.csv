@@ -1,31 +1,31 @@
-Date,text,score,VADER_Sentiment,TextBlob_Sentiment,FinBERT_Sentiment,VADER_Label,TextBlob_Label,FinBERT_Label
-2021-11-02,This MOASS thing is messing with my tsla calls,2,0.0,0.0,-0.8296898230910301,Neutral,Neutral,Extremely Negative
-2021-12-16,Swinging a tsla call that I’ll probably sell for 150% and watch it go to 1000%,14,0.0,0.0,0.06162481103092432,Neutral,Neutral,Neutral
-2022-01-14,Hoping for tsla sub 1000 today,6,0.4215,0.0,0.18566667940467596,Positive,Neutral,Neutral
-2022-05-21,It was stupid to get in TSLA but people still made bank.,0,-0.296,-0.7999999999999999,-0.008958425372838974,Negative,Extremely Negative,Neutral
-2022-06-18,"Stop I can't get any harder. Ok, I lied, if my TSLA puts payout after enduring 2 margin calls I will get harder.",2,-0.5859,0.1,0.13955195248126984,Negative,Neutral,Neutral
-2021-07-10,Dogecoin Creator Reflects On Why He Put Money In His Savings Account And Not DOGE - Tesla Motors (TSLA),1,0.0,0.0,0.005577605217695236,Neutral,Neutral,Neutral
-2021-12-30,Imagine watching your TSLA Puts evaporate 🤡🤡🤡,13,0.0,0.0,-0.11320433206856251,Neutral,Neutral,Neutral
+Date,text,score,VADER_Sentiment,TextBlob_Sentiment,FinBERT_Sentiment,VADER_Label,TextBlob_Label,FinBERT_Label,Manual_Sentiment_Label,Manual_Evaluation_Reason
+2021-11-02,This MOASS thing is messing with my tsla calls,2,0.0,0.0,-0.8296898230910301,Neutral,Neutral,Extremely Negative,Negative,loss or regret on trade
+2021-12-16,Swinging a tsla call that I’ll probably sell for 150% and watch it go to 1000%,14,0.0,0.0,0.06162481103092432,Neutral,Neutral,Neutral,Positive,bullish or favorable stance
+2022-01-14,Hoping for tsla sub 1000 today,6,0.4215,0.0,0.18566667940467596,Positive,Neutral,Neutral,Negative,bearish or critical stance
+2022-05-21,It was stupid to get in TSLA but people still made bank.,0,-0.296,-0.7999999999999999,-0.008958425372838974,Negative,Extremely Negative,Neutral,Positive,bullish or favorable stance
+2022-06-18,"Stop I can't get any harder. Ok, I lied, if my TSLA puts payout after enduring 2 margin calls I will get harder.",2,-0.5859,0.1,0.1395524591207504,Negative,Neutral,Neutral,Negative,bearish or critical stance
+2021-07-10,Dogecoin Creator Reflects On Why He Put Money In His Savings Account And Not DOGE - Tesla Motors (TSLA),1,0.0,0.0,0.0055776629596948,Neutral,Neutral,Neutral,Neutral,question or mechanics only
+2021-12-30,Imagine watching your TSLA Puts evaporate 🤡🤡🤡,13,0.0,0.0,-0.11320433206856251,Neutral,Neutral,Neutral,Positive,bullish against bears
 2022-01-26,"JPOW: I look forward to your questions.
 
 
-Random dude: TSLA stock split when?",9,0.0,-0.5,-0.03191184811294079,Neutral,Negative,Neutral
-2021-09-25,Jesus christ man I've been non-stop averaging into TSLA stock since 2015 and you still have more separate tax lots than me.,2,0.0,0.5,0.016740936785936356,Neutral,Positive,Neutral
+Random dude: TSLA stock split when?",9,0.0,-0.5,-0.03191184811294079,Neutral,Negative,Neutral,Neutral,question or mechanics only
+2021-09-25,Jesus christ man I've been non-stop averaging into TSLA stock since 2015 and you still have more separate tax lots than me.,2,0.0,0.5,0.016740936785936356,Neutral,Positive,Neutral,Neutral,unclear or mixed sentiment
 2022-04-24,"[Indexes take a shit and TSLA only down 0.37% Man, talk about compressing a spring. When we have a nice green day, it's going to explode.](/r/stocks/comments/u9kxee/all_us_indexes_drop_over_2/i5sm059/)
 
 KEYWORD : TSLA DATE : Fri Apr 22 20:23:58 2022 SUBREDDIT : stocks
 
 
 
-[TSLA was insanely weak on the previous day and produced one hell of an ugly daily candle. Sure, there was some relative strength on it today but I wouldn’t count on it exploding higher](/r/stocks/comments/u9kxee/all_us_indexes_drop_over_2/",1,-0.5499,-0.0633838383838383,-0.9281408693641424,Negative,Neutral,Extremely Negative
-2021-10-31,$TSLA,1,0.0,0.0,-0.022675931453704834,Neutral,Neutral,Neutral
-2021-12-17,Sometime in 2022 wen TSLA hits $1500 and PLTR $40 I will legitimately put up a hospitality suite for a weekend at a location voted on by this sub.,7,0.0,0.0,0.010489419102668762,Neutral,Neutral,Neutral
-2022-04-26,Tsla +1 call 1250 strike exp 5/20,1,-0.128,0.0,-0.026402346789836884,Neutral,Neutral,Neutral
-2021-10-04,"10:1, stock splits from 2000 to 200. I had a dream, very vivid, where I saw it happen to ETH2.0, the same dream I met Elon, so somehow interpreting it as a 10:1 split at 2K for TSLA",5,0.4588,0.08125,0.02583322674036026,Positive,Neutral,Neutral
-2022-05-09,TSLA 7-handle today or bust,2,0.0,0.0,0.004018504172563553,Neutral,Neutral,Neutral
-2022-01-19,What's TSLA hitting by EOW?,3,0.0,0.0,-0.06225636787712574,Neutral,Neutral,Neutral
-2021-08-31,"Geez, when did you buy these? Was it at TSLA all time highs around 900?",1,0.0,0.0,0.011716887354850769,Neutral,Neutral,Neutral
-2021-09-11,I think everyone TSLA and TSLAQ alike has whipped themself into an orgasmic froth. We don’t know all the details. Do you have any links proving how much Tesla is spending?,-12,0.0,0.2,-0.06755595654249191,Neutral,Neutral,Neutral
+[TSLA was insanely weak on the previous day and produced one hell of an ugly daily candle. Sure, there was some relative strength on it today but I wouldn’t count on it exploding higher](/r/stocks/comments/u9kxee/all_us_indexes_drop_over_2/",1,-0.5499,-0.0633838383838383,-0.9281408693641424,Negative,Neutral,Extremely Negative,Negative,bearish or critical stance
+2021-10-31,$TSLA,1,0.0,0.0,-0.0226758085191249,Neutral,Neutral,Neutral,Neutral,ticker list or market data
+2021-12-17,Sometime in 2022 wen TSLA hits $1500 and PLTR $40 I will legitimately put up a hospitality suite for a weekend at a location voted on by this sub.,7,0.0,0.0,0.010489419102668762,Neutral,Neutral,Neutral,Positive,bullish or favorable stance
+2022-04-26,Tsla +1 call 1250 strike exp 5/20,1,-0.128,0.0,-0.026402346789836884,Neutral,Neutral,Neutral,Positive,bullish or favorable stance
+2021-10-04,"10:1, stock splits from 2000 to 200. I had a dream, very vivid, where I saw it happen to ETH2.0, the same dream I met Elon, so somehow interpreting it as a 10:1 split at 2K for TSLA",5,0.4588,0.08125,0.02583322674036026,Positive,Neutral,Neutral,Positive,bullish or favorable stance
+2022-05-09,TSLA 7-handle today or bust,2,0.0,0.0,0.004018504172563553,Neutral,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2022-01-19,What's TSLA hitting by EOW?,3,0.0,0.0,-0.06225636787712574,Neutral,Neutral,Neutral,Neutral,question or mechanics only
+2021-08-31,"Geez, when did you buy these? Was it at TSLA all time highs around 900?",1,0.0,0.0,0.011716887354850769,Neutral,Neutral,Neutral,Positive,bullish or favorable stance
+2021-09-11,I think everyone TSLA and TSLAQ alike has whipped themself into an orgasmic froth. We don’t know all the details. Do you have any links proving how much Tesla is spending?,-12,0.0,0.2,-0.06755595654249191,Neutral,Neutral,Neutral,Neutral,question or mechanics only
 2022-05-10,"TSLA P/E at yesterday's closing price ($787.11):
 
 **TTM:** 106.8
@@ -33,101 +33,101 @@ KEYWORD : TSLA DATE : Fri Apr 22 20:23:58 2022 SUBREDDIT : stocks
 
 *edit: Rob Mauer says Tesla is trading at 69x Q1 annualized, I have to check the numbers again!*
 
-*edit2: updated with correct Q1 annualized p/e*",16,-0.5983,0.0,0.003287866711616516,Negative,Neutral,Neutral
-2021-11-11,"Meh. I've been holding TSLA for a few years now. I hear ""overvalued"" all the time. Fundamentals this. P/E that. It's a myopic/limited view that doesn't understand how these companies grow and change over time. I don't compare Rivian or Tesla to legacy auto any more than I would still compare Amazon to Barnes &amp; Noble. Cars and trucks are just where they're getting started. The potential is bigger than the initial market they get their start in.",11,0.5267,0.15,0.03373789228498936,Positive,Neutral,Neutral
-2021-10-25,yall are getting rich of TSLA while I'm holding PLTR waiting for earnings in November.,6,0.5574,0.375,0.11538839712738991,Positive,Positive,Neutral
+*edit2: updated with correct Q1 annualized p/e*",16,-0.5983,0.0,0.003287866711616516,Negative,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2021-11-11,"Meh. I've been holding TSLA for a few years now. I hear ""overvalued"" all the time. Fundamentals this. P/E that. It's a myopic/limited view that doesn't understand how these companies grow and change over time. I don't compare Rivian or Tesla to legacy auto any more than I would still compare Amazon to Barnes &amp; Noble. Cars and trucks are just where they're getting started. The potential is bigger than the initial market they get their start in.",11,0.5267,0.15,0.03373789228498936,Positive,Neutral,Neutral,Positive,defends TSLA valuation
+2021-10-25,yall are getting rich of TSLA while I'm holding PLTR waiting for earnings in November.,6,0.5574,0.375,0.11538839712738991,Positive,Positive,Neutral,Positive,bullish or favorable stance
 2021-09-20,"TSLA 100 is still 500 pre split 
 
-Don’t cry when it gets down there",1,-0.4767,-0.1555555555555555,-0.02934962883591652,Negative,Neutral,Neutral
+Don’t cry when it gets down there",1,-0.4767,-0.1555555555555555,-0.02934962883591652,Negative,Neutral,Neutral,Neutral,question or mechanics only
 2022-04-21,"20 year olds blow $1k on stupid shit over and over again and have nothing to show for it!
 
 Buy 2 shares of TSLA.  So the worst happens and you lose $2200.  Big fn deal!
 
-The best happens and 5 years from now that $2200 is $5k, 10 years maybe is $10000!",1,-0.8609,-0.2099999999999999,-0.13235469534993172,Extremely Negative,Neutral,Neutral
-2021-11-06,People who aren't invested in TSLA that just want the richest person in the world to pay some taxes,1,0.5106,0.0,0.03746379725635052,Positive,Neutral,Neutral
-2021-11-09,Do I take my sorry as 10% or leave this sad 11/12 TSLA 1220 call to bleed out slowly because fuck it thoughts?,2,-0.8236,-0.425,-0.38338733837008476,Extremely Negative,Negative,Negative
-2022-05-20,TSLA ded,4,0.0,0.0,0.02350655570626259,Neutral,Neutral,Neutral
+The best happens and 5 years from now that $2200 is $5k, 10 years maybe is $10000!",1,-0.8609,-0.2099999999999999,-0.13235469534993172,Extremely Negative,Neutral,Neutral,Positive,bullish or favorable stance
+2021-11-06,People who aren't invested in TSLA that just want the richest person in the world to pay some taxes,1,0.5106,0.0,0.03746379725635052,Positive,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2021-11-09,Do I take my sorry as 10% or leave this sad 11/12 TSLA 1220 call to bleed out slowly because fuck it thoughts?,2,-0.8236,-0.425,-0.38338733837008476,Extremely Negative,Negative,Negative,Negative,loss or regret on trade
+2022-05-20,TSLA ded,4,0.0,0.0,0.02350655570626259,Neutral,Neutral,Neutral,Negative,bearish or critical stance
 2021-12-10,"The index can decline even if earnings multipliers decrease. If the market decides that TSLA deserves a 30x multiplier instead of 300x, it would drop 90%. Apple has often traded around 15x earnings and is now around 30, so the stock could drop by half while still making massive profits.
 
-On the other hand, PE ratios could increase if the bull market intensifies. The Nikkei reached an average of like 65 before it crashed in the 80s, so 30 is not necessarily an upper limit. If that happened, we could see TQQQ",2,0.7964,-0.0883333333333333,-0.954148143529892,Extremely Positive,Neutral,Extremely Negative
-2022-04-20,TSLA $1200 ✨🚀,1,0.3182,0.0,0.03069770522415638,Positive,Neutral,Neutral
-2021-11-15,"I've sold chunks of TSLA multiple times as it's gone up and reinvested the proceeds. Meanwhile, its overall course is up, and maybe I get to vote to fire Elon from the rest of his positions someday.",2,-0.34,0.0,-0.042269714176654816,Negative,Neutral,Neutral
-2021-11-03,Tsla is done for now,9,0.0,0.0,-0.031062334775924683,Neutral,Neutral,Neutral
-2021-09-15,TSLA powerwall.,1,0.0,0.0,0.01115756668150425,Neutral,Neutral,Neutral
+On the other hand, PE ratios could increase if the bull market intensifies. The Nikkei reached an average of like 65 before it crashed in the 80s, so 30 is not necessarily an upper limit. If that happened, we could see TQQQ",2,0.7964,-0.0883333333333333,-0.954148143529892,Extremely Positive,Neutral,Extremely Negative,Negative,bearish or critical stance
+2022-04-20,TSLA $1200 ✨🚀,1,0.3182,0.0,0.03069770522415638,Positive,Neutral,Neutral,Positive,bullish or favorable stance
+2021-11-15,"I've sold chunks of TSLA multiple times as it's gone up and reinvested the proceeds. Meanwhile, its overall course is up, and maybe I get to vote to fire Elon from the rest of his positions someday.",2,-0.34,0.0,-0.042269714176654816,Negative,Neutral,Neutral,Positive,bullish or favorable stance
+2021-11-03,Tsla is done for now,9,0.0,0.0,-0.031062334775924683,Neutral,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2021-09-15,TSLA powerwall.,1,0.0,0.0,0.01115756668150425,Neutral,Neutral,Neutral,Neutral,unclear or mixed sentiment
 2021-12-06,"Certainly not the end goal. But at 23 years old a million offers a good stepping stone for greater things. And the TSLA investment opportunity will not be over by then. 
 
-Also I could definitely leanfire on a million $.",3,0.9437,0.2154761904761904,0.13267168682068586,Extremely Positive,Neutral,Neutral
-2021-09-18,Burrys TSLA puts gonna print,111,0.0,0.0,-0.006045326590538025,Neutral,Neutral,Neutral
+Also I could definitely leanfire on a million $.",3,0.9437,0.2154761904761904,0.13267168682068586,Extremely Positive,Neutral,Neutral,Positive,bullish or favorable stance
+2021-09-18,Burrys TSLA puts gonna print,111,0.0,0.0,-0.006045326590538025,Neutral,Neutral,Neutral,Negative,bearish or critical stance
 2022-05-03,"&gt;a month ago 
 
-Yes, as was every other stock or do you only pay attention to and seethe over Musk's stock? Brainlet. You clowns were cheering tsla going down to low 800s. Called it the end of tsla. Lmao!",1,0.8268,0.0938888888888888,-0.7128001116216183,Extremely Positive,Neutral,Negative
+Yes, as was every other stock or do you only pay attention to and seethe over Musk's stock? Brainlet. You clowns were cheering tsla going down to low 800s. Called it the end of tsla. Lmao!",1,0.8268,0.0938888888888888,-0.7128001116216183,Extremely Positive,Neutral,Negative,Neutral,unclear or mixed sentiment
 2021-11-09,"Even $WISH is up...lol.
 
 I have or track about 60 stocks and somehow after a great earnings report, $CLOV is in the bottom 5 with TSLA, RMO, HIVE, AMC.  Even those had great green days over the last weeks to more than make up for being in the bottom 5.  $CLOV?  Not so much.
 
-It is not a ""market"" thing.  And it's not about a squeeze for me anymore and I think others have gotten past that too for the most part.  We just want an investment that performs within reason.  Not with every 2-3% gain be followed by 5",5,0.9463,0.29375,0.1839212328195572,Extremely Positive,Positive,Neutral
+It is not a ""market"" thing.  And it's not about a squeeze for me anymore and I think others have gotten past that too for the most part.  We just want an investment that performs within reason.  Not with every 2-3% gain be followed by 5",5,0.9463,0.29375,0.1839212328195572,Extremely Positive,Positive,Neutral,Positive,bullish or favorable stance
 2022-01-05,"&gt; TSLA
 
-Moze usput i u Rimac ulozit malo. Slicne su kompanije.",1,0.0,0.0,0.059047795832157135,Neutral,Neutral,Neutral
+Moze usput i u Rimac ulozit malo. Slicne su kompanije.",1,0.0,0.0,0.059047795832157135,Neutral,Neutral,Neutral,Neutral,unclear or mixed sentiment
 2021-12-21,"you own 100 shares of tsla which are worth $1000 each today. I believe tsla is going to crash to nothing because they make shit cars. I agree to pay you $100 today in exchange for your shares and a promise to return your shares to you in 6 months. I take your shares, sell them all today at $1000 and collect my profits. 6 months from now, if i'm right, i buy back 100 shares at $1 a piece and give them back to you.
 
-If the stock jumps to $2500, i still have to deliver you the 100 shares as promised and i lose",9,0.8979,0.1642857142857142,-0.10836438834667206,Extremely Positive,Neutral,Neutral
+If the stock jumps to $2500, i still have to deliver you the 100 shares as promised and i lose",9,0.8979,0.1642857142857142,-0.10836438834667206,Extremely Positive,Neutral,Neutral,Negative,bearish or critical stance
 2022-03-26,"[$TSLA pick up day journey](https://imgur.com/a/wFA3Jsz). 
 
 Pick up was easy. Handed over a check and she asked if I needed any help and said not really. Walked to car gave me 10 minutes to get acclimated. Came back asked if good and hit the road. I asked if Elon around she said I just missed him 😉. I live 230 miles from pickup site and she said I was already the 4th pick up from my city and another arrived just after me. 
 
-I watched abot 100 videos before pick up and I guess the biggest thing I didn’t know",30,0.743,0.2339393939393939,0.016026031225919724,Positive,Neutral,Neutral
-2021-11-05,F. Schmerzt so sehr wie sich alle hier für ihre TSLA und NVDA Gains abfeiern.,2,0.34,0.0,0.052917711436748505,Positive,Neutral,Neutral
+I watched abot 100 videos before pick up and I guess the biggest thing I didn’t know",30,0.743,0.2339393939393939,0.016026031225919724,Positive,Neutral,Neutral,Positive,bullish or favorable stance
+2021-11-05,F. Schmerzt so sehr wie sich alle hier für ihre TSLA und NVDA Gains abfeiern.,2,0.34,0.0,0.052917711436748505,Positive,Neutral,Neutral,Positive,bullish or favorable stance
 2022-02-11,"oh well, no, i don't think forgive is the right word. she accepted and moved on by way of sleeping and waking up and forgetting about all of it.
 
-however, tsla moved enough for me to close my strangle and that is great because i'm not feeling trading today",5,0.7283,0.3619047619047619,0.2601994350552559,Positive,Positive,Positive
-2021-10-27,"Wow this is a brazen lie. Plus TSLA has largely paid back most of its loans to the feds. Which was a rounding of error compared to the Unlike the mega corps and financial cos that were bailed out during that time, and don’t receive a fraction of the hate from ‘progressive’ clowns like Sanders or the Squad. Almost like they are in the pockets of companies like GM who did get bailed out and whom the Biden admin is gushing on while largely ignoring or targeting the one company that has actually made substantiv",1,0.228,0.0285714285714285,-0.48558979108929634,Neutral,Neutral,Negative
-2022-01-07,"Even TSLA bro, i feel like the rate hikes corrections will drop TSLA just like the previous dips we got on september and december dropped some of the overvalued stocks like paypal",3,0.6597,-0.1666666666666666,-0.8559032212942839,Positive,Neutral,Extremely Negative
+however, tsla moved enough for me to close my strangle and that is great because i'm not feeling trading today",5,0.7283,0.3619047619047619,0.2601994350552559,Positive,Positive,Positive,Positive,bullish or favorable stance
+2021-10-27,"Wow this is a brazen lie. Plus TSLA has largely paid back most of its loans to the feds. Which was a rounding of error compared to the Unlike the mega corps and financial cos that were bailed out during that time, and don’t receive a fraction of the hate from ‘progressive’ clowns like Sanders or the Squad. Almost like they are in the pockets of companies like GM who did get bailed out and whom the Biden admin is gushing on while largely ignoring or targeting the one company that has actually made substantiv",1,0.228,0.0285714285714285,-0.48558979108929634,Neutral,Neutral,Negative,Neutral,unclear or mixed sentiment
+2022-01-07,"Even TSLA bro, i feel like the rate hikes corrections will drop TSLA just like the previous dips we got on september and december dropped some of the overvalued stocks like paypal",3,0.6597,-0.1666666666666666,-0.8559032212942839,Positive,Neutral,Extremely Negative,Negative,bearish or critical stance
 2022-05-09,"and gyna is fucked and responsible for 100% of their profitability (at least in 2021 they were), supply chains are fucked, two new factories that can't produce shit because of said fucked supply chain, elon under investigation by basically every regulatory agency there is, and probably a lot of other shit i'm forgetting
 
-long story short, TSLA to 1200 probably",1,-0.9095,-0.2126033057851239,-0.8346870839595795,Extremely Negative,Neutral,Extremely Negative
-2021-11-16,if you invested 70k in TSLA 2 years ago you’d be a millionaire (and delusional too?),-2,0.0,0.0,-0.06719961017370224,Neutral,Neutral,Neutral
-2022-03-13,Just buy more TSLA &amp; AMZN,24,0.0,0.5,0.19212318398058414,Neutral,Positive,Neutral
+long story short, TSLA to 1200 probably",1,-0.9095,-0.2126033057851239,-0.8346870839595795,Extremely Negative,Neutral,Extremely Negative,Negative,bearish or critical stance
+2021-11-16,if you invested 70k in TSLA 2 years ago you’d be a millionaire (and delusional too?),-2,0.0,0.0,-0.06719961017370224,Neutral,Neutral,Neutral,Positive,bullish or favorable stance
+2022-03-13,Just buy more TSLA &amp; AMZN,24,0.0,0.5,0.19212318398058414,Neutral,Positive,Neutral,Positive,bullish or favorable stance
 2022-04-27,"TSLA
-Please go back down thanks",4,0.6369,0.0148148148148148,-0.015555961057543755,Positive,Neutral,Neutral
+Please go back down thanks",4,0.6369,0.0148148148148148,-0.015555961057543755,Positive,Neutral,Neutral,Negative,bearish or critical stance
 2022-02-17,"Patience. Time.
 
 This is appropriately labeled a \_\_\_\_post.
 
 This is an EV stock.....look at any other EV stock.  Look at TSLA in its' infancy.  Look at the craziness of the market.  Look at the fed's conversations about interest rates.  Look at global supply chains.  Look at the global labor market.
 
-Or sell.  Then you won't have to worry about it",3,0.4226,0.09375,0.005426865071058273,Positive,Neutral,Neutral
-2021-08-19,Can’t believe I didn’t just drop these TSLA 700cs. Really thought they’d be ITM today. Back to being completely fucked god dammit why am I this stupid,13,-0.8561,-0.3,-0.5582471452653408,Extremely Negative,Negative,Negative
-2021-11-16,"Elon has dumped 7 million shares, he has another 9 million to go at least.  He might even dump more than that.  $tsla trading just below $1000 right now premarket.",10,-0.4767,0.1619047619047619,-0.6679358333349228,Negative,Neutral,Negative
-2021-10-25,TSLA open at $1050. Who disagrees,9,-0.3182,0.0,-0.14093280583620071,Negative,Neutral,Neutral
-2021-12-28,Load the fucking boat TSLA,7,0.0,-0.6,-0.008487865328788757,Neutral,Negative,Neutral
-2021-10-02,How does VIX being pumped help the TSLA puts premium?,0,0.4019,0.0,0.09433987364172935,Positive,Neutral,Neutral
-2021-12-07,Is the TSLA 420k calls guy still alive?,4,0.3818,0.1,-0.09854733198881149,Positive,Neutral,Neutral
+Or sell.  Then you won't have to worry about it",3,0.4226,0.09375,0.005426865071058273,Positive,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2021-08-19,Can’t believe I didn’t just drop these TSLA 700cs. Really thought they’d be ITM today. Back to being completely fucked god dammit why am I this stupid,13,-0.8561,-0.3,-0.5582471452653408,Extremely Negative,Negative,Negative,Negative,bearish or critical stance
+2021-11-16,"Elon has dumped 7 million shares, he has another 9 million to go at least.  He might even dump more than that.  $tsla trading just below $1000 right now premarket.",10,-0.4767,0.1619047619047619,-0.6679358333349228,Negative,Neutral,Negative,Negative,bearish or critical stance
+2021-10-25,TSLA open at $1050. Who disagrees,9,-0.3182,0.0,-0.14093280583620071,Negative,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2021-12-28,Load the fucking boat TSLA,7,0.0,-0.6,-0.008487865328788757,Neutral,Negative,Neutral,Neutral,unclear or mixed sentiment
+2021-10-02,How does VIX being pumped help the TSLA puts premium?,0,0.4019,0.0,0.09433987364172935,Positive,Neutral,Neutral,Neutral,question or mechanics only
+2021-12-07,Is the TSLA 420k calls guy still alive?,4,0.3818,0.1,-0.09854733198881149,Positive,Neutral,Neutral,Positive,bullish or favorable stance
 2022-03-18,"Jim Chanos shorts COIN.  This is the same genius famous for getting deballed trying to short TSLA.  
 
-May his nuts rot on the vine.",1,-0.3182,0.1666666666666666,-0.22340595535933971,Negative,Neutral,Neutral
-2022-04-07,"Just need a 10% day out of TSLA easy, right?",7,0.4404,0.3595238095238095,0.05622471868991852,Positive,Positive,Neutral
-2022-04-07,TSLA avoider reporting,4,-0.4215,0.0,-0.25022662803530693,Negative,Neutral,Negative
-2021-11-11,"It looks like the price of $TSLA went up on 11/10, when he sold all those shares. I had always assumed that a big sell off like that would cause the price to plummet. Why didn’t it?",75,0.7351,0.0,-0.24350064247846603,Positive,Neutral,Neutral
-2021-12-30,Why tsla,-1,0.0,0.0,-0.01786477491259575,Neutral,Neutral,Neutral
-2022-05-20,die TSLA die,6,-0.8316,0.0,0.009195094928145409,Extremely Negative,Neutral,Neutral
+May his nuts rot on the vine.",1,-0.3182,0.1666666666666666,-0.22340595535933971,Negative,Neutral,Neutral,Negative,bearish or critical stance
+2022-04-07,"Just need a 10% day out of TSLA easy, right?",7,0.4404,0.3595238095238095,0.05622471868991852,Positive,Positive,Neutral,Neutral,question or mechanics only
+2022-04-07,TSLA avoider reporting,4,-0.4215,0.0,-0.25022662803530693,Negative,Neutral,Negative,Neutral,unclear or mixed sentiment
+2021-11-11,"It looks like the price of $TSLA went up on 11/10, when he sold all those shares. I had always assumed that a big sell off like that would cause the price to plummet. Why didn’t it?",75,0.7351,0.0,-0.24350064247846603,Positive,Neutral,Neutral,Negative,bearish or critical stance
+2021-12-30,Why tsla,-1,0.0,0.0,-0.01786477491259575,Neutral,Neutral,Neutral,Neutral,question or mechanics only
+2022-05-20,die TSLA die,6,-0.8316,0.0,0.009195094928145409,Extremely Negative,Neutral,Neutral,Negative,bearish or critical stance
 2022-03-03,"[Fidelity Retail Order Flow](https://imgur.com/a/msge7rf)
 
 Not much on the docket today. Picked up just a little TSLA and BST. 
 
 Need to work today and happy hour trivia tonite. Maybe help son look for that house. 
 
-☮️",5,0.872,0.1708333333333333,0.038818467408418655,Extremely Positive,Neutral,Neutral
+☮️",5,0.872,0.1708333333333333,0.038818467408418655,Extremely Positive,Neutral,Neutral,Neutral,unclear or mixed sentiment
 2021-12-07,"he answered above your comment   
 
 
-CRWD MDB ABNB FVRR DASH SNOW TSLA SI NVDA",3,0.0,0.0,0.06001483276486397,Neutral,Neutral,Neutral
-2021-10-28,He actually bought puts in December as well when tsla was like 400. That's when he first announced on Twitter that he was short tsla. Media advertised his short position when tsla dropped from 900 to like 700.,3,0.7269,0.0625,-0.38118767738342285,Positive,Neutral,Negative
-2022-05-05,TSLA needs to do better to grab my attention,1,0.4404,0.5,0.053589943796396255,Positive,Positive,Neutral
+CRWD MDB ABNB FVRR DASH SNOW TSLA SI NVDA",3,0.0,0.0,0.06001483276486397,Neutral,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2021-10-28,He actually bought puts in December as well when tsla was like 400. That's when he first announced on Twitter that he was short tsla. Media advertised his short position when tsla dropped from 900 to like 700.,3,0.7269,0.0625,-0.38118767738342285,Positive,Neutral,Negative,Negative,bearish or critical stance
+2022-05-05,TSLA needs to do better to grab my attention,1,0.4404,0.5,0.053589943796396255,Positive,Positive,Neutral,Neutral,unclear or mixed sentiment
 2021-10-26,"[&gt; Remove GM and Ford's debt and give them a 50% CAGR for the foreseeable future, their valuation would be sky high too.  That would help, but they don't have Tesla's gross margins.  If their debt went away tomorrow, they'd have to go heavily back into debt to try to catch up to Tesla on tech/features in 5-10 years.  This is like Border's Books trying to catch up to Amazon (hint: they died in 2011).](/r/wallstreetbets/comments/qfi5wf/i_give_up/hi28twl/)
 
-NYSE:GM DATE : Tue Oct 26 01:40:02 2021 SUBREDDIT ",1,-0.5674,0.04,0.01843366213142872,Negative,Neutral,Neutral
-2022-03-30,Tbf Tsla usually doesn’t drop that far down and then when it runs it really runs.,1,-0.2732,-0.0263888888888888,-0.10966315120458603,Negative,Neutral,Neutral
+NYSE:GM DATE : Tue Oct 26 01:40:02 2021 SUBREDDIT ",1,-0.5674,0.04,0.01843366213142872,Negative,Neutral,Neutral,Positive,bullish or favorable stance
+2022-03-30,Tbf Tsla usually doesn’t drop that far down and then when it runs it really runs.,1,-0.2732,-0.0263888888888888,-0.10966315120458603,Negative,Neutral,Neutral,Negative,bearish or critical stance
 2022-02-23,"I completely agree with your assessment. So here is the Billion Dollar question, what is holding up the S&amp;P and other indexes if so many stocks have been decimated?
 
 The big ones are all down. Just today for example all of the top 10 are down more than SPY except Goog, Brk.B and UNH.
@@ -135,10 +135,10 @@ The big ones are all down. Just today for example all of the top 10 are down mor
 \#	Company	Symbol	Weight	      Price	Chg	% Chg  
 1	Apple Inc.	AAPL	7.025936	   160.45	-3.88	(-2.36%)  
 2	Microsoft Corporation	MSFT	5.925248	   280.63	-7.10	(-2.47%)  
-3	Amazon.com Inc.	AMZN	3.594059	   2,901.99	-101.96	(-",2,0.5563,0.1454861111111111,-0.8983744895085692,Positive,Neutral,Extremely Negative
-2021-10-11,"It's my girlfriend's car, so she chose MSM with white interior just like the one she test-drove at a Tesla event. Mine was white with black interior. Hers is a much rarer combination. I WFH and wasn't driving much so I sold my car to buy TSLA stock. :)",1,0.6705,0.1222222222222222,-0.0021617114543914795,Positive,Neutral,Neutral
-2022-05-10,"I know, I got some TSLA and QQQ calls just sitting and chilling",2,-0.0258,-0.5,0.027419518679380417,Neutral,Negative,Neutral
-2021-10-03,"It's the height of irony and lack of awareness that someone from Wall Street Bets (whose entire raison d'etre is to pump GME) is accusing TSLA of being a ""religion.""",0,-0.4939,0.0,-0.8532441603019834,Negative,Neutral,Extremely Negative
+3	Amazon.com Inc.	AMZN	3.594059	   2,901.99	-101.96	(-",2,0.5563,0.1454861111111111,-0.8983744895085692,Positive,Neutral,Extremely Negative,Neutral,question or mechanics only
+2021-10-11,"It's my girlfriend's car, so she chose MSM with white interior just like the one she test-drove at a Tesla event. Mine was white with black interior. Hers is a much rarer combination. I WFH and wasn't driving much so I sold my car to buy TSLA stock. :)",1,0.6705,0.1222222222222222,-0.0021617114543914795,Positive,Neutral,Neutral,Positive,bullish or favorable stance
+2022-05-10,"I know, I got some TSLA and QQQ calls just sitting and chilling",2,-0.0258,-0.5,0.027419518679380417,Neutral,Negative,Neutral,Positive,bullish or favorable stance
+2021-10-03,"It's the height of irony and lack of awareness that someone from Wall Street Bets (whose entire raison d'etre is to pump GME) is accusing TSLA of being a ""religion.""",0,-0.4939,0.0,-0.8532441603019834,Negative,Neutral,Extremely Negative,Neutral,unclear or mixed sentiment
 2021-12-23,"The best way to deal with FOMO is to remember there's always going to be future plays to make in the market.
 
 Today MU 0DTEs were 10-15 baggers if you played them right.  Past 2 days TSLA has done that.  Over the past 3 days, SPY has been a 10-bagger on 3DTEs.
@@ -147,12 +147,12 @@ That's 3 plays this week and there were countless other plays that would have wo
 
 You just have to be patient and wait for the next ones to come into view.  There will always be other plays.
 
-If you absolutely have the itch to FOMO and can't sha",13,0.9118,0.0735714285714285,-0.047315508127212524,Extremely Positive,Neutral,Neutral
-2022-01-03,"That's a massive bet.  I wish you success in the coming months.  I've always been amazed by people who can afford Tesla options.  The way the option system in US trading is set up (each contract automatically = 100units), it is literally hopeless for small traders on the stocks with big unit-price.  I've always wanted to get in on options of these bigger stocks like TSLA and NVDA but goddamn buying 1 contract is like betting away a quarter of my portfolio.",3,0.4854,0.0099999999999999,-0.03148208186030388,Positive,Neutral,Neutral
+If you absolutely have the itch to FOMO and can't sha",13,0.9118,0.0735714285714285,-0.047315508127212524,Extremely Positive,Neutral,Neutral,Positive,bullish or favorable stance
+2022-01-03,"That's a massive bet.  I wish you success in the coming months.  I've always been amazed by people who can afford Tesla options.  The way the option system in US trading is set up (each contract automatically = 100units), it is literally hopeless for small traders on the stocks with big unit-price.  I've always wanted to get in on options of these bigger stocks like TSLA and NVDA but goddamn buying 1 contract is like betting away a quarter of my portfolio.",3,0.4854,0.0099999999999999,-0.03148208186030388,Positive,Neutral,Neutral,Positive,bullish or favorable stance
 2021-10-25,"&gt;TESLA SHARES CROSS $1000 LEVEL FOR THE FIRST TIME, LAST UP 10% $TSLA
 
-^FXHedge ^[@Fxhedgers](http://twitter.com/Fxhedgers) ^at ^2021-10-25 ^14:16:23 ^EDT-0400",3,0.4466,0.0833333333333333,0.8885495625436306,Positive,Neutral,Extremely Positive
-2022-01-07,I tweeted Elon and said his bussy too loose if he won’t let TSLA fall below 1k. Waiting for him to dump eet.,2,-0.5994,-0.0769230769230769,-0.25057153403759,Negative,Neutral,Negative
+^FXHedge ^[@Fxhedgers](http://twitter.com/Fxhedgers) ^at ^2021-10-25 ^14:16:23 ^EDT-0400",3,0.4466,0.0833333333333333,0.8885495625436306,Positive,Neutral,Extremely Positive,Positive,bullish or favorable stance
+2022-01-07,I tweeted Elon and said his bussy too loose if he won’t let TSLA fall below 1k. Waiting for him to dump eet.,2,-0.5994,-0.0769230769230769,-0.25057153403759,Negative,Neutral,Negative,Negative,bearish or critical stance
 2021-12-13,"Top: 
 
 - GME +800%
@@ -169,47 +169,1122 @@ Flop:
 
 - TSLA Puts -80%
 
-Niemals gegen Elon wetten ...",1,-0.1531,0.5,0.024370530620217323,Neutral,Positive,Neutral
-2021-07-27,One day the market will understand TSLA true value and actually go up after earnings,3,0.6369,0.175,0.6913317563012242,Positive,Neutral,Positive
-2022-05-02,Did that mf'er with the $87 trillion TSLA order nuke the market yet?,1,0.0,0.0,-0.17144102230668068,Neutral,Neutral,Neutral
-2022-02-12,"[Do you not know that after a major correction or recession the next progression is a bull run? I mean seriously dude go back to school you sound so under educated. The thing you still haven't grasped is that that run will not happen for at a minimum of a year from now and can likely even take 2-4 years. Enjoy jerking off to your loss porn for that long buddy. Just make sure you post it here for the rest of us to enjoy.  Also, Buffet holds massive multi-billion dollar companies. Nothing he's long on is a sh",1,0.3892,0.0782051282051282,-0.06414463743567467,Positive,Neutral,Neutral
-2022-03-14,TSLA January 2023 2000C,5,0.0,0.0,-0.02921748161315918,Neutral,Neutral,Neutral
+Niemals gegen Elon wetten ...",1,-0.1531,0.5,0.024370530620217323,Neutral,Positive,Neutral,Neutral,unclear or mixed sentiment
+2021-07-27,One day the market will understand TSLA true value and actually go up after earnings,3,0.6369,0.175,0.6913317563012242,Positive,Neutral,Positive,Positive,bullish or favorable stance
+2022-05-02,Did that mf'er with the $87 trillion TSLA order nuke the market yet?,1,0.0,0.0,-0.17144102230668068,Neutral,Neutral,Neutral,Neutral,question or mechanics only
+2022-02-12,"[Do you not know that after a major correction or recession the next progression is a bull run? I mean seriously dude go back to school you sound so under educated. The thing you still haven't grasped is that that run will not happen for at a minimum of a year from now and can likely even take 2-4 years. Enjoy jerking off to your loss porn for that long buddy. Just make sure you post it here for the rest of us to enjoy.  Also, Buffet holds massive multi-billion dollar companies. Nothing he's long on is a sh",1,0.3892,0.0782051282051282,-0.06414463743567467,Positive,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2022-03-14,TSLA January 2023 2000C,5,0.0,0.0,-0.02921748161315918,Neutral,Neutral,Neutral,Neutral,unclear or mixed sentiment
 2022-05-03,"It is a bargin, the world economic conditions are much more challenging than they have been the last few years. The FED is expected to raise rates 3 more times this year, the q1 GDP was -1.4%. For some reason the chiense market is shut down until the 5th of May.  Eric1004? just placed a 867x1.09\^10 TSLA call order. Oil is spiking, Gold is spiking. Wells FArgo just dumped 800+ Mortage loan processors, Jim Cramer says we reached the bottom. ARC lady says shits about to go up.  
 
 
-Hopefully Bill Hawang is sin",1,-0.5279,0.1555555555555555,-0.6580275949090719,Negative,Neutral,Negative
-2021-07-27,The new rule well not be a controlled squeeze . It well be a controlled sell off of TSLA and apple and all HFS other positions AFTER the moas starts. Ths is to mitigate the damage done ! Remember it is not possible for the dtcc to control buying .,2,0.0,-0.0066287878787878,0.03359100967645645,Neutral,Neutral,Neutral
+Hopefully Bill Hawang is sin",1,-0.5279,0.1555555555555555,-0.6580275949090719,Negative,Neutral,Negative,Negative,bearish or critical stance
+2021-07-27,The new rule well not be a controlled squeeze . It well be a controlled sell off of TSLA and apple and all HFS other positions AFTER the moas starts. Ths is to mitigate the damage done ! Remember it is not possible for the dtcc to control buying .,2,0.0,-0.0066287878787878,0.03359100967645645,Neutral,Neutral,Neutral,Negative,bearish or critical stance
 2022-02-23,"Gary Black has decided to kill his TSLA self for some reason.
 
-https://twitter.com/garyblack00/status/1495837322667073545?s=20",9,-0.6908,-0.1666666666666666,-0.5090915933251381,Negative,Neutral,Negative
-2022-05-19,Details of his past are being revealed now that the $TSLA money train has derailed,6,-0.34,-0.25,-0.43257591128349304,Negative,Negative,Negative
-2022-04-11,"TSLA did a nice little jump,1,087 to 1,000 in 15 minutes.",0,0.4215,0.20625,0.6886277999728918,Positive,Neutral,Positive
-2022-02-28,"Sounds like a good chance to power bottom for her then. ""Let's ride you like you ride TSLA.""",6,0.836,0.7,0.07763774134218693,Extremely Positive,Positive,Neutral
+https://twitter.com/garyblack00/status/1495837322667073545?s=20",9,-0.6908,-0.1666666666666666,-0.5090915933251381,Negative,Neutral,Negative,Neutral,unclear or mixed sentiment
+2022-05-19,Details of his past are being revealed now that the $TSLA money train has derailed,6,-0.34,-0.25,-0.43257591128349304,Negative,Negative,Negative,Neutral,unclear or mixed sentiment
+2022-04-11,"TSLA did a nice little jump,1,087 to 1,000 in 15 minutes.",0,0.4215,0.20625,0.6886277999728918,Positive,Neutral,Positive,Neutral,unclear or mixed sentiment
+2022-02-28,"Sounds like a good chance to power bottom for her then. ""Let's ride you like you ride TSLA.""",6,0.836,0.7,0.07763774134218693,Extremely Positive,Positive,Neutral,Positive,bullish or favorable stance
 2022-01-17,"Can someone help this noob out with understanding writing options?
 
 I've got 100 TSLA shares in my account. Say I write a call option for $1600, expires end of March. Someone buys it, I get the premium, if it stays under $1600 I get to keep my 100 TSLA shares.
 
 BUT
 
-If it goes to $1600 before expiry, I'll lose the shares right. But I want to keep my shares long term. How do I hedge against that, and what's the worst case scenario for my losses if the call doesn't go my way?",12,-0.7299,-0.2547619047619047,-0.13422473892569542,Negative,Negative,Neutral
-2021-12-06,TSLA could be on full-blown reversal here.  1010 will be key,1,0.0,0.0,-0.25959616899490356,Neutral,Neutral,Negative
-2021-10-18,"From this list does it look that way? I bet mostly on sava, tsla. But would like to have a list to look at before every Monday. No harm in looking at the data and take a data driven decision IMHO",1,0.792,0.5,0.0022398531436920166,Extremely Positive,Positive,Neutral
-2021-12-03,Elon dumping TSLA around the same time he says SpaceX needs access to liquidity can't be a coincidence. I guarantee he cares more about SpaceX than Tesla.,0,0.4019,0.25,-0.016728390008211136,Positive,Positive,Neutral
-2021-11-22,imagine not having tsla calls,-1,0.0,0.0,-0.004813220351934433,Neutral,Neutral,Neutral
+If it goes to $1600 before expiry, I'll lose the shares right. But I want to keep my shares long term. How do I hedge against that, and what's the worst case scenario for my losses if the call doesn't go my way?",12,-0.7299,-0.2547619047619047,-0.13422473892569542,Negative,Negative,Neutral,Positive,bullish or favorable stance
+2021-12-06,TSLA could be on full-blown reversal here.  1010 will be key,1,0.0,0.0,-0.25959616899490356,Neutral,Neutral,Negative,Neutral,unclear or mixed sentiment
+2021-10-18,"From this list does it look that way? I bet mostly on sava, tsla. But would like to have a list to look at before every Monday. No harm in looking at the data and take a data driven decision IMHO",1,0.792,0.5,0.0022398531436920166,Extremely Positive,Positive,Neutral,Neutral,unclear or mixed sentiment
+2021-12-03,Elon dumping TSLA around the same time he says SpaceX needs access to liquidity can't be a coincidence. I guarantee he cares more about SpaceX than Tesla.,0,0.4019,0.25,-0.016728390008211136,Positive,Positive,Neutral,Neutral,unclear or mixed sentiment
+2021-11-22,imagine not having tsla calls,-1,0.0,0.0,-0.004813220351934433,Neutral,Neutral,Neutral,Positive,bullish or favorable stance
 2022-01-20,"Good points, I know China has been investing pretty heavily in Africa; I would see them as the key beneficiary of that continent’s raw material production if geopolitics continue as they are now. 
 
 One thing to consider is the lead time required to make a new mine operational, I believe it’s something like 4-5 years (excluding any political red tape with getting it approved) for most of the materials related to battery manufacturing.
 
-In regards to TSLA, the supply contracts they have been proactively secur",3,0.926,0.1155594405594405,0.3241516062989831,Extremely Positive,Neutral,Positive
-2021-07-26,You ever have one of those trading days where you think you're just not gonna make it?  I missed MSTR completely (could have had options cheap into Friday close) and paperhanded TSLA because I couldn't take the risk even though they practically telegraphed that their earnings were good.,3,0.3641,0.3999999999999999,-0.6509020924568176,Positive,Positive,Negative
-2022-01-13,#Tesla #Stock Price Predictions: Where Will Red-Hot #TSLA Go in 2022? - Read more on #PipPost,1,0.0,0.5,-0.0038552507758140564,Neutral,Positive,Neutral
-2022-01-17,"Yes. You can be an idiot and still make ridiculous amounts of money. Case in point: degens in wsb getting lucky with 0dte otm options on TSLA, DASH, PLTR, or whatever other volatile stock, and getting a 6000% return in two days. It doesnt even have to be options. Every now and then there are bound to be people who pick the right stock at the right time. Or it could be daddys money, or some other reason. Please dont fall into the trap of thinking that every person that has money is smart or knows what they a",11,0.34,-0.0330357142857142,-0.02365729585289955,Positive,Neutral,Neutral
+In regards to TSLA, the supply contracts they have been proactively secur",3,0.926,0.1155594405594405,0.3241516062989831,Extremely Positive,Neutral,Positive,Positive,bullish or favorable stance
+2021-07-26,You ever have one of those trading days where you think you're just not gonna make it?  I missed MSTR completely (could have had options cheap into Friday close) and paperhanded TSLA because I couldn't take the risk even though they practically telegraphed that their earnings were good.,3,0.3641,0.3999999999999999,-0.6509020924568176,Positive,Positive,Negative,Positive,bullish or favorable stance
+2022-01-13,#Tesla #Stock Price Predictions: Where Will Red-Hot #TSLA Go in 2022? - Read more on #PipPost,1,0.0,0.5,-0.0038552153855562,Neutral,Positive,Neutral,Neutral,ticker list or market data
+2022-01-17,"Yes. You can be an idiot and still make ridiculous amounts of money. Case in point: degens in wsb getting lucky with 0dte otm options on TSLA, DASH, PLTR, or whatever other volatile stock, and getting a 6000% return in two days. It doesnt even have to be options. Every now and then there are bound to be people who pick the right stock at the right time. Or it could be daddys money, or some other reason. Please dont fall into the trap of thinking that every person that has money is smart or knows what they a",11,0.34,-0.0330357142857142,-0.02365729585289955,Positive,Neutral,Neutral,Neutral,question or mechanics only
 2021-11-30,"Wenn du keinen ETF ohne Tesla findest, kannst du auch einfach die TSLA Exposure des ETFs anteilig mit einer Short Position ausgleichen. Damit hast du dann effektiv keinen TSLA Anteil in deinem Portfolio.
 
-Du zahlst dann aber halt auch Gebühren fürs shorten, musst du wissen, ob es dir das wert ist.",1,-0.5994,0.0,0.05900626629590988,Negative,Neutral,Neutral
-2022-01-18,TSLA up to 1500,-4,0.0,0.0,0.10865306854248047,Neutral,Neutral,Neutral
-2021-10-27,Banbet! TSLA 1100 by friday .,4,0.0,0.0,0.018570909276604652,Neutral,Neutral,Neutral
-2021-10-15,"Nice Power Hour for TSLA.  First one this week, I think.",2,0.4215,0.425,0.07498388923704624,Positive,Positive,Neutral
-2022-05-04,"I'd be worried the deaths of Buffet and Munger could implode the market cap. Pretty grim way to look, but if something were to happen to Elon I'd feel the same about TSLA.",4,-0.2144,-0.25,-0.43937743455171585,Neutral,Negative,Negative
-2022-06-12,"If a recall was enacted, is a refund warranted?  This would crush TSLA.",4,-0.1531,0.0,-0.6927721761167049,Neutral,Neutral,Negative
-2021-09-12,"I am not in anything besides VTSAX, so I'm very much a newbie in the single stock world. I think maybe I'm just afraid of it overall, and perhaps it could be too late to buy TSLA stock at this point in time. But that's the game, right?",1,0.0,-0.1179591836734693,-0.042540352791547775,Neutral,Neutral,Neutral
+Du zahlst dann aber halt auch Gebühren fürs shorten, musst du wissen, ob es dir das wert ist.",1,-0.5994,0.0,0.05900626629590988,Negative,Neutral,Neutral,Negative,bearish or critical stance
+2022-01-18,TSLA up to 1500,-4,0.0,0.0,0.10865306854248047,Neutral,Neutral,Neutral,Positive,bullish or favorable stance
+2021-10-27,Banbet! TSLA 1100 by friday .,4,0.0,0.0,0.018570909276604652,Neutral,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2021-10-15,"Nice Power Hour for TSLA.  First one this week, I think.",2,0.4215,0.425,0.07498388923704624,Positive,Positive,Neutral,Neutral,unclear or mixed sentiment
+2022-05-04,"I'd be worried the deaths of Buffet and Munger could implode the market cap. Pretty grim way to look, but if something were to happen to Elon I'd feel the same about TSLA.",4,-0.2144,-0.25,-0.43937743455171585,Neutral,Negative,Negative,Neutral,unclear or mixed sentiment
+2022-06-12,"If a recall was enacted, is a refund warranted?  This would crush TSLA.",4,-0.1531,0.0,-0.6927721761167049,Neutral,Neutral,Negative,Negative,bearish or critical stance
+2021-09-12,"I am not in anything besides VTSAX, so I'm very much a newbie in the single stock world. I think maybe I'm just afraid of it overall, and perhaps it could be too late to buy TSLA stock at this point in time. But that's the game, right?",1,0.0,-0.1179591836734693,-0.042540352791547775,Neutral,Neutral,Neutral,Positive,bullish or favorable stance
+2021-11-15,TSLA is some wild shit,7,-0.5574,-0.05,0.013038396835327148,Negative,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2021-08-06,My Quant did an analysis on TSLA calls and puts and I have no idea how to use the data,1,-0.296,0.0,-0.0091028716415166,Negative,Neutral,Neutral,Positive,bullish or favorable stance
+2022-04-29,He can buy the dip now when they crush TSLA some more,8,-0.1531,0.5,0.06697623431682587,Neutral,Positive,Neutral,Negative,bearish or critical stance
+2022-05-23,"I own a 2019 SR+ Model 3 and a new Y in order, should be here next month
+
+We have kids, a dog and my son races BMX. None of that is new but the 3 doesn't quite work for a lot of it. We have more money now (thanks tsla!) and the resale on the 3 means even after 2.5 years we have car equity. Put it all together and we're getting a Y.",12,0.6744,0.2704545454545454,0.18335262220352888,Positive,Positive,Neutral,Neutral,unclear or mixed sentiment
+2022-03-04,Why the erection on tsla,2,0.0,0.0,-0.05500194802880287,Neutral,Neutral,Neutral,Neutral,question or mechanics only
+2021-08-28,PLTR about to compete with TSLA in autonomous driving....,21,0.0,0.4,0.8163204602897167,Neutral,Positive,Extremely Positive,Neutral,unclear or mixed sentiment
+2021-10-26,not sure where I stand but tsla isn't actually exuding confidence right now...,3,-0.6167,0.0119047619047618,0.09829623252153397,Negative,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2022-02-11,"&gt;	do we really need stainless steel body?
+
+Yes. This is the first principles foundation of the entire design and crucial to the long term cost savings of manufacturing. And fuck paint.
+
+&gt;	do we even need new batteries?
+
+They were pretty clear during battery day that the CT and Semi required the 4680s to reach the marks they set out to achieve in range and efficiency.
+
+Listen, if you’re desperate for a new car now, the smart money move is to buy a Tesla now and sell it when your CT number comes up. Tes",35,0.8253,0.0336163836163836,0.1365044480189681,Extremely Positive,Neutral,Neutral,Positive,bullish or favorable stance
+2021-12-23,"Lol. TSLA 950 P from 1 is dead but just closed the 1060 C from 3 to 10. Thought that thing was dead this morning lol.
+
+Edit: the January 1110 C I took from 6 to 14 is now 40. Guh",4,-0.6124,0.22,-0.06158960238099098,Negative,Neutral,Neutral,Negative,bearish or critical stance
+2022-02-22,"👨 Just passed STD test with flying colors 🌈! Looks like we've got the most active stocks in today's pre market trading:
+
+Ticker|Name
+:--|:--
+$MSFT|Microsoft
+$NVDA|Nvidia
+$AAPL|Apple
+$PLTR|Palantir
+$AMD|&amp;#x200B;
+$DD|DuPont
+$MRO|Marathon
+$F|Ford
+$DKNG|Draftkings
+$AAL|American
+$TGT|Target
+$CF|&amp;#x200B;
+$INTC|Intel
+$TSLA|Tesla
+$FB|Meta
+$UNP|&amp;#x200B;
+$HD|Home Depot
+$CCL|Carnival
+$DWAC|",1,0.6989,0.1833333333333333,0.08607332408428192,Positive,Neutral,Neutral,Neutral,ticker list or market data
+2021-10-28,"Originally I held TSLA, I watched XPEV (Chinese electric car) it rose I panic bought. Guess who turned $33k into $180k? Not me. My girlfriend. Queen has Diamond hands I FOMOd like a bitch and lost $5k",7,-0.6705,0.325,0.011714890599250793,Negative,Positive,Neutral,Positive,bullish or favorable stance
+2021-11-08,"I sold 2 TSLA puts Friday for $179k collateral and ngl I am concerned.
+
+But also TSLA needs to go down.
+
+Conflicted 🧠",2,0.0,-0.1555555555555555,-0.891622755676508,Neutral,Neutral,Extremely Negative,Negative,bearish or critical stance
+2022-01-20,"Somebody please, please tell me TSLA will go back to 1200 soon.......",0,0.5574,0.0,0.056524647399783134,Positive,Neutral,Neutral,Positive,bullish or favorable stance
+2022-02-22,I've been burned too many times trying to bet against TSLA but I'm happy to see that turd burn. Fuck the Twitter TSLA-stans who just pump and shill for Elon.,9,0.0772,0.3,-0.03372529521584511,Neutral,Positive,Neutral,Positive,bullish or favorable stance
+2021-12-10,"[AAPL is no longer just a phone company. In the worst case scenario, they can reposition themselves as a CPU company and beat both INTC and AMD. Acquiring  P.A. Semi and Intrinsity is the best decision they've ever made.](/r/stocks/comments/rcjn5j/what_stock_are_you_bearish_on_that_most_people/hnw0w5j/)
+
+KEYWORD : AMD DATE : Thu Dec  9 19:27:43 2021 SUBREDDIT : stocks
+
+
+
+[Bullish on GXO, CHPT, AMD, QCOM, FB, PYPL, TER  These are at or near good entry prices](/r/stocks/comments/rclu91/what_stock_are_you_bull",1,0.2023,0.1999999999999999,0.10316453501582146,Neutral,Neutral,Neutral,Positive,bullish or favorable stance
+2022-05-31,Buy more TSLA. Amazing company 🚀🚀😁,-7,0.7951,0.55,0.07933751679956913,Extremely Positive,Positive,Neutral,Positive,bullish or favorable stance
+2022-03-15,"Or if MMs decide TSLA has any worth whatsoever, in an environment where Tesla is sitting pretty on top. 
+
+Huge catalysts are at play with Tesla. Just because there's stuff going on causing macro issues doesn't mean we don't get our ducks in a row.
+
+Side effect of trading emotional I suppose.",4,0.8807,0.1895833333333333,-0.05326272174715996,Extremely Positive,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2021-12-23,"TSLA 1200, NVDA 330, SPY 480 next week. Happy Holidays you motherfuckers!!!! See you Monday",9,0.816,0.5,-0.010095901787281036,Extremely Positive,Positive,Neutral,Positive,bullish or favorable stance
+2022-02-03,Let's go TSLA!!!,4,0.0,0.0,0.01952800527215004,Neutral,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2021-10-18,"Not sure if this was a joke...
+
+TSLA stocks\*",1,0.0613,-0.25,-0.17627432197332382,Neutral,Negative,Neutral,Neutral,unclear or mixed sentiment
+2022-01-22,"Missed the NFLX ER? A look at upcoming earnings - MSFT, TSLA, INTC, AAPL, HOOD and V.",112,-0.296,0.0,0.0340462233871221,Negative,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2022-03-29,"TSLA forming small PP Pattern.
+
+Puts on the menu.",5,0.0,-0.25,0.026052411645650864,Neutral,Negative,Neutral,Neutral,unclear or mixed sentiment
+2021-07-22,"I watch you and Rocky exclusively now but have streamed MattK and Roensch a lot in the past. I do not know much about YouTube revenue so i cannot help you there. However, my first thought is that you and Rocky need to take care of yourselves first.  If you need to make money by trading, then make your trades before you make your videos and then take time intraday if you need to make others. 
+
+MattK basically spends his days making minute by minute commentary of the daily price action as if he we calling a s",9,0.2541,0.0916666666666666,-0.053946204483509064,Positive,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2022-04-20,TSLA reversal will be historic here,6,0.0,0.0,0.020799145102500916,Neutral,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2021-10-25,Me this morning when I saw my TSLA shares,1,0.296,0.0,0.0344799160957336,Positive,Neutral,Neutral,Neutral,question or mechanics only
+2022-02-25,"You can buy an option in TSLA for $3, see it go to $5 then $1.5 before you even have a chance to set a limit order.",1,0.25,0.0,0.011115249246358871,Positive,Neutral,Neutral,Positive,bullish or favorable stance
+2022-03-28,GO GO GO TSLA,5,0.0,0.0,0.008394427597522736,Neutral,Neutral,Neutral,Neutral,ticker list or market data
+2022-04-20,$TSLA Q1'22 Earnings Thread 🌕,133,0.0,0.0,0.1041293069720268,Neutral,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2022-04-25,"10 years ago I almost did a similar move. AAPL, BRK, NVDA, GOOG, SPY, etc., after careful research, I sold most of them and moved into TSLA. Now looking back, I made the right move.
+
+&amp;#x200B;
+
+Here are the lessons I learned in the last two decades:
+
+If you are shooting for 10x or 100x, Founder/CEO makes the biggest difference. 
+
+If you diversify enough, you should just go with the index. 
+
+If you buy individual stocks, you should thoroughly research the companies so you fully understand why these compan",10,0.1531,0.0857142857142857,0.06190454866737127,Neutral,Neutral,Neutral,Positive,bullish or favorable stance
+2021-10-13,You think them losing “expected” profitability matters in this market? You’re going to lose all your TSLA gains out of spite bud unless the market crashes as a whole,3,-0.6249,0.05,-0.9252209905534983,Negative,Neutral,Extremely Negative,Negative,bearish or critical stance
+2022-04-04,Guh I have no plays that call to me. I think it's dumb to get puts on TSLA or TWTR rn.,1,-0.6174,-0.375,-0.12246206402778625,Negative,Negative,Neutral,Positive,bullish or favorable stance
+2021-10-29,Most brokers do this by default. I believe you can specifically call then and mark a position “do not exercise/sell if ITM” but you’re playing a dangerous game because if you don’t have network access you could let a position expire and get even more fucked. I’m sure you’re talking about the TSLA pump at the last minute because I know most brokers sell ITM positions at like 3:40 and the pump happened right after most ppl got kicked out of their positions.,1,-0.5986,0.1185714285714285,-0.6367552168667316,Negative,Neutral,Negative,Negative,loss or regret on trade
+2021-11-04,"Ams : Vwrl (all world etf about 20% of my portfolio, tsla is about 75%)",2,0.0,0.0,0.03107148688286543,Neutral,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2021-11-08,Moontower #125 - Using The TSLA Price Endgame To Understand Options,1,0.0,0.0,0.0305671505630016,Neutral,Neutral,Neutral,Neutral,question or mechanics only
+2022-01-22,This is my 100% TSLA journey over the last 5 years. Mostly upish though lol!!,1,0.5242,0.5,0.08519024401903152,Positive,Positive,Neutral,Neutral,unclear or mixed sentiment
+2022-04-21,TSLA has been bobbing like your mom.  Play the waves.,1,0.5994,0.0,-0.008695844560861588,Positive,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2022-01-07,TSLA had no business flying back up to ATHs. It was on it's way to a fair evaluation before the pump earlier this week.,6,0.0258,0.2333333333333333,0.6109412927180529,Neutral,Neutral,Positive,Positive,bullish or favorable stance
+2021-10-26,If you want moons like this you need hidden shit or super volatile companies like TSLA.  AAPL won't ever see a move like this unless they release something revolutionary instead of just iterating on their current products.,110,0.7964,-0.0083333333333333,0.021029626950621605,Extremely Positive,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2022-03-16,"Look at STLA now and then look how cheap 2024 calls still are
+
+Yes STLA not TSLA",2,0.4019,0.4,0.040654102340340614,Positive,Positive,Neutral,Neutral,question or mechanics only
+2022-03-24,"
+Price * Volume Calls &gt; $5,000,000
+
+Symbol|Last * Volume|Last * Volume|Total Premium|Total Premium|
+:--|:--:|:--:|:--:|:--:|
+AAPL|240144306|$240.144306m(Δ$38.503778m)|-26711210.5|$-26.7112105m
+ADBE|9021699|$9.021699m(Δ$1.030095m)|6268445.5|$6.2684455m
+AMC|28510750|$28.51075m(Δ$-4.666241m)|13468642|$13.468642m
+AMD|188402666|$188.402666m(Δ$-3.993361m)|22393433|$22.393433m
+AMZN|81731913|$81.731913m(Δ$6.219963m)|24080175.5|$24.0801755m
+ARCH|5353210|$5.35321m(Δ$0m)|2884049|$2.884049m
+BABA|44472200|$44.4722m(Δ",1,0.0,0.0,-0.20654543116688728,Neutral,Neutral,Neutral,Neutral,ticker list or market data
+2021-11-05,Besides being hyped on where the tsla sp is…. I have 300 shares of coin being called away today. I may buy more coin next week or use the extra cash for some tsla sold puts. What moves you dudes making?,1,0.296,0.1666666666666666,-0.06395299360156059,Positive,Neutral,Neutral,Positive,bullish or favorable stance
+2021-11-22,Putting the rest of my money in tsla weekly $1200c,2,0.0,0.0,0.004660103470087051,Neutral,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2021-11-02,"If you look into citadel advisors 13F. Then what I see is a “iron condor” in puts and calls. 
+
+Its not one hedgefund that is pumping tsla, cant be! Its not FOMO it must be a combination of many different institutions and FOMO.",2,0.0,0.25,-0.06489409133791924,Neutral,Positive,Neutral,Neutral,unclear or mixed sentiment
+2022-03-26,"I play TSLA options only. I'm overall bullish but I think $1000 is the level where people need to be careful. But most bears are bearish even at much lower price than that.
+
+Wall St has changed their tune after TSLA started to show great profitability and strong demand.",0,0.9153,0.2619047619047619,0.07400752604007721,Extremely Positive,Positive,Neutral,Negative,bearish or critical stance
+2021-07-27,"Call or Put, theta will still eat u raw in TSLA",1,0.0,-0.2307692307692307,-0.01148691400885582,Neutral,Neutral,Neutral,Positive,bullish or favorable stance
+2022-05-09,Tsla is ghey,2,0.0,0.0,0.015843328088521957,Neutral,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2022-06-07,"TSLA
+
+Elon is the new mango.",2,0.0,0.1363636363636363,0.024564240127801895,Neutral,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2022-07-02,LGCHEM-$TSLA -META Great dd by HTDK on Twitter,4,0.6249,0.8,0.0326575264334678,Positive,Extremely Positive,Neutral,Positive,bullish or favorable stance
+2022-02-10,TSLA puts could be a 10 bagger rn,1,0.0,0.0,0.005628829821944237,Neutral,Neutral,Neutral,Positive,bullish or favorable stance
+2021-11-12,TSLA is still up 30% on the month. Almost no one had to have lost 💵 there.,1,-0.4951,0.0,0.9260336719453335,Negative,Neutral,Extremely Positive,Positive,bullish or favorable stance
+2021-11-11,So tsla has 20x more bad days to come right,1,-0.5849,0.0285714285714286,-0.5841072425246239,Negative,Neutral,Negative,Negative,bearish or critical stance
+2022-05-18,I blame TSLA for this catastrophic disaster. Speculation without substantial practicality,6,-0.8966,0.0,-0.2954506780952215,Extremely Negative,Neutral,Negative,Negative,bearish or critical stance
+2021-12-15,"[I know that there are skilled daytraders out there. However, to help steer you in the right direction for your own trading, I'd like to add that you should focus on yourself, rather than what others are making. There are those who talk, and then there are those who actually trade (daily). Trading is something you have to find and make work for your own life/situation/circumstances. Some are more than happy to make a few hundred in a couple of minutes/hours, some are not satisfied with $1,200+ trading 4-5 h",1,0.7812,0.2835714285714285,-0.006654515862464905,Extremely Positive,Positive,Neutral,Neutral,unclear or mixed sentiment
+2022-06-10,TSLA having tard strength wtf,3,-0.6249,-0.5,0.29171338863670826,Negative,Negative,Positive,Neutral,unclear or mixed sentiment
+2021-11-30,"I think of it more as buy equity in a company instead of bonds in a company. For example all in on the sp500, or xeqt, etc vs only 60-70% and the rest in bonds. However yes it is commonly (mis)understood as “go buy tsla options you are young”.",1,0.4019,0.075,-0.003459762781858444,Positive,Neutral,Neutral,Positive,bullish or favorable stance
+2021-09-25,"**You want safe guaranteed bets just do one call/share of COST, NVDA, GOOGL. Calls at least three to four weeks out and shares buy the dips and forget about them. Run by decent people, clean and devoid of greedy, criminal shit sacks like NKE, FB, AMZN etc. Avoid fairy tales like TSLA, Papa Elon is generous but unpredictable like dynamite lol.**",10,0.875,0.074074074074074,-0.016660593450069427,Extremely Positive,Neutral,Neutral,Negative,bearish or critical stance
+2021-12-13,**Ban Bet Created:** **/u/MagicNoodle** bet **TSLA** goes from **1022.15** to **1100.0** before **2021-12-14 06:45:58.208207-05:00**,4,-0.3818,0.0,0.13303661718964577,Negative,Neutral,Neutral,Positive,bullish ban bet target
+2021-12-01,He is in the process of unloading 10% of his TSLA stock as we speak. Primary for tax purposes but also to have liquidity available to him I assume.,3,0.0,0.4,0.05510617606341839,Neutral,Positive,Neutral,Neutral,question or mechanics only
+2021-12-05,When are you selling TSLA to buy NKLA calls,3,0.0,0.0,-0.008302628993988037,Neutral,Neutral,Neutral,Positive,bullish or favorable stance
+2022-04-25,"Elon, Bill, TSLA, and short selling.",1,0.0,0.0,-0.014746762812137604,Neutral,Neutral,Neutral,Negative,bearish or critical stance
+2022-01-04,How is Spy not down more? AAPL and MSFT aren't doing great and TSLA is down big.,1,-0.5096,0.2444444444444444,-0.9206862729042768,Negative,Neutral,Extremely Negative,Negative,bearish or critical stance
+2022-01-06,"Tweet Mirror:[@SelectOptions](https://twitter.com/SelectOptions/status/1479138012797673472)
+
+&gt;SWEEP 400 $TSLA 06/16/23 $2000 calls for $124.00 
+&gt;
+&gt;
+&gt;
+&gt;Spot: $1068.31
+&gt;
+&gt;Volume: 436
+&gt;
+&gt;OI: 6,712
+&gt;
+&gt;IV: 62.84%
+&gt;
+&gt;Premium: $5.0m
+&gt;
+&gt;Sector: Consumer Cyclical",2,0.0,0.0,0.019049763679504395,Neutral,Neutral,Neutral,Neutral,ticker list or market data
+2022-03-30,TSLA FB SQ,1,0.0,0.0,0.05497751757502556,Neutral,Neutral,Neutral,Neutral,ticker list or market data
+2022-06-03,And he’s mad Gates shorted TSLA. 😂,9,-0.0772,-0.625,-0.28304800391197205,Neutral,Negative,Negative,Neutral,unclear or mixed sentiment
+2022-04-30,"It’s a shame I didn’t make more profits off my predictions. Lmao. The stock market is hard. 
+
+Don’t get me wrong. I made some $$. But nothing like I should have given I seen this coming. There was a small group of us that figured it out together.
+
+Edit. This is mostly old news now. But the theory still holds with the exception of TSLA. If she sells shares prior to earnings or anytime really expect a brief pump but not to new ath. Just new monthly highs. If she buys shares prior to earnings load up your bags",1,0.4908,0.0525883838383838,0.006033647805452347,Positive,Neutral,Neutral,Positive,bullish or favorable stance
+2022-05-03,Tsla bout to meme to 1k by eod?,2,0.0,0.0,0.43920204043388367,Neutral,Neutral,Positive,Neutral,question or mechanics only
+2021-12-24,"[Tesla 2000 EOD seems reasonable](/r/wallstreetbets/comments/rmt9nk/daily_discussion_thread_for_december_23_2021/hpq4uqp/)
+
+NYSE:EOD DATE : Thu Dec 23 20:39:31 2021 SUBREDDIT : wallstreetbets
+
+
+
+NYSE:DPZ / 5
+
+[In general, free cash flow is a better number to go off of then book income. A company might have a high PE on the basis of big depreciation or amortization, along with increasing capex to fund expansions, or ever growing LIFO inventory, but still generate big cash flows.  In this specific case, I jus",1,0.5994,0.1585714285714285,0.2598426453769207,Positive,Neutral,Positive,Neutral,unclear or mixed sentiment
+2022-05-25,"🐮💸Open a brokerage account with Moomoo (Futu Inc) with this link code get up to 5 FREE STOCKS! ( valued up to $2500) Plus with my special offer you’ll have 1/100 chance of TSLA, GOOG, MSFT or AAPL &amp; 1/50 chance of WMT, SBUX or KO. Deposit $100 to get Another Free Stock! FREE LVL2 Full Hours 8am-4pm!",1,0.9676,0.4389285714285714,0.1284666918218135,Extremely Positive,Positive,Neutral,Positive,bullish or favorable stance
+2022-05-23,Market can’t bottom until tsla is sub $400 maybe $300,11,0.0,0.0,-0.12381580471992493,Neutral,Neutral,Neutral,Negative,bearish or critical stance
+2022-01-27,Tsla is either gonna rebound hard or tank,4,-0.1027,-0.2916666666666667,-0.5306841880083084,Neutral,Negative,Negative,Negative,bearish or critical stance
+2022-06-17,"TSLA puts are a pretty good move not going to lie. 
+
+Before he made unprofitable cars and rockets and appealed to younger folks. 
+
+Now he makes unprofitable cars and rockets and tells us the office is important.",3,0.7845,0.3375,0.04052508808672428,Extremely Positive,Positive,Neutral,Negative,bearish or critical stance
+2022-02-23,I was just goofin when I bought those tsla 715p this morning.,3,0.0,0.0,0.008745953440666199,Neutral,Neutral,Neutral,Positive,bullish or favorable stance
+2021-08-20,Manifest it TSLA $700,-1,0.0,0.0,0.023649146780371666,Neutral,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2021-10-27,Let me in so I can buy TSLA calls,17,0.0,0.0,0.034590527415275574,Neutral,Neutral,Neutral,Positive,bullish or favorable stance
+2022-02-28,$TSLA GAS PUMP,5,0.0,0.0,0.03520510718226433,Neutral,Neutral,Neutral,Neutral,ticker list or market data
+2022-04-29,The amount of bearish downvoting activity im seeing against anything positive for TSLA just makes me certain TSLA is primed for another $100-$200 bounce soon,9,0.6908,0.2207792207792207,0.720365971326828,Positive,Neutral,Positive,Negative,bearish or critical stance
+2021-07-06,Not for me. I don't have one. TSLA is my long term saving.,8,0.0,-0.05,0.02761600725352764,Neutral,Neutral,Neutral,Positive,bullish or favorable stance
+2021-08-25,IV is basically at ALL TIME lows now for TSLA,4,-0.2023,0.0,-0.7268119528889656,Neutral,Neutral,Negative,Neutral,unclear or mixed sentiment
+2021-11-03,It has been a pretty great year for tsla that's for sure. How far out do you sell typically?,1,0.8625,0.2966666666666667,0.061295682564377785,Extremely Positive,Positive,Neutral,Positive,bullish or favorable stance
+2021-07-15,u/knotswag you still in those TSLA puts? 🖍🙇🏼‍♀️,5,0.0,0.0,-0.011351969093084335,Neutral,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2022-06-02,"Nahh Q2 ER will be after the Apple, Tsla and Msft pretended outlook was all good last er.",5,0.4404,0.35,0.8833493757992983,Positive,Positive,Extremely Positive,Positive,bullish or favorable stance
+2022-01-18,Retired and have more than half of my money in TSLA. Now what?,18,0.0,0.1666666666666666,-0.1393849104642868,Neutral,Neutral,Neutral,Neutral,question or mechanics only
+2021-11-12,Remember when TSLA hit 160 and Elon said it was overvalued?,10,0.0,0.0,0.13106732349842787,Neutral,Neutral,Neutral,Neutral,question or mechanics only
+2022-05-09,"[Trading zones updated -](https://www.reddit.com/r/wallstreetbetsHUZZAH/comments/ulomtc/daily_discussion_thread_may_09_2022/i7wv7kf/) 
+
+Some thoughts - If the market dumps, I think TSLA puts will pay out the most relatively - as TSLA has broken its long time support and there is a lot to fall to.",7,-0.5423,0.0124999999999999,-0.9108868930488825,Negative,Neutral,Extremely Negative,Negative,bearish or critical stance
+2022-03-29,"I know I know only joking
+
+TSLA has afforded me much more time with my kids, especially in the future once they grow out of toddler stage",6,0.2263,0.125,0.2622328707948327,Neutral,Neutral,Positive,Neutral,unclear or mixed sentiment
+2021-11-12,Agreed on both the TSLA and Soffe. The TSLA tights are 1/3 the price of UA and there's no noticeable difference. Soffe are great with compression shorts or boxer briefs underneath.,1,0.6124,0.8,0.0499710850417614,Positive,Extremely Positive,Neutral,Positive,bullish or favorable stance
+2022-02-22,"👨 Let's play a little game I like to call ""just the tip"". Here are the Most active NASDAQ listed stocks so far today:
+
+**Dollar volume**
+
+Ticker|Name
+:--|:--
+$QQQ|&amp;#x200B;
+$TSLA|Tesla
+$AMD|AMD
+$NVDA|Nvidia
+$AAPL|Apple
+$MSFT|Microsoft
+$AMZN|Amazon
+$FB $META|Meta
+$TQQQ|&amp;#x200B;
+
+
+**Volume**
+
+Ticker|Name
+:--|:--
+$SOFI|SoFi
+$OCGN|Ocugen
+$PHUN|&amp;#x200B;
+$SNDL|Sundial
+$HMHC|&amp;#x200B;
+$ROKU|&amp;#x200B;
+$DKNG|Draftkings
+$INTC|Intel
+$LCID|Lucid
+$WISH|&amp;#x200B;
+$AAL|American Airlines
+$GRAB|",3,0.767,-0.0241666666666666,-0.003993716090917587,Extremely Positive,Neutral,Neutral,Neutral,ticker list or market data
+2021-08-18,"Mid-day trending tickers. Today's popular names include CLOV, PLTR, TSLA, PFE, HOOD",2,0.4215,0.6,0.0225816704332828,Positive,Positive,Neutral,Neutral,unclear or mixed sentiment
+2021-12-27,"TSLA, ATVI CALLS, CCL PUTS",3,0.0,0.0,0.02776002138853073,Neutral,Neutral,Neutral,Neutral,ticker list or market data
+2021-10-22,"[THAT'S WHAT IT WAS! that's what I referring to in my comment, that I couldn't remember that they did for me...](/r/pennystocks/comments/qb0lv7/how_to_close_out_positions_with_zero_interest_or/hhb0u34/)
+
+NYSE:IT DATE : Wed Oct 20 01:01:35 2021 SUBREDDIT : pennystocks
+
+
+
+[I'm a first line IT supervisor for a state retirement system. Since my system transfers trade information, I'm not allowed to trade any stocks or ETFs without prior approval, even though I can't see the information. But the board members ca",1,-0.2661,0.125,-0.04204450733959675,Negative,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2021-11-21,"Esteemed gentlemen, u/quarantrader &amp; u/thefleshgordon
+
+Sirs,
+
+As promised in thy’s correspondence yesterday-morn, your humble servant is currently sitting on thy’s most illustrious throne, the toilet. We are ridding ourselves of the royal waste and are writing to you noble sirs with much fervor and pressure. We find this the motht opportune time for correthpondence as we squeeze our sphincter and take deep breaths. 
+
+As thy duel continues on thy weekend thread reaching levels of hysteria not theen since",8,0.6124,0.1083333333333333,0.11522532626986504,Positive,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2021-11-05,Way to play with my emotions TSLA 😂,2,0.6486,0.0,-0.000615585595369339,Positive,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2022-06-07,TSLA GONNA DICK BEARS,2,-0.5106,0.0,0.015224684029817581,Negative,Neutral,Neutral,Neutral,ticker list or market data
+2022-01-27,Just need TSLA to gap up 100 dollars tomorrow and we're all gd,4,0.0,0.0,0.3787623178213835,Neutral,Neutral,Positive,Positive,bullish or favorable stance
+2022-06-01,"its true. I woke up to my handful of tsla calls printing. But they took a shit when i went to go take a shit of my own :{. Honestly closed them out not wanting to, but still up 50% on them. went up around 1100 on qqq calls then got wrecked for rest of day. This is the life of a stock broker - i should go apply for JPM now. :\]",1,-0.7096,-0.0785714285714285,-0.29114870727062225,Negative,Neutral,Negative,Positive,bullish or favorable stance
+2021-10-25,"MS prices TSLA at 1200, TSLA gets half-way there in a day. Gorgeous.",13,0.6124,0.7,0.0374028030782938,Positive,Positive,Neutral,Positive,bullish or favorable stance
+2022-04-01,"TSLA NUMBERS LEAK
+
+420,069",11,-0.4824,0.0,-0.03321397863328457,Negative,Neutral,Neutral,Neutral,ticker list or market data
+2021-08-19,[It's almost comical to see how every FB related post in r/stocks gets downvoted into oblivion.  If you want free up-votes you should definitely join the bandwagon on how FB is the 'EPITOME OF THE ANTI-CHRIST'.    If you're just looking for an investment into a company with historically good returns &amp; great books... FB fits that.   Crazy how such a company is even being allowed a mention in a sub about INVESTING!  ( /s for those that don't get sarcasm).](/r/stocks/comments/p73t2t/facebook_says_ready_to_,1,0.9245,0.225,0.01604662835597992,Extremely Positive,Neutral,Neutral,Positive,bullish or favorable stance
+2022-05-18,If TSLA goes to 600 I’ll cross light sabres with you,2,0.0,0.2,0.03231832943856716,Neutral,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2022-05-08,"Use the cash how you please. Income? Buy a house? Buy more shares?
+
+You own the shares, or you hold them on margin?
+
+To wheel TSLA, you would sell calls until they get called, then sell puts until you own them again. Then calls again. Like a “wheel”",2,0.8574,0.5666666666666668,-0.03201255202293396,Extremely Positive,Positive,Neutral,Positive,bullish or favorable stance
+2022-05-19,"with what cash?
+
+&amp;#x200B;
+
+99% of elon's worth is tsla stock",1,0.2263,0.3,0.05567732360213995,Neutral,Positive,Neutral,Neutral,unclear or mixed sentiment
+2021-12-31,"Read a post by someone the other day talking about how he’s so depressed, he’s scared, his kids lives are sheltered, they get excited for their one monthly trip to Target, he doesn’t know what to do, life seems meaningless he just works at home and stays inside, etc etc.
+
+Like, bro, just get over it.  If that is your idea of living, why even bother?
+
+Also, TSLA $1130 EOD",10,-0.8319,-0.0833333333333333,-0.12105253152549267,Extremely Negative,Neutral,Neutral,Neutral,question or mechanics only
+2021-12-09,"turns out the significance of 12/9 was this:
+
+the last day TSLA ever closed above 1000 ![img](emote|t5_2th52|5957)",7,0.3382,-0.0333333333333333,-0.014913488179445267,Positive,Neutral,Neutral,Negative,bearish or critical stance
+2021-10-21,$TSLA ATH coming up in the next min. Put me in the screenshot.,7,0.0,0.0,0.040994929149746895,Neutral,Neutral,Neutral,Positive,bullish or favorable stance
+2022-02-23,"You literally have the most successful entrepreneur in human history (Elon Musk) advocating for an investigation into naked short selling and retards on this sub are like “don’t trust him, he doesn’t pay taxes”
+
+1) Probably don’t listen to Elizabeth Warren because he paid more in taxes than any human in history in 2021
+2) TSLA was literally naked shorted and manipulated for years, think he’s probably a good person to have as an advocate!
+
+Way too many paranoid people on this sub",13,0.8436,0.2022727272727272,-0.05922869220376015,Extremely Positive,Neutral,Neutral,Positive,bullish or favorable stance
+2022-06-10,"I picked up tsla 650p at close. 
+
+Please drill tsla and save my port",6,0.6705,0.0,0.15887031704187393,Positive,Neutral,Neutral,Negative,bearish or critical stance
+2021-11-18,"I dumped PLTR and I don't think they are going to be the next AMZN or TSLA, they sell a packaged tool to ""manage"" data which is literally an OS, once you buy in you almost can't go back to standard industry tools without huge investment.
+
+I don't see any business company wanting that kind of dependance.
+
+Also if you see their cogs going down its because they are abusing the shit of stock compensation program, so letting investor pay part of the salary, the float is now 1.5 billion lmao the dilution is real",2,0.1467,0.1604938271604938,-0.16020392999053001,Neutral,Neutral,Neutral,Negative,bearish or critical stance
+2022-01-04,My 2 TSLA call spreads are so retarded that they would make 10k if they finish in the money this week. Capping my gains with spreads because I became a poor in 2021.,6,-0.7537,-0.6000000000000001,-0.05784463882446289,Extremely Negative,Negative,Neutral,Positive,bullish or favorable stance
+2022-05-11,Lol I sold at like 5% profit cus I'm a wuss. But TSLA is just as unpredictable as the market itself. I would take profits lol,2,0.9032,0.4777777777777778,-0.15571925416588783,Extremely Positive,Positive,Neutral,Neutral,unclear or mixed sentiment
+2022-05-05,"🎶How do you solve a problem like Elon.🎶
+
+Agreed, 100%. But there are scary parts to his unpredictability. He tweets, TSLA responds violently.  That is just one example.",1,-0.8641,-0.65,-0.1927879862487316,Extremely Negative,Negative,Neutral,Negative,bearish or critical stance
+2022-06-01,The Lounge probably buys more TSLA shares daily on average or something lol,7,0.6461,0.2875,0.057344477623701096,Positive,Positive,Neutral,Neutral,unclear or mixed sentiment
+2022-04-03,"https://twitter.com/WSBChairman/status/1415481606584868864?s=20
+
+Might want the edit button fElon hahaah
+
+Buy more TSLA, the fate of Mars is in your paychecks",4,0.0772,0.5,-0.0926275122910738,Neutral,Positive,Neutral,Positive,bullish or favorable stance
+2021-10-17,Thanks for reminding me to update my flair. I had bought 300 shares on margin earlier this spring at around $625 avg and I just sold 225 on Friday to cover my margin.  My average cost for the remaining shares is 380. I've been in and out of TSLA for years. I wish I had held on to the shares that I bought at $140 pre split instead of selling for $300.,10,0.8807,0.0166666666666666,0.024808481335639954,Extremely Positive,Neutral,Neutral,Positive,bullish or favorable stance
+2022-04-26,"Drawdowns
+
+* $AAPL 13%
+* $MSFT 20%
+* $GOOGL 20%
+* $TSLA 28%
+* $NVDA 43%
+* $FB 53%",6,0.0,0.0,-0.5725474059581757,Neutral,Neutral,Negative,Neutral,unclear or mixed sentiment
+2021-11-12,"TSLA $&gt;!1420.69!&lt; EO&gt;!Y!&lt;
+
+😎",4,0.6331,0.0,0.01711270585656166,Positive,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2021-11-01,This woman’s entire career is just selling and buying TSLA,6,0.0,0.0,0.0006155073642730713,Neutral,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2021-10-18,"I haven't been here in a while, I came back to:
+
+TSLA at December prices
+
+Whatever Ban bet is
+
+Recession cancelled?",7,-0.8126,0.0,-0.06406283751130104,Extremely Negative,Neutral,Neutral,Neutral,question or mechanics only
+2022-04-29,"Probably speculation that if after selling TSLA stock, if Elon decides against/Twitter deal falls through, he might put money into Doge. Or if he does buy it, people just hoping for a repeat from earlier this year",1,0.4215,0.0,-0.019461385905742645,Positive,Neutral,Neutral,Positive,bullish or favorable stance
+2021-11-13,"Oh wow how nice that you have a verified asset issued by legally recognizable by parties, where are your txn IDs and who's behind the bridge's initial offer to back it up?
+
+You're being obnoxious and dumb. You would argue that stocks are a scam because anyone can write $TSLA on a piece of paper and sell it.
+
+NFTs and Blockchain transaction are _verifiable_ and _publicly auditable_ for a fucking reason, you would only buy a fake Mona Lisa NFT if you were dumb enough to not realize it's coming from scam walle",2,-0.8834,-0.1,-0.29728393629193306,Extremely Negative,Neutral,Negative,Neutral,question or mechanics only
+2021-09-26,I think people should not short companies that are doing good for the world if you really want to short consider shorting tobacco or big oil companies not companies like NVDA or TSLA.,-11,0.3363,0.18,-0.011145949363708496,Positive,Neutral,Neutral,Negative,bearish or critical stance
+2021-08-02,I feel so hiiiii…eee…iiii…iiii…Like Nicolas TSLA.,2,0.0,0.0,0.03718734160065651,Neutral,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2022-01-24,"[Yeah, depends on your bull case for NVDA. With AI and machine learning being a 15 trillion dollar industry by maybe 2030, then NVDA is a fine buy at these prices.. just gotta know you may get diced up in the short term.. but this company will be a trillion dollar MC at some point.](/r/stocks/comments/sal66d/tech_is_on_discount_but_if_anything_near_the/htwen3g/)
+
+KEYWORD : NVDA DATE : Sun Jan 23 17:04:43 2022 SUBREDDIT : stocks
+
+
+
+[NVDA will become a good buy at 214 and an even better buy at 204 based on vo",1,0.8658,0.4041666666666667,0.1035461276769638,Extremely Positive,Positive,Neutral,Positive,bullish or favorable stance
+2022-05-13,Elon is just a con man at this point. I think he’s having second thoughts due to $TSLA stock tanking and now he wants to pull out,8,0.0,0.025,-0.8977302620187402,Neutral,Neutral,Extremely Negative,Negative,bearish or critical stance
+2021-09-20,TSLA is way too high,4,0.0,0.16,-0.1891905851662159,Neutral,Neutral,Neutral,Negative,bearish or critical stance
+2022-05-06,Until TSLA pops and all the cash they’d been using to secure mining ahead of other EV competitors dries up…,3,0.34,0.1375,-0.10622616857290268,Positive,Neutral,Neutral,Positive,bullish or favorable stance
+2021-11-04,"Lol dude, your anti-Tesla bias on this forum is staggering.  
+
+Also, disparaging an EA charging station on a reddit post doesn't move the needle for TSLA in any way. What a silly suggestion.",17,-0.1779,0.15,-0.5098495930433273,Neutral,Neutral,Negative,Neutral,unclear or mixed sentiment
+2022-05-20,"Buy SPY and TSLA calls rn is what I’d do. Bought a TSLA call this morning and down 50%, but this is a better entry",1,0.5927,0.1722222222222222,-0.35429253429174423,Positive,Neutral,Negative,Positive,bullish or favorable stance
+2021-09-01,"&gt;I’m not a “member” of RealTesla, I don’t see their feed. 
+
+Yet you continue to post there. Again you are dodging the question. What purpose does it serve to post there?  Honest question. That one screencap is only one of the many posts from you on that subreddit.  
+
+&gt;sheer madness of the cult that believes   ...
+
+Ok and that matters to you because?  I pretty much know the answer, but I want you to say it 🍿Do you have financial interest against $TSLA? (Dont be a bitch 😏)",1,0.9161,0.2928571428571428,-0.04556136578321457,Extremely Positive,Positive,Neutral,Neutral,unclear or mixed sentiment
+2022-03-29,The TSLA train that doesn't stop/,5,0.2235,0.0,-0.039423514157533646,Neutral,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2022-01-08,"I was trading TSLA when it was for $60-65. If I would have hold, I would have retired by now. Have I stopped trading TSLA? No, I am fine with 10-20% gains when I try my luck.
+
+You can play small gains/losses with big bucks or risky plays with smaller bets that you are willing to keep if they drop 50+%. 
+
+GL with your next trading.",3,0.8331,0.0694444444444444,-0.2385188229382038,Extremely Positive,Neutral,Neutral,Negative,bearish or critical stance
+2021-11-29,TSLA: the unlimited money glitch,17,0.0,0.0,-0.017917457967996597,Neutral,Neutral,Neutral,Positive,bullish or favorable stance
+2022-07-04,TSLA dow 30% on Tuesday,3,0.0,0.0,0.7920996770262718,Neutral,Neutral,Extremely Positive,Neutral,unclear or mixed sentiment
+2021-11-16,fwiw - Fidelity's Blue Chip Growth Fund holds TSLA -   ¯\\\_ (ツ)\_/¯,2,0.3818,0.0,0.0344617972150445,Positive,Neutral,Neutral,Positive,bullish or favorable stance
+2022-06-23,The credit was for 200k vehicles per manufacturer to incent all manufacturers to get going on EV's.  TSLA got theirs.  Fine.  Pulling the rug out now under the other guys as they are making traction would be government interference helping TSLA lock in competitive advantage.  That's anti-competitive as fuck and not in the spirit of what the credit was designed to do (get all manufacturers to MOVE).,1,0.7079,-0.0361111111111111,0.012406572699546814,Positive,Neutral,Neutral,Positive,bullish or favorable stance
+2021-09-02,"Thinking about buying an 8 week gamble TSLA call options on Oct 1. Playing deliveries, earnings, maybe a stock split and I’m wondering if there are any major car shows etc that Model AF prototype could be announced (remember hearing some rumblings a few months back about something in China)
+
+Obviously will see how next few weeks go so opportunity could pass but thinking about it.
+
+What do others think here on this gamble? Would you to ITM or OTM and if so, how much?",1,0.471,-0.0196428571428571,0.018158458173274994,Positive,Neutral,Neutral,Positive,bullish or favorable stance
+2022-05-03,"Whenever someone commented, ""TSLA is more than a car company."" Every comment was heavily downvoted. Feels strange. Maybe it was Michael Burry on his 12 reddit accounts.",6,-0.2023,0.0833333333333333,-0.21841435506939888,Neutral,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2021-12-15,"SHOP, AMZN, TSLA, XPEV, ETSY",1,0.0,0.0,0.013345740735530853,Neutral,Neutral,Neutral,Neutral,ticker list or market data
+2022-06-10,"Great point. The cost, capabilities, and form factor of MVIS' sensor is impressive, but honestly that's the easy part of being the first major ADAS LIDAR provider for several OEMs. 
+
+If you went 50 years in the future and brought back the nicest LIDAR sensor, it'd still be hard to sell to the OEMs today - interpreting raw LIDAR data to provide inputs that supplement the OEM's ADAS's decision maker, and making that easily integrated by most OEMs is like, super tuff. If it was any easier the OEMs would have a",11,0.9862,0.2778617216117215,0.16521403286606073,Extremely Positive,Positive,Neutral,Positive,bullish or favorable stance
+2022-02-26,"I bought them on Tuesday and Wednesday at $800 and $850 ish, essentially catching the knife on the way down. 
+
+Would have loved to buy them Thursday morning when TSLA was at 697 ish but didn't have buying power without selling some shares.",1,0.0305,0.3814814814814815,0.026480361819267273,Neutral,Positive,Neutral,Positive,bullish or favorable stance
+2022-02-02,"STO GOOG 3500 CC 3/18 $750 used funds to buy more GOOG
+
+STO 4 SPOT 150/145 PCSs margin $.36
+
+GTC order hit TSLA 10 🌈 sh margin @ $899.99
+
+GTC UBER 25 2024 LEAP $16.50 still open
+
+That PYPL 100 CSP I got this morning doing nicely at least. 
+
+Wat a shit market day. If I wasn’t so heavy GOOG and MSFT I would be getting murdered. 
+
+Buddy gave me a Reagan silver Oz coin and thot was cool. Partner wants to get another rental, think I agree and diversify more from the market. 
+
+Gotta work today. Good luck out ther",13,0.5574,0.1722222222222222,0.5731977727264166,Positive,Neutral,Positive,Positive,bullish or favorable stance
+2022-05-16,Go ahead and short TSLA then,1,0.0,0.0,-0.02243822067975998,Neutral,Neutral,Neutral,Negative,bearish or critical stance
+2022-01-27,"4 Top Stock Trades for Thursday: MSFT, TSLA, T, AMD - Read more on PipPost",1,0.2023,0.5,0.0075588207691907,Neutral,Positive,Neutral,Neutral,ticker list or market data
+2022-04-26,Msft going to beat earnings if those tsla shorts go into their pocket.,2,0.0,0.0,0.8697700258344412,Neutral,Neutral,Extremely Positive,Neutral,unclear or mixed sentiment
+2022-01-27,TSLA moon mission resumed?,0,0.0,0.0,0.054474812000989914,Neutral,Neutral,Neutral,Positive,bullish or favorable stance
+2021-08-10,"$TSLA Tesla turns Gigafactory Shanghai into its new 'export hub,' and July numbers are showing it",1,0.0,0.1363636363636363,0.8952049128711224,Neutral,Neutral,Extremely Positive,Neutral,unclear or mixed sentiment
+2022-04-26,"TSLA, don’t play with my feelings now",0,0.34,0.0,-0.21008330211043358,Positive,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2022-05-03,TSLA Will Triple In 2022.,9,0.0,0.0,0.7999277217313647,Neutral,Neutral,Extremely Positive,Positive,bullish or favorable stance
+2022-04-20,"TSLA just printed $1,000.00.  Obviously not staying there but it showed up on my screen as the current price.",5,0.0,0.0,0.0022802650928497314,Neutral,Neutral,Neutral,Positive,bullish or favorable stance
+2022-04-03,Even if it was all TSLA? Either brilliant or incredibly stupid.,9,0.0276,0.05,-0.10315212234854698,Neutral,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2022-02-17,GME is going through what TSLA experienced for years. Fuck shorts and SEC. Why do you think Elon hates them so much and threatened to take TSLA private? Retail direct registration can take both companies private.,4,-0.8646,0.0857142857142857,-0.4013750236481428,Extremely Negative,Neutral,Negative,Positive,bullish against bears
+2021-11-23,TSLA bull trap perfecto,-2,0.0,0.0,0.05232989974319935,Neutral,Neutral,Neutral,Negative,bearish or critical stance
+2022-05-22,"&gt; She’s only 25.
+
+Do you know the definition of ""Millennial""?
+
+```
+mil·​len·​ni·​al | \ mə-ˈle-nē-əl
+
+Definition of millennial
+
+ (Entry 1 of 2)
+1 : They like the stonk. So long as it's AAPL or TSLA.
+2 : So fucked now.
+```
+
+BTW, tell your baby girl not to rent the over-priced apartment until she actually sits down for her first day at the Kombucha Bar. And puts in a full six hours. And isn't sent home to await a box of swag and come back in when you get it.
+
+Or maybe Apple isn't as mean as Meta.",9,-0.5742,-0.0575617283950617,-0.05465357378125191,Negative,Neutral,Neutral,Positive,bullish or favorable stance
+2021-11-25,"PLTR cos sooner or later ppl want to analyze stuffs
+
+Tsla cos peer pressure by govs and individuals will boost up demands for ev and clean energy.",1,0.6808,0.1833333333333333,0.8967595659196377,Positive,Neutral,Extremely Positive,Positive,bullish or favorable stance
+2022-01-05,Damn my tsla puts sold 7.25 now worth 13!!,2,-0.3365,0.46875,-0.014846570789813995,Negative,Positive,Neutral,Neutral,unclear or mixed sentiment
+2022-03-21,"Yah, I'm not selling CC's at this level. I was very close to pulling the trigger after the Q4 vehicle delivery beat on Jan 3rd but didn't do it (unfortunately).
+
+8 $1000 for 4/22 is a nice aggressive play.
+15 for $1000 seems definitely doable but who knows. I have a lot less confidence in the market.
+
+When did you sell these puts? I sold mine too early and so I'm roughly break even on the ones I have remaining.
+
+Oh and how much premium will you make on all of these puts you sold if TSLA is above the strike ",1,0.9356,0.0333333333333333,0.021596014499664307,Extremely Positive,Neutral,Neutral,Neutral,question or mechanics only
+2021-10-07,"Uranium bouncing back a touch, TSLA roulette wheel continuing to fuck /u/chzakalwe ,  markets behaving as normal.
+
+SPY 300 by EOY.",7,-0.5423,-0.0833333333333333,0.10581853054463863,Negative,Neutral,Neutral,Neutral,question or mechanics only
+2021-11-06,Stimmy passed and TSLA going in the shitter for a minute? Don’t mind if I do.,2,0.0,0.0,-0.09517873451113701,Neutral,Neutral,Neutral,Negative,bearish or critical stance
+2022-01-10,The TSLA Cultists are the absolute worst society has to offer.,6,-0.6249,-0.4,-0.875622165389359,Negative,Negative,Extremely Negative,Negative,bearish or critical stance
+2021-07-17,With TSLA I’d say zero. But GME will get me my next 10x.,-3,0.0,0.0,0.06295466050505638,Neutral,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2022-01-10,Never knew tsla would be less red than “safe haven asset” aapl,6,0.0,0.1111111111111111,0.22527055442333221,Neutral,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2022-01-17,"not likely, Dodge is still speculative and its only real backer is TSLA",-10,0.1027,0.0666666666666666,0.012475790455937386,Neutral,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2021-07-23,"yo wtf, I set a stop limit on my TSLA 0DTEs at trigger: 1.25, limit: 1.20
+
+it filled at 1.25 despite the price never getting down to 1.25. the price has been above 1.50 all day
+
+wow fuck tastyworks",2,-0.6908,-0.0925925925925926,-0.08639694005250931,Negative,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2022-05-12,"My strategy - not the only strategy by any means - is to invest capital for growth while I am working. I'll use my salary to pay bills, I don't need my investments do that while I'm working. I'd rather invest to grow my wealth as much as possible. For the past 20 years or so that meant investing in the usual growth suspects - AMZN, AAPL, MSFT, NVDA, ADBE, TSLA, MA, etc. as well as lesser known names like PAYC, MDB, SEDG, TTD, NOW and others that paid little or no dividends. All of it is in tax-advantaged ac",2,0.8062,-0.1145833333333333,0.03746618144214153,Extremely Positive,Neutral,Neutral,Positive,bullish or favorable stance
+2022-03-23,Puts on TSLA at $1150,-1,0.0,0.0,0.011517096310853958,Neutral,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2022-01-21,"$5.80. honestly not a fan of the IV, but i made a ton off of ATVI calls recently so why not. never bought in on TSLA options so here we go",2,0.1328,-0.15,0.03758280910551548,Neutral,Neutral,Neutral,Positive,bullish or favorable stance
+2022-06-06,"That's the reason I can't stand her, the blind allegiance to the TSLA cult is maddening.",2,-0.7096,-0.5,-0.7232713662087917,Negative,Negative,Negative,Neutral,unclear or mixed sentiment
+2021-11-20,i'm not racist but i don't understand how anyone thinks tsla is worth a trillion dollars,15,0.5362,0.3,-0.015605565160512924,Positive,Positive,Neutral,Negative,bearish or critical stance
+2021-12-09,"[You implicitly blame mismanagement of money. I'm telling you even somebody who is educated and earning well above his peers still can't afford a House and save money.  Median Household income in USA is &lt;$70,000 in 2019.  Saying the reason people can't afford $300k homes because they buy coffee and have take-out is fucking absurd. Rent is not much better; any living space starts at $1k and every apartment I've seen is going for $1,700.00.  A single person can scrape by living in some efficiency the size ",1,0.4577,-0.2053571428571428,-0.31221011839807034,Positive,Neutral,Negative,Neutral,unclear or mixed sentiment
+2021-09-26,"It means that 9 out of 10 people who have been given options approvals shouldn't have it.  But they will never admit they lied when they filled out the forms saying they had experience and knew what they were doing.  They are like teenage raised by absentee parents who have just been tossed the keys to a high end sports car - chances for a funeral were high.
+
+It means that most people should not be investing in the stock market: the bell curve is real.  But the intelligence community also doesn't waste thei",2,0.8218,0.1742857142857143,-0.03879820555448532,Extremely Positive,Neutral,Neutral,Neutral,question or mechanics only
+2021-10-25,Cause they 🌈 on a day that TSLA is printing 15 baggers,6,0.0,0.0,-0.06583790481090546,Neutral,Neutral,Neutral,Positive,bullish or favorable stance
+2022-03-05,$TSLA stock bear market gains.,1,0.34,0.0,-0.2636483311653137,Positive,Neutral,Negative,Negative,bearish or critical stance
+2021-10-20,"For the record TSLA twitter is especially melting because she's somebody that they've already targeted as a ""big oil shill"".",6,0.0,0.0,-0.016376696527004242,Neutral,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2022-06-11,"TSLA filed for a 3:1 split.
+
+As was obvious, and as I've been saying months now.
+
+Keep buying ROKU and your other trash positions... Wondering how the super-favorite TDOC is doing rn, you know, the ticker she's been buying for MONTHS now...
+
+The only reason why Cathie the Clown's fund isn't already at SINGLE-DIGIT prices is TSLA. Get out people, get out and buy the real deal, stop wasting your money on this r3t@rded scammer.",2,-0.5994,0.01875,-0.09433211758732796,Negative,Neutral,Neutral,Positive,bullish or favorable stance
+2022-06-28,"What does that mean?   I just went on a five mile hike.  I have a lush garden. I am in touch with nature don't worry. Are you?  And what does grass have to do with anything. You want me to toke some weed?    Listen, I may not be right all the time, I'd be a billionaire if I was, but I know an overvalued stock when I see one, especially in this market climate where all the hot air is being squeezed out and companies are being forced to prove their mojo. 
+
+Most tech companies will have a bad quarter or two, t",1,-0.8569,-0.0220982142857142,-0.26343532651662827,Extremely Negative,Neutral,Negative,Neutral,question or mechanics only
+2022-04-16,$TSLA and $TWTR and TSLA earnings - Hear me out here,2,0.0,0.0,0.0422239117324352,Neutral,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2021-12-23,"I think 200 in the next year is a reasonable goal, even if the markets swoon.
+
+So, that would require 5K shares.
+
+TSLA has been a great HODLer for me, I'm expecting DWAC to be the same. We shall see!",7,0.7644,0.25,0.3400113908573985,Extremely Positive,Positive,Positive,Positive,bullish or favorable stance
+2022-02-24,Damn guys not trying to be insensitive but I have BABA calls and TSLA puts.,5,-0.3182,0.0,-0.03887924179434776,Negative,Neutral,Neutral,Positive,bullish or favorable stance
+2021-11-06,Lmao Elon out here about to completely tank TSLA,11,0.5994,0.35,-0.42508838325738907,Positive,Positive,Negative,Negative,bearish or critical stance
+2021-11-04,tsla already priced in the next decade of growth lmao.,8,0.7579,0.3,0.8182871835306287,Extremely Positive,Positive,Extremely Positive,Negative,bearish or critical stance
+2022-06-27,"you’ll hate the irony, but my first stock purchase was TSLA at $40",2,-0.3506,-0.275,0.024528365582227707,Negative,Negative,Neutral,Neutral,unclear or mixed sentiment
+2022-06-28,"2022 Elon is alienating a lot of people.  
+
+
+I'm a long time fan, investor and owner , my wife is arguing against keeping our tsla, and even the car, and its hard to argue against.",13,-0.5423,-0.2138888888888888,-0.4978823568671942,Negative,Neutral,Negative,Positive,bullish or favorable stance
+2021-09-27,"I’m always watching AAPL, BA, FB, MSFT, NVDA, and TSLA, and I scalp their options primarily because they usually have narrower bid-ask spreads. TDA’s “Flexible Grid” under their charts lets me watch all six, and if I see one flagging, consolidating, double-topping/bottoming, etc., I will set up to jump in. If I miss it, oh well, there’s always another opportunity with these six typically fast movers.",4,0.5106,0.1166666666666666,0.03113013133406639,Positive,Neutral,Neutral,Positive,bullish or favorable stance
+2021-10-27,"I realised that people who are long TSLA tends to be long on fake internet money as well
+
+Do what you will with this information",5,-0.25,-0.1999999999999999,-0.021608643233776093,Negative,Neutral,Neutral,Positive,bullish or favorable stance
+2022-06-04,"#Ban Bet Lost
+
+/u/Hagridonatrain (1/9) made a bet that TSLA would go to 820.0 when it was 783.2 and it did not, so they were banned for a week.",2,-0.8467,0.0,-0.22113671898841858,Extremely Negative,Neutral,Neutral,Neutral,question or mechanics only
+2021-11-04,Is Burry still holding his TSLA puts? It's still showing up in WhaleWisdom. That fker should be up in his ass in losses by now.,3,-0.7351,0.0,0.01628223806619644,Negative,Neutral,Neutral,Positive,bullish or favorable stance
+2022-01-06,"Yeah, like buying TSLA at @ $150 pre split. 😎",1,0.7717,0.0,0.02612670138478279,Extremely Positive,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2022-06-10,Really wish I held those TSLA 750 puts,4,0.4576,0.2,0.032749297097325325,Positive,Neutral,Neutral,Negative,loss or regret on trade
+2022-05-17,I put $1600 into TSLA calls before close then got home and pissed away $500 on a online casino. Fuck I hope those calls hit now ![img](emote|t5_2th52|12787),4,-0.7263,-0.5,-0.08437645621597767,Negative,Negative,Neutral,Positive,bullish or favorable stance
+2022-04-27,TSLA experiencing convulsions right now,4,0.0,0.2857142857142857,-0.8239749874919653,Neutral,Positive,Extremely Negative,Neutral,unclear or mixed sentiment
+2021-11-09,Back to our regularly scheduled program of TSLA Freefall,8,0.0,0.0,0.037264599464833736,Neutral,Neutral,Neutral,Negative,bearish or critical stance
+2022-03-17,"Assuming your statement of Tesla raising ""887 million shares to 1 billion 129 million"" is accurate, that is a 27% dilution - and at least the last raises came at a time of strength, the stock price was climbing, unlike Nikola, which is doing raises while the stock price is near or at all time lows.
+
+Nikola's latest raise is 33% dilution, and this is in addition to the other raises they've done since going public. Telsa's last raise was to fill a war chest with money, 'just in case' and 'why not' given the s",3,-0.0772,0.071875,0.13163690082728863,Neutral,Neutral,Neutral,Neutral,question or mechanics only
+2022-05-20,"Tsla current pe after today's bloodbath : 89
+
+Amazon current pe : 52
+
+Shop : 251
+
+If tsla trades flat till 2023 Aug &amp; they keep eps of 3 like q1 of this year, on avg pe will be around 35",4,0.4939,-0.0083333333333333,0.010777216404676437,Positive,Neutral,Neutral,Negative,bearish or critical stance
+2021-12-14,I feel like tsla puts is the obvious choice for today,5,0.3612,0.0,0.1388347651809454,Positive,Neutral,Neutral,Negative,bearish or critical stance
+2021-08-15,How much does 350miles cost on ur tsla?? 🤔,0,0.0,0.2,0.004393495619297028,Neutral,Neutral,Neutral,Neutral,question or mechanics only
+2021-11-08,Tsla stock,3,0.0,0.0,-0.0119338184595108,Neutral,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2022-03-21,TSLA just green everyday huh,8,0.0,-0.2,0.018802788108587265,Neutral,Neutral,Neutral,Positive,bullish or favorable stance
+2021-11-01,Welcome to speculation.  TSLA stock is worth $1208 per share because that’s what people are willing to pay for a share of TSLA.  The VALUE of TSLA stock isn’t anywhere near that.  The stock currently has no relationship to the value of the company and its product.  TeslaBros will tell you it’s somehow still undervalued.  That disconnect leads to mania which leads to bubbles.  Think of Tesla stock as a car-shaped tulip.  :),1,0.9222,0.325,-0.1958899274468422,Extremely Positive,Positive,Neutral,Negative,bearish or critical stance
+2021-09-02,"🔥Welcome to MiniSTONK🔥
+
+🦾 Locked liquidity
+
+🎁 5% Auto Liquidity and Buyback
+
+🎊 6% Stock Rewards (TSLA,AMZN,NFLX)
+
+⚙️ 3% Marketing
+
+💸 Huge Marketing
+
+🗣 Telegram: @MiniSTONK
+
+🌎 Website : Ministonks.com",1,0.7096,0.3999999999999999,0.015789475291967392,Positive,Positive,Neutral,Neutral,unclear or mixed sentiment
+2022-05-02,"[MNTK WM AES &amp; GOOGL in that order will be the focus of June and the rest of the year. Lots of buying opportunities across the board, for sure, but I have recurring investments lined up for these and I won’t deviate from that schedule. UPST and GOOGL are the only stocks I jumped on when they went down](/r/stocks/comments/ufqqag/buys_for_june/i6xjky5/)
+
+KEYWORD : UPST DATE : Sun May  1 18:06:45 2022 SUBREDDIT : stocks
+
+
+
+[dude I'm looking at SE and UPST for the last 6 months and I still think they are un",1,0.3506,0.1666666666666666,-0.0208195261657238,Positive,Neutral,Neutral,Neutral,question or mechanics only
+2021-07-15,There is a lot of discord about tsla stock. You can see it on this sub frequently. Particularly when the stock drops.,5,-0.4019,0.1666666666666666,-0.9045631373301148,Negative,Neutral,Extremely Negative,Neutral,question or mechanics only
+2021-11-08,Bears actually thought tsla would drop 20% today 😂,5,0.2023,0.0,-0.9605827834457159,Neutral,Neutral,Extremely Negative,Positive,bullish against bears
+2022-04-24,"There are so many more important things I'd rather say, but given the word limit.
+
+Buy more TSLA. 
+
+Like every single week @ $17.50/share.....
+
+Young people....learn how easy it is to invest in the stock market. 
+
+ASAFP....",1,0.848,0.3374149659863946,0.06212421227246523,Extremely Positive,Positive,Neutral,Positive,bullish or favorable stance
+2022-01-07,"It's not. And indexing may not be the answer for everyone. 
+
+The reason you hear it so often on this sub is in response to questions from new investors who really don't know what they're doing. Either they are just starting with investing, or they started doing something like daytrading and lost a lot of money in a massive bullmarket. 
+
+For those people, indexing is always the answer.
+
+""I lost $40,000 daytrading. What should I do?""
+
+Is your answer really ""options""? Or ""TSLA""? Or ""bonds""?",3,-0.4696,0.1072727272727272,-0.13165763951838017,Negative,Neutral,Neutral,Neutral,question or mechanics only
+2022-06-14,"TSLA going from 659 to 677 in half an hour or in other words how to ruin my day. This is too much even for a relief pump, remember it was in the 630s today.",2,-0.1779,-0.0305555555555555,-0.43145912885665894,Neutral,Neutral,Negative,Positive,bullish or favorable stance
+2021-10-14,"$TSLA Daily Investor Discussion - October 14, 2021",34,0.0,0.0,-0.014336047694087,Neutral,Neutral,Neutral,Neutral,ticker list or market data
+2021-11-07,ATM put spreads I think. Spreads because my account can't handle too many ATM TSLA anything unless it's way OTM. ATM because you could be right.,2,0.0,0.3928571428571428,-0.07869203388690948,Neutral,Positive,Neutral,Neutral,question or mechanics only
+2021-10-22,"[It looks like you want to create a banbet. Say the following command.  ```  !banbet TSLA +1% 1M ```  ^This ^is ^a ^test. ^Collecting ^data, ^sorry ^if ^it's ^being ^dumb.](/r/wallstreetbets/comments/qctcfy/hey_you_bought_high_yeah_i_know/hhi6pe8/)
+
+KEYWORD : TSLA DATE : Thu Oct 21 16:04:07 2021 SUBREDDIT : wallstreetbets
+
+
+
+[lol...no.  I meant it would place 28k calls over the $900 strike price.  I am a TSLA fanboy](/r/wallstreetbets/comments/qctcfy/hey_you_bought_high_yeah_i_know/hhii2nx/)
+
+KEYWORD : TSLA",1,0.5255,-0.25,-0.02283059060573578,Positive,Negative,Neutral,Positive,bullish or favorable stance
+2022-05-19,TSLA - 710 short straddle 1DTE..Call@13.6 Put@21.40,1,0.0,0.0,0.014059742912650108,Neutral,Neutral,Neutral,Negative,bearish or critical stance
+2021-12-29,TSLA calls always and forever,2,0.0,0.0,0.005909977480769157,Neutral,Neutral,Neutral,Positive,bullish or favorable stance
+2021-10-05,The amount of people that TSLA yolo is beyond me,3,0.2732,0.0,-0.031915126368403435,Positive,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2022-01-09,"At what degree incline would a TSLA in park need to slide down the hill of a shear ice surface?
+
+Do I need to provide a slip factor for the ice? No I do not. It is a clean sheet of ice with no contamination",2,-0.264,0.1055555555555555,-0.046448901295661926,Negative,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2021-10-26,Worauf muss ich bei Tsla Calls bei Trade Republic achten? Bzw welche Preise sind „vernünftig“?,1,0.0,0.0,0.07143354415893555,Neutral,Neutral,Neutral,Positive,bullish or favorable stance
+2022-02-26,"I don't make much.  From 2014 to 2019 I bought about $5k/year of AMD and TSLA.  Never sold, only bought.  I was up 2000% in November.  Now I'm only up 1000%",19,0.0,0.0666666666666666,0.1696501150727272,Neutral,Neutral,Neutral,Positive,bullish or favorable stance
+2021-12-14,"[As I've warned people here countless times, making money in the market is easy - just buy the trends - but not losing it all when those trends shift is far harder.  If you're not investing in stuff based on its fundamental value then you're exposing yourself to the risk that at any moment the market might decide to value your investment based on what it's actually worth. If you're buying stuff which you believe is trading below it's fundamental value then it's great when the market finally decides to value",1,0.96,0.219047619047619,-0.0265924334526062,Extremely Positive,Neutral,Neutral,Positive,bullish or favorable stance
+2021-08-11,Does WSB even TSLA?,1,0.0,0.0,-0.012849871069192886,Neutral,Neutral,Neutral,Neutral,question or mechanics only
+2021-11-20,TSLA 2021 stock prize,1,0.5106,0.0,0.0027218665927648544,Positive,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2022-06-03,"Let’s get TSLA close to 700 then sell a bunch of 700 puts
+
+Pump it to 800 next week. Then sell a bunch of 850 calls
+
+Then week after tank it to 700
+
+How can we do it?? We OWN THE FLOAT 
+
+HFs think they’re so smart straight up robbing people. Cheating to win. That’s cool. You’ll always be frauds",2,0.6404,0.3607142857142857,0.021392028778791428,Positive,Positive,Neutral,Negative,bearish or critical stance
+2022-04-08,"Oh, yeah, as I've written that i should have mentioned: i hope Elon cuts both hands of that dirty smelly CEO, gouge his eyes and chain him to a TSLA that drives in circles around 1355 Market Street CA.
+
+There's definitely a lot that Elon can make to make Twitter more profitable and better, i was just referring to current twitter status quo pre-Elon.",2,0.8425,0.08,0.020614389330148697,Extremely Positive,Neutral,Neutral,Positive,bullish or favorable stance
+2022-01-18,DIE TSLA DIE back to 1020,6,-0.8825,0.0,0.019465621560811996,Extremely Negative,Neutral,Neutral,Negative,bearish or critical stance
+2021-11-20,"China is making a huge push for EV next year and Chinese consumers also view TSLA as a status symbol.  They favor TSLA over their domestic brands like Nio.  If China makes another EV push, it will drive the price back up.  It'll be on its way to $1400 but good luck to you.",2,0.9022,0.1833333333333333,0.8561998950317502,Extremely Positive,Neutral,Extremely Positive,Positive,bullish or favorable stance
+2021-12-08,TSLA WILL RIP ON GIGA FACTORY COMPLETION. this week or next week,3,0.0,0.0,-0.13746052980422974,Neutral,Neutral,Neutral,Positive,bullish or favorable stance
+2022-04-26,Something else to keep in mind is that TSLA was and still is heavily shorted and some believe is still experiencing a long term controlled squeeze of sorts which is inflating TSLA share price which inflates Elon's NW which also helps him afford to purchase twitter,2,0.5859,-0.125,-0.577535942196846,Positive,Neutral,Negative,Positive,bullish or favorable stance
+2021-12-06,"F... TSLA is always a wild card, so you might be able to recover depending on how retarded people wanna get.
+
+
+Personally, I'd set a trailing stop loss and just forget it and move on.",1,-0.8442,-0.05,-0.012239821255207062,Extremely Negative,Neutral,Neutral,Neutral,question or mechanics only
+2022-04-11,Right now I am buy-and-hold. I buy when price is below my intrinsic value calculation. Unless the price goes tsla-crazy (or if the company changes fundamentally for the worse) I don't intend to sell.,1,-0.1779,-0.0571428571428571,-0.1452241949737072,Neutral,Neutral,Neutral,Positive,bullish or favorable stance
+2021-11-12,[Buy TSLA.](https://twitter.com/elonmusk/status/1360170735033978880?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1360170735033978880%7Ctwgr%5E%7Ctwcon%5Es1_c10&amp;ref_url=https%3A%2F%2Fpublish.twitter.com%2F%3Fquery%3Dhttps3A2F2Ftwitter.com2Felonmusk2Fstatus2F1360170735033978880widget%3DTweet)![img](emote|t5_2th52|5957),1,0.0,0.0,-0.056070178747177124,Neutral,Neutral,Neutral,Positive,bullish or favorable stance
+2021-07-21,Wonder how that 600k TSLA 7/30 700c yolo guy is doing,5,0.2732,0.0,-0.01925519108772278,Positive,Neutral,Neutral,Neutral,question or mechanics only
+2021-10-26,"Not a share holder. But, I think the rise yesterday was more due to the fact that Hertz  making 20% of its fleet Tesla's signals we're further along the EV adoption curve than previously thought. Additionally, it helps confirm Tesla's current issue is production, not demand. Couple that with the amount of money they already have moving through the company, and people are getting excited.
+
+I don't know enough about fundamentals to determine whether this justifies Tesla's new valuation (though I see from peop",1,0.7657,0.0899621212121212,0.42892259545624256,Extremely Positive,Neutral,Positive,Positive,bullish or favorable stance
+2022-06-06,No idea ig tsla and amzn making spy moon,2,-0.296,0.0,-0.00879141315817833,Negative,Neutral,Neutral,Positive,bullish or favorable stance
+2022-05-16,"
+		0 in premium column indicative of 'N/A' column result lately for those contracts 🤷‍		
+
+
+
+Price * (Volume+Open Interest) Calls &gt; $125,000,000
+
+Symbol|Last * Volume|Last * Volume|Total Premium|Total Premium|
+:--|:--:|:--:|:--:|:--:|
+AAPL|706270272|$706.270272m(Δ$-86.887748m)|270191454.76|$270.19145476m
+AMD|368740981|$368.740981m(Δ$77.213878m)|143815427.5|$143.8154275m
+AMZN|75027855|$75.027855m(Δ$-81.80901m)|74253853|$74.253853m
+BABA|108735467|$108.735467m(Δ$-30.713613m)|0|$0m
+CI|339478650|$339.47865m(Δ$",1,0.4588,-0.3,-0.20280462875962257,Positive,Negative,Neutral,Neutral,ticker list or market data
+2021-12-22,Good job and fuck you. $TSLA basically 10x. How did you get to that share price? Cheers,1,0.5719,0.1499999999999999,0.0628251489251852,Positive,Neutral,Neutral,Positive,bullish or favorable stance
+2022-03-04,"They pumped TSLA to where it is now and the wheat market is also not that big.
+
+But I am pretty sure politicians will step in this time or the ""little"" people will revolt when bread price quadruples.",3,0.8047,0.140625,-0.1864691600203514,Extremely Positive,Neutral,Neutral,Neutral,question or mechanics only
+2021-10-24,TSLA credit spreads &amp; eyeing SNAP to see whats gonna happen. Expect FB earnings to be good &amp; SNAP to begin its slow recovery to probably about 65.,2,0.6705,0.1999999999999999,0.8282032310962677,Positive,Neutral,Extremely Positive,Positive,bullish or favorable stance
+2022-05-13,"Opinions welcome
+
+I missed the boat on TSLA last year but made decent gains on AAPL &amp; SPCE. I sold out of SPCE at $37 after the second peak and haven’t done much with the cash since (waiting for a good time to re enter.
+
+Im now looking to re enter and I’m interested in your opinion, I have 30k in an ISA (I’m UK based), so no puts of calls, just buying stocks directly.
+
+SPCE is tempting given its current price, but AAPL &amp; TSLA also have taken a hit recently…..",0,0.7964,0.2462962962962963,0.33011307939887047,Extremely Positive,Neutral,Positive,Positive,bullish or favorable stance
+2022-01-28,"I am just saying. If you loved TSLA at $1000 , you would have loved them even more now !
+
+&amp;#x200B;
+
+![gif](giphy|Jlt69Ka6SwtH2|downsized)",7,0.855,0.7270833333333333,-0.0016142986714839935,Extremely Positive,Positive,Neutral,Neutral,unclear or mixed sentiment
+2022-04-26,"ARK Innovation ETF Top Holdings, % Below High:
+
+* TSLA: -27%
+* ZM: -83%
+* ROKU: -81%
+* TDOC: -80%
+* COIN: -64%
+* SQ: -64%
+* EXAS: -61%
+* U: -63%
+* TWLO: -73%
+* CRSP: -74%
+* PATH: -78%
+* SPOT: -70%
+* NTLA: -71%
+* SHOP: -74%
+* BEAM: -69%
+* PD: -47%
+* FATE: -71%
+* DKNG: -80%
+* HOOD: -86%
+* SGFY: -61%
+
+The ARK Innovation ETF is now underperforming the Nasdaq 100 by 60% since its inception in Oct 2014. 
+
+In February 2021 it was outperforming by 500%.",42,0.7184,0.33,-0.2658580392599106,Positive,Positive,Negative,Neutral,unclear or mixed sentiment
+2021-12-07,"TSLA yet to go regard, tbh",3,0.0,0.0,-0.012287423014640808,Neutral,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2022-05-02,No but he’s looking at adding additional funding so he doesn’t have to sell more TSLA,1,-0.1531,0.5,0.45306969713419676,Neutral,Positive,Positive,Neutral,unclear or mixed sentiment
+2021-11-10,If you aren't in TSLA calls are you not a shell of a man,2,0.0,0.0,-0.08287476561963558,Neutral,Neutral,Neutral,Positive,bullish or favorable stance
+2022-04-07,"
+		0 in premium column indicative of 'N/A' column result lately for those contracts 🤷‍		
+
+
+
+Price * (Volume+Open Interest) Calls &gt; $75,000,000
+
+Symbol|Last * Volume|Last * Volume|Total Premium|Total Premium|
+:--|:--:|:--:|:--:|:--:|
+AAPL|1174125714|$1,174.125714m(Δ$-3.243483m)|-57513352|$-57.513352m
+AMD|255188268|$255.188268m(Δ$0.810501m)|212954873.74|$212.95487374m
+BAC|104918472|$104.918472m(Δ$-3.148866m)|73888844|$73.888844m
+BMY|78305900|$78.3059m(Δ$0.877853m)|-54737629|$-54.737629m
+CI|275616300|$275.6",1,0.4588,-0.3,-0.2012191154062748,Positive,Negative,Neutral,Neutral,ticker list or market data
+2022-01-17,"[It was different in a lot of ways, but kinda similar in sentiment I guess. Back then valuations were more reasonable with most large-cap tech stocks selling at about a 30-50% discount to today's valuations. During the sell-off growth tech stocks mostly fell with the rest of the market (although slightly more aggressively) where as today investors seem to think only small-cap growth stocks should be significantly impacted by interest rates and that high PE stocks like MSFT, AAPL and NVDA are safe, which has",1,0.9426,0.2695833333333333,-0.889019064605236,Extremely Positive,Positive,Extremely Negative,Positive,bullish or favorable stance
+2022-02-12,"Somewhat priced in - or at least people have been waiting for more certainty and clarity around it before diving into the market. If Russian forces move away from the border, I'd expect a good recovery, inflation/rates notwithstanding.
+
+No matter how low QQQ goes, there comes a point when TSLA will stand on its own fundamentals - otherwise a sort of arbitrage opportunity opens up.",4,0.8312,0.25,0.3055701144039631,Extremely Positive,Positive,Positive,Positive,bullish or favorable stance
+2021-07-14,Will this 3.5 trillion bill pump my tsla calls?,6,0.0,0.0,0.01339929923415184,Neutral,Neutral,Neutral,Positive,bullish or favorable stance
+2022-04-29,5/6 tsla $750 put will it print ?,2,0.0,0.0,0.009575124830007553,Neutral,Neutral,Neutral,Negative,bearish or critical stance
+2021-12-11,vix dropped big time today after 2pm. my $tsla puts are well in the green.,4,0.2732,-0.1,0.07532387971878052,Positive,Neutral,Neutral,Negative,bearish or critical stance
+2021-12-18,"Most Mentioned Tickers for r/vitards Daily Discussion 
+
+Ticker | Mentions | Price 
+--------- | --------- | --------- 
+[CLF](https://www.reddit.com/r/MillennialBets/wiki/index/stocks/CLF)  |  50 |20.59,(0.24%)
+[MT](https://www.reddit.com/r/MillennialBets/wiki/index/stocks/MT)  |  32 |32.03,(-0.53%)
+[ZIM](https://www.reddit.com/r/MillennialBets/wiki/index/stocks/ZIM)  |  30 |50.96,(2.41%)
+[AMC](https://www.reddit.com/r/MillennialBets/wiki/index/stocks/AMC)  |  17 |29.12,(19.1%)
+[ASO](https://www.reddit.com/r/",1,0.0,0.25,-0.07200068607926369,Neutral,Positive,Neutral,Neutral,ticker list or market data
+2021-09-20,"I think the CCP will contain the Evergrande fiasco, but its a risk for sure. TSLA can certainly use a correction. I'm convinced it will trade largely sideways for a long time.",3,0.7003,0.2196428571428571,0.1945493072271347,Positive,Neutral,Neutral,Positive,bullish or favorable stance
+2022-02-05,"I wasn't actively investing in 2000 but I agree with this take. I will say that there appear to be bubbles in specific sectors like ev. Rivn and lcid no production with market caps bigger than honda seem highly speculative. That said, they seem to be deflating. I would add that tsla is more appropriately valued than most given it's innovation, profit margins, and proven success. That doesn't necessarily mean I fel they are fairly valued.",5,0.98,0.2214166666666666,0.17637966573238373,Extremely Positive,Neutral,Neutral,Positive,defends TSLA valuation
+2021-11-19,Persuaded my sister to start investing and dump all into TSLA. Just doing my part 😎,7,0.1027,0.0,0.06351352296769619,Neutral,Neutral,Neutral,Negative,bearish or critical stance
+2022-01-27,"I did some hard work to make some under the radar picks. It was super diligent. Pretty happy with my unique portfolio of relatively unknown companies with an edge. 
+
+  Ended up with AAPL, AMZN, FB, NFLX, GOOG, MSFT, CRM and TSLA.",5,0.886,0.2277777777777777,0.20661910716444254,Extremely Positive,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2021-07-12,"Remember TSLA, they had the lowest price target forever. They were focused on cash flow and ebitda when tesla was ramping up production.",3,0.0,0.0,-0.03278674930334091,Neutral,Neutral,Neutral,Positive,bullish or favorable stance
+2022-01-06,"Whatever it is, the man isn't wrong about AMD amazing growth, data center, server, meta verse, automotive, potential 5G exposure, phone/mobile, etc. AI is coming. Fantastic CEO with collaboration, innovation, and customer orientated who deeply understand both products, technology, and market needs. AMD is picked by TSLA (already in model3). AMD is picked by FB. etc. etc. etc. P/E is less than half of NVDA (41 now vs. 85). Everything is moving more and more digital (not less.) Even in sectors that isn't norm",1,0.9343,0.0958333333333333,0.09554449561983347,Extremely Positive,Neutral,Neutral,Positive,bullish or favorable stance
+2021-12-04,"TSLA please. Especially TSLA.
+
+I had so many spy puts I paper handed man :( and I also bought VIX puts to hedge the other puts lol
+
+If crash still gonna make a killing but not as much as before for sure",1,0.0,0.1607142857142857,0.005858849734067917,Neutral,Neutral,Neutral,Negative,bearish or critical stance
+2021-12-23,"This is something I'm in the middle of putting together a review on. 
+
+
+
+Growing up I would play in boxers and that was it. Of course, I also didn't air out my gear or wash it. As an adult I've always worn long sleeve top/bottom. For the last 5 or so years I've used TSLA branded gear I got on Amazon. For the price, it's been amazing! Back when I bought them, tops/bottoms combined were probably only $25. Insane price especially for the quality and how long they've lasted. I have a highly ventilated versions ",1,0.6114,-0.0081818181818181,0.006644830107688904,Positive,Neutral,Neutral,Positive,bullish or favorable stance
+2022-02-22,"You fucking piece of shit Buls.. all your calls are making sure my VXX doesn’t pop. All your shit is expiring worthless. I’m short TSLA 
+
+Fuck you buls 
+
+Fuck you retards 
+
+Stupid mother fucking idiots",-2,-0.961,-0.4181818181818181,-0.5104351118206978,Extremely Negative,Negative,Negative,Negative,loss or regret on trade
+2022-06-22,Tick Tock TSLA,7,0.0,0.0,-0.009289003908634186,Neutral,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2022-05-06,TSLA 900 0DTE market order queued,-1,0.0,0.0,-0.3001029323786497,Neutral,Neutral,Negative,Neutral,unclear or mixed sentiment
+2021-11-03,"I swear ETF trading has more impact on an individual share price than trades of that specific company's shares.  You really cannot underestimate the power that massive index funds can have on the underlying holdings. 
+ 
+I've seen huge winners with massive moats tank from sector rotation and I've seen massive dung heaps catch a ride from positive news related to their industry.
+ 
+The rebalancing that these indices do to match market cap compounds the individual price movements.  When a massive market cap lik",2,0.9241,0.1106060606060606,0.02793470025062561,Extremely Positive,Neutral,Neutral,Negative,bearish or critical stance
+2022-02-10,"[Yeah no amma sit this one out. FB is shit, user rate declining. And thats Metas big cow. Insta is shit. If it wasent for all the chicks no1 would be there either.](/r/wallstreetbets/comments/so19al/why_only_retards_are_selling_the_near_bottom_on/hw73zc4/)
+
+KEYWORD : FB DATE : Wed Feb  9 07:18:28 2022 SUBREDDIT : wallstreetbets
+
+
+
+[Elon, please split TSLA 20-1 so that TSLA can go to $2,000, and then you can buy FB with your wealth.](/r/wallstreetbets/comments/so19al/why_only_retards_are_selling_the_near_bot",1,-0.7096,-0.1333333333333333,-0.18467439338564873,Negative,Neutral,Neutral,Positive,bullish or favorable stance
+2021-07-29,"Agreed. Might be trying to glean some of that TSLA P/E ratio karma by being seen as more than an auto maker. Watch their CEO on TV trying to be upbeat about the production schedule was painful. They really need to get that car finished and delivered yesterday. I can't see too many takers until after the lock-up expirations. The Saudi's say they are in it for the long haul 5 years type of deal, but they got in so cheaply that they can afford to take a sell-off or two.  When I see an actual Lucid on the stree",1,-0.1027,0.1214285714285714,-0.017605595290660858,Neutral,Neutral,Neutral,Positive,bullish or favorable stance
+2022-06-22,!banbet TSLA 669.69 1w,3,0.0,0.0,0.027546901255846024,Neutral,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2021-08-30,anyone selling covered calls on TSLA?,3,0.0,0.0,-0.01018134132027626,Neutral,Neutral,Neutral,Positive,bullish or favorable stance
+2022-01-07,too early to say but today this trade is in the money. I might close it out much sooner than i had hoped. Tsla shorts are scary,1,-0.2263,-0.0666666666666666,-0.1941666565835476,Neutral,Neutral,Neutral,Negative,bearish or critical stance
+2021-11-02,"[&gt;The AI is so bad that Tesla fatal accidents felt like they were happening every week this year lol.  FYI, there's been ***zero*** crashes with FSD Beta over the past 12 months, with 2,000 drivers - let alone ""fatalities"".  For reference: 2,000 average US drivers driving average non-Tesla cars have ~50 police-reported crashes over 12 months, according to NHTSA data.  Tesla's AI ***is*** genuinely good.  Friends don't let friends get TSLA DD from TeslaCharts, Mark Spiegel, Michael Burry or Jim Chanos... ",1,-0.7107,0.0416666666666666,-0.03518935292959213,Negative,Neutral,Neutral,Positive,bullish or favorable stance
+2021-12-22,"You sound like a $TSLA bear. They have been saying that for years now. Not saying your wrong, just not all things make complete sense every time",2,0.6192,9.251858538542969e-18,-0.13975322991609573,Positive,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2022-05-20,Can you imagine what would happen if TSLA got repriced all the way down to what it's actually worth?,8,0.2263,0.0722222222222222,0.006563950330018997,Neutral,Neutral,Neutral,Neutral,question or mechanics only
+2021-11-23,so are you bullish on tsla short term?,2,0.0,0.0,0.037406597286462784,Neutral,Neutral,Neutral,Negative,bearish or critical stance
+2022-01-23,"TSLA due to it's grey-area position in the Macro. Amazon is running at 5% net profit but TSLA will easily be double-digit profit by end of 2022. I think this is somewhat priced in as Amazon and TSLA are both coincidentally down about 22% from pre-tech-fallout. Vs. e.g. Netflix at 44% and biotechs/long-bets (psychedelics, speculative assets) down 70%+
+
+I usually never mention growth stocks and profit, but this macro headwind requires profits to not get a beating.",1,0.9686,0.0203703703703703,-0.9506170311942697,Extremely Positive,Neutral,Extremely Negative,Positive,bullish or favorable stance
+2021-12-27,sold my SPY calls for TSLA calls then got raped by IV crush…,11,-0.6808,0.0,-0.22803190723061562,Negative,Neutral,Neutral,Negative,loss or regret on trade
+2021-11-08,Tsla 1200 in 5 minutes,8,0.0,0.0,-0.01117684692144394,Neutral,Neutral,Neutral,Positive,bullish or favorable stance
+2021-10-28,"Even naked shorts are legal, if you're a mm. And citadel is. 
+
+Sorry, but you're wrong. TSLA is similar to GME. Just not as good an opportunity as it was never shorted as much as gme. TSLA is continuing to squeeze. The SHFs have ways to delay the squeeze, and prolong and protract it, which is what they've been doing with TSLA, and what they're now doing with gme.",1,-0.7513,0.0142857142857142,-0.016560330986976624,Extremely Negative,Neutral,Neutral,Positive,bullish or favorable stance
+2022-04-28,Can’t believe my TSLA puts are printing,7,0.0,0.0,0.06385891512036324,Neutral,Neutral,Neutral,Negative,bearish or critical stance
+2022-07-03,"Remember this - if people were smart, then TSLA would be expensive now and you probably could not buy as much of it.
+
+So... load up soon, boys (and probably a girl or two somewhere), especially if no boom this week.
+
+By Q4 this stock could be very expensive.",25,0.0571,-0.1471428571428571,0.024526599794626236,Neutral,Neutral,Neutral,Positive,bullish or favorable stance
+2021-11-20,"[On here huge cult around AAPL . Same with OPEN + maybe NIO .](/r/stocks/comments/qx1fex/the_rise_of_stock_cults_on_the_internet/hlbcohq/)
+
+KEYWORD : AAPL DATE : Fri Nov 19 22:35:41 2021 SUBREDDIT : stocks
+
+
+
+[I wouldn't worry about it. $5k is not a whole lot: you wouldn't be making any significant returns with it, and you also wouldn't be losing much to inflation even at current elevated levels. Putting it in your savings isn't bad, it'd be your insurance in case you need cash for something urgent. AAPL ma",1,0.8844,0.021875,0.02771618589758873,Extremely Positive,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2021-12-27,"Some news I heard today on finance tv - AAPL, NVDA, TSLA, RIVN, etc are seeing new short interest, with value plays like KO seeing less short interest as long investors are moving into value plays and shorts are leaving them. Seems like a bad move with the santa rally to be shorting those in particular.",4,0.9189,-0.0876623376623376,-0.8668948840349913,Extremely Positive,Neutral,Extremely Negative,Negative,bearish or critical stance
+2021-10-28,He also said TSLA to $1200 a week ago and they had flawless earnings,2,0.5106,1.0,0.3818300310522318,Positive,Extremely Positive,Positive,Positive,bullish or favorable stance
+2022-03-13,"I'm thinking about purchasing a Telsa Model 3 with FSD and paying it off by doing Gig apps. - **FSD works now?**
+
+It would be much less of a pain to drive because I'm in a Tesla and Most of the work would be taken out by it drving itself. - **Has this person ever seen FSD Beta videos?**
+
+And I know there's depreciation but if I don't plan on selling the car, depreciation won't matter right?? -  **Correct, same with stocks, you only lose if you sell TSLA (this is financial advice)**
+
+ And considering that ma",18,-0.7676,0.1031746031746031,-0.013031069189310074,Extremely Negative,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2022-02-01,LETS GO BABY! hopped up on caffeine and TSLA calls,8,0.0,0.0,0.25152272544801235,Neutral,Neutral,Positive,Positive,bullish or favorable stance
+2021-11-09,"The problem I have with any legacy auto maker pivoting to EV is charging. Tesla’s private network of chargers is far and away superior to any other public charging both in speed, as well as seamless billing. Until the others figure that out, public charging is the barrier.
+
+Full disclosure, I hold no TSLA shares at the moment. I was a fucking idiot and sold it at ~$300/share pre-split.",1,-0.6464,0.0361111111111111,-0.050207577645778656,Negative,Neutral,Neutral,Positive,bullish or favorable stance
+2022-01-03,I think my tits have never been this fucking jacked before lfg TSLA,5,-0.2263,-0.6,0.014958076179027557,Neutral,Negative,Neutral,Neutral,unclear or mixed sentiment
+2022-03-28,"These TSLA, GME and Oil puts better print 🙏",1,0.4404,0.5,0.3629025537520647,Positive,Positive,Positive,Negative,bearish or critical stance
+2022-05-21,"
+&gt;If you want to be on safe side sell OTM Puts.
+
+There is no safe side with TSLA.",3,0.2008,0.125,0.00959618017077446,Neutral,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2021-07-07,TSLA july 30 $900 call good bet for runup to earnings,2,0.4404,0.7,0.38733961433172226,Positive,Positive,Positive,Positive,bullish or favorable stance
+2021-11-23,apple suna bine dar TSLA e american dream. intr-adevar e supra evaluata dar asta se zicea si cand s-a facut split. eu o vad ajungand la 3000 pt ca america,2,0.25,0.0,0.5788664128631353,Positive,Neutral,Positive,Positive,bullish or favorable stance
+2022-05-21,TSLA won’t be pretty on Monday ![img](emote|t5_2th52|4260),0,0.5411,0.3125,-0.06057650037109852,Positive,Positive,Neutral,Neutral,unclear or mixed sentiment
+2022-05-20,"TSLA AUTOPILOT TO $200 PRECOVID HIGH
+
+ALL ABOARD",2,0.2103,0.16,0.8646809421479702,Neutral,Neutral,Extremely Positive,Neutral,ticker list or market data
+2021-09-03,Those TSLA $730c were like 20 baggers during power hour. GUESS WHO SOLD THEM FOR A LOSS HAHAHAHA FUCK ME HAHAHAHAHA,5,-0.6971,0.0,-0.008160281926393509,Negative,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2021-11-16,"Assuming that JPM is correct, and TSLA is not following contractual obligations, then I hope both companies get exactly what they deserve.",29,0.4404,0.125,0.7272089831531048,Positive,Neutral,Positive,Neutral,unclear or mixed sentiment
+2021-08-16,$TSLA vanaf q4 2021 earnings zul je zien waarom het deze waardering krijgt 2022 word een monsterlijk jaar daar zijn meerdere mensen van r/teslainvestorsclub het overeens als je kijkt naar wat het doet GAAP earnings 👌🏻 auto verkopen alleen al,1,0.7297,0.0,0.07401474565267563,Positive,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2022-04-20,"Most of ARKK is *kinda* uncorrelated with TSLA, other than what it represents, speculatively. I mean the biggest other holdings are shit like TDOC, ZM, ROKU, shitty biotechs, etc that are getting pounded with mid-cap SAAS stocks.
+
+TSLA posting a MASSIVE beat will cause ARKK to go up sort of, as its 10% but i doubt it will effect risk off repricing of the other components.
+
+YMMV",2,-0.8294,-0.0553571428571428,0.6368188932538033,Extremely Negative,Neutral,Positive,Positive,bullish or favorable stance
+2022-04-08,tsla 1040 yolo on the drop. If it’s green by eotd I will shit my pants,4,-0.5574,-0.2,-0.4144721291959286,Negative,Neutral,Negative,Negative,bearish or critical stance
+2022-05-25,"Lots of stocks are down. Good time to buy tsla, let's see where the price is in a year",4,0.4404,0.2722222222222222,-0.7094211932271719,Positive,Positive,Negative,Positive,bullish or favorable stance
+2022-04-19,"short TSLA, QQQ, and many more",1,0.0,0.3333333333333333,-0.01649715192615986,Neutral,Positive,Neutral,Negative,bearish or critical stance
+2022-02-23,TSLA $2000 EOY 🤑🤑🤑🤑🤑🤑🤑🤑🤑🤑,0,0.0,0.0,0.03798089735209942,Neutral,Neutral,Neutral,Positive,bullish or favorable stance
+2022-05-16,TSLA was green for literally a second lol,3,0.4215,0.2,0.020884692668914795,Positive,Neutral,Neutral,Positive,bullish or favorable stance
+2021-12-23,Tesla TSLA May Deliver 285k Cars in Q4 2021 According to RBC Capital Markets,1,0.0,0.0,0.3370106108486652,Neutral,Neutral,Positive,Positive,bullish or favorable stance
+2021-11-01,Fuck it TSLA 1300c for this week,21,-0.5423,-0.4,0.017332112416625023,Negative,Negative,Neutral,Neutral,unclear or mixed sentiment
+2022-07-04,"Institutional investors have been selling. Not everything is a conspiracy.  The company as a whole is still dog shit. GME is still dog shit. Fundamentals are King until things like buyouts, mergers etc.... happen. Nothing will spark a squeeze without a catalyst. imo only a hard run ups will happen like GME, which is stuck in a violent up and down channel because of OPEX and people not selling. GME is a traders wet dream (like a baby TSLA), BBBY is next",2,-0.8769,-0.1719135802469136,-0.620225926861167,Extremely Negative,Neutral,Negative,Negative,bearish or critical stance
+2022-01-29,Fuck even the poors in TSLA are too rich to bother,3,-0.3182,-0.0125,-0.13452239707112312,Negative,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2021-10-20,"The disconnect is around whether we’re talking about car sales or stock prices. 
+
+Will Tesla continue to grow sales and be a significant player in the auto industry going forward? Yes, clearly. 
+
+Will Tesla grow to completely dominate the global auto industry the way the valuation of $TSLA suggests? No, clearly not.",17,0.816,0.1049999999999999,0.14246361330151558,Extremely Positive,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2021-10-14,"I do that with max margin overnight lol. Have tossed into TSLA V FB MSFT GOOG lately and usually buying around $300k-$1m worth, so a couple bucks up in share price makes you a few grand easily",2,0.8834,0.1833333333333333,0.10720034316182137,Extremely Positive,Neutral,Neutral,Positive,bullish or favorable stance
+2022-03-25,"I have no idea what TIPS is, but I joined a morning call so I have up to date news everyday before market opens and learn from someone with much more experience than me. 
+
+Never bought JNJ cause I thought it’s too much of a “boomer” stock lol. I have divi stocks that have a higher yield %, but I firmly believe you can trade any stock once you master the movement of it. Some people can successfully daytrade TSLA cause they put in the hours to study the stock, and maybe it’s lower risk and easier with low bet",1,0.6124,0.2625,0.048175498843193054,Positive,Positive,Neutral,Positive,bullish or favorable stance
+2022-04-03,"He changed his name since so I think it shows the current name.
+
+Here's the links
+
+Bryon from Looprings reply tweet to Elon :  https://twitter.com/macro_diary/status/992383771256213504?t=KKvXmVQYs3t_KxW8d-Q6dg&amp;s=19
+
+Elons original tweet thread on TSLA shorts : https://twitter.com/elonmusk/status/992361223793487872?t=evYj1_TgV5sHJclJPHjr8w&amp;s=19",2,0.3939,0.1875,-0.02977870963513851,Positive,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2022-06-21,**Ban Bet Created:** **/u/WorkingDefinition666** bet **TSLA** goes from **670.5** to **700.0** before **2022-06-22 07:28:15.496896-04:00**,1,-0.3818,0.0,0.1538994386792183,Negative,Neutral,Neutral,Positive,bullish ban bet target
+2021-10-25,Anyone gonna turn of the tsla buy button?,10,0.0,0.0,0.004521232098340988,Neutral,Neutral,Neutral,Positive,bullish or favorable stance
+2022-05-12,"Just wait till the next bounce. TSLA moonbois and the like come out of their hole just like yesterday during the morning pump thinking the bottom has bottomed and we're at the start of a full-on 1+ year bull run only to quickly be silenced. Your $1000 TSLA FD ain't going to save you from your parents basement, you f@#k.",1,0.3339,0.1111111111111111,-0.11444953829050064,Positive,Neutral,Neutral,Positive,bullish or favorable stance
+2022-02-12,You should have added the scene where Tommy beats the shit out of Billy Batts and compare it to Elon beating the shit out of $TSLA puts,2,0.7184,-0.2,-0.03090137243270874,Positive,Neutral,Neutral,Positive,bullish against bears
+2021-10-20,Micheal Burry is gonna be tugging behind Wendy's if he's been shorting internet money and TSLA,8,0.0,-0.4,-0.2698857393115759,Neutral,Negative,Negative,Negative,bearish or critical stance
+2021-08-09,"roth = all sq leaps for a while now
+brokerage = all tsla leaps since may (share to leap conversion) 
+
+2023 is tendieland?",1,0.296,0.0,0.027216574177145958,Positive,Neutral,Neutral,Positive,bullish or favorable stance
+2022-01-17,"@Reuters: WATCH: $TSLA Consumers bought nearly 70,847 of the Chinese-made Tesla vehicles in December, the electric vehicle maker’s highest monthly rate since it began manufacturing in Shanghai in 2019, data from the China https://t.co/UxW9g8PQWv",1,0.0,0.1,0.6125422231853008,Neutral,Neutral,Positive,Neutral,ticker list or market data
+2021-10-24,"Just my thoughts for your consideration...
+
+\-The speed of decision making in day-trading is typically overwhelming for most all beginners.
+
+\-Swing trading, as others here have suggested, makes a lot of sense as the slower pace of decision making allows you to follow the steps of your trade plan and make rational decisions like entry point, stop loss, and position sizing based on your risk tolerance, account size, etc.
+
+\-You can develop your own trade plan if you are the DIY type, or you may want to use a",1,-0.1531,0.5333333333333333,0.04285477660596371,Neutral,Positive,Neutral,Neutral,unclear or mixed sentiment
+2021-10-26,TSLA 970 at open and bleeds all day,0,0.0,0.0,-0.025482676923274994,Neutral,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2022-01-26,Sorry I know it makes me sound like an asshole but I love seeing ppl lose money off TSLA,6,0.5927,0.1333333333333333,0.051718130707740784,Positive,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2021-10-25,Sold tsla 935c for $25 and they are now $100 fuck meeeeee it feels so bad,11,-0.8398,-0.5499999999999999,0.07916029263287783,Extremely Negative,Negative,Neutral,Neutral,unclear or mixed sentiment
+2021-11-08,TSLA 900 EOW,-8,0.0,0.0,0.012128692120313644,Neutral,Neutral,Neutral,Neutral,ticker list or market data
+2022-02-25,Scalping TSLA 800P is scary af...that's kinda what I'm into it you know?,3,-0.4939,-0.5,-0.16660070419311523,Negative,Negative,Neutral,Negative,bearish or critical stance
+2022-03-23,"my shitty tech stock picks did NOT moon like TSLA  and I'm very, very salty.",10,-0.6917,0.26,-0.5487125217914581,Negative,Positive,Negative,Neutral,unclear or mixed sentiment
+2021-09-12,"I think he would. Elon likely knows all too well the manipulation possible in the markets - even if he somehow wasn't informed of the depths when TSLA was targeted, he certainly would know by now as we drag these bad actors into the light.",2,-0.4767,-0.0309523809523809,0.03700648993253708,Negative,Neutral,Neutral,Neutral,question or mechanics only
+2021-11-05,"Frankly, for a horizon this short, TSLA is not the correct choice.
+
+for 2 or 3 years, TSLA is the best choice you can think of (IMO). The only reason I am not saying 1 year is that there is a small risk that properly ramping Austin and Berlin might take more time than planned and the market might be extra stupid about that.",10,-0.0772,0.05625,-0.46090712770819664,Neutral,Neutral,Negative,Negative,bearish or critical stance
+2022-05-22,"I think a bottom is close when people at Tesla Motors Club are fighting with each other like starving survivors of a natural disaster watching a plate of hamburgers disappear.  
+
+TMC Investor’s forum was so argumentative last week that the moderators locked their main chat thread to force members to cool off.  
+
+A lot of TSLA shareholders at TMC still have well over 100-baggers on their stock, even with the current downturn.  I’m at approximately 11,000% gains on TSLA since 2011, as of market close last Fri",3,-0.5777,0.0114583333333333,-0.49465618282556534,Negative,Neutral,Negative,Negative,bearish or critical stance
+2022-01-03,"Futures continuing to drop. So fake and gay.
+
+Tesla better carry the market to a decent green early if it does all come tumbling down later in the day. Just want to sell my SPY eod calls for at least breakeven.
+
+Thinking if market open TSLA calls are still the move if I sell within the hour because I expect it to pump with the news.",7,-0.4388,0.0027777777777777,-0.3435822203755379,Negative,Neutral,Negative,Negative,bearish or critical stance
+2021-12-05,"TSLA is an overvalued cult stock. One day, it might, and probably will warrant its current massive overvaluation. For now, I feel my money is safer invested elsewhere.",51,0.4215,0.0,0.08571495302021503,Positive,Neutral,Neutral,Negative,bearish or critical stance
+2022-06-14,5. Sell small slice of TSLA and AAPL millions,-6,0.0,-0.25,0.060678877867758274,Neutral,Negative,Neutral,Neutral,unclear or mixed sentiment
+2021-12-31,"It got invaded by the 'All Democrats are Satanic Pedophiles' brand of conservatives after GME.
+
+Don't focus on actual Senators fired for Insider trading (Republicans Aaron Burr and Kelly Loeffler most recently), focus on the Democrat with no actual clear pattern of Insider trading (Literally just buying TSLA, MSFT and AAPL)",24,-0.7896,0.12,-0.35427162423729897,Extremely Negative,Neutral,Negative,Neutral,unclear or mixed sentiment
+2021-12-23,My only regret is not buying TSLA calls this week ![img](emote|t5_2th52|4266)![img](emote|t5_2th52|4267),17,-0.5242,0.0,-0.036788035184144974,Negative,Neutral,Neutral,Positive,bullish or favorable stance
+2021-12-16,buying TSLA calls right at the first sign of uptick,2,0.0,0.2678571428571428,0.1281447671353817,Neutral,Positive,Neutral,Positive,bullish or favorable stance
+2021-10-28,"I think the part about the S&amp;P 500 being representative of the US economy is actually the easiest bar to cross. The auto industry (the industry, not any one company) is an absolutely massive part of the US economy. 
+
+Prior to its inclusion, GM and Ford were both in the index, but due to their relatively small market caps relative to their enterprise values, they made up a very small part of the S&amp;P 500. In some sense, TSLA helped balance that out. 
+
+That said, obviously TSLA is now a very large part",5,0.6652,-0.0421428571428571,0.03488384746015072,Positive,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2022-01-05,"I agree it probably won't happen soon, but TSLA could plausibly 3x. SpaceX will also IPO eventually.",1,0.1901,0.5,0.04642132483422756,Neutral,Positive,Neutral,Neutral,unclear or mixed sentiment
+2022-06-20,"Except Tesla isn't the only player in the EV market anymore. Ford and Rivian have production vehicles on the road. GM set to release prod Ev's next year and Toyota in '25. 
+
+It will be interesting to see how this affects the TSLA share price.",1,0.5994,0.1666666666666666,0.047348239459097385,Positive,Neutral,Neutral,Neutral,question or mechanics only
+2021-09-08,Everytime I read about some financial crime I'm like why didn't they just buy Tsla and steal money legally from the shorts burry chanos etc... like we did.,17,-0.3182,0.1,-0.07742073386907578,Negative,Neutral,Neutral,Positive,bullish or favorable stance
+2022-01-26,TSLA,1,0.0,0.0,-0.0216498672962188,Neutral,Neutral,Neutral,Neutral,ticker list or market data
+2022-05-14,"Can you afford 416 a month? 
+
+Throw it all into to tsla if you believe the stock is going to be higher in 2027 
+
+Then start paying it off time in the market is better than timing 
+
+And there is no better time to invest more than right now (if you are long term 5+ years out )
+
+Yes the market might go down further so  average down over the next month if that happens",1,0.4929,0.0704184704184704,-0.8718492854386568,Positive,Neutral,Extremely Negative,Positive,bullish or favorable stance
+2021-11-30,Tsla will close at 1140 again and run up tomorrow again. Buy sell. Repeat,5,0.0,0.0,0.051030730828642845,Neutral,Neutral,Neutral,Positive,bullish or favorable stance
+2021-11-06,"I think you should be taking that class if the only argument you used to support the claim that ""TSLA price is justifiable"" is that people believe in future high dividends and that you personally believe that too. That sounds like some high economics. You done your bachelors yet?
+
+EDIT: Of course I know that there are various formulas. So please mister PhD. of Economics show me some comparison of TSLA and POTS valuation based on these formulas you know so well.",1,0.8143,0.0533333333333333,0.020170317962765694,Extremely Positive,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2021-12-16,"Pelosi rejects stock-trading ban for members of Congress: 'We are a free-market economy. They should be able to participate in that.'
+
+https://www.businessinsider.com/we-are-free-market-economy-pelosi-rejects-stock-ban-congress-2021-12
+
+Of course she would, her TSLA and AAPL leaps are printing.",21,-0.7783,0.5,0.03544565103948116,Extremely Negative,Positive,Neutral,Positive,bullish or favorable stance
+2022-05-24,"The Dow is down 8% over the last six months.
+
+TSLA is down 37%.
+
+This isn’t *just* it being down with the market.",50,0.0,-0.1166666666666666,-0.9596659652888775,Neutral,Neutral,Extremely Negative,Neutral,unclear or mixed sentiment
+2021-10-13,"My BBIG calls are down to only -92%, TSLA Friday 820C/825C from -100% -&gt; -25%",3,0.0,-0.0777777777777777,-0.9219691315665841,Neutral,Neutral,Extremely Negative,Positive,bullish or favorable stance
+2022-05-03,"You clearly didn't do the math. If TSLA were to sell ""nearly every car in the world"", their automotive profits would be over trillion dollars if you scale 2021 sales/automotive profit margin to the 90 million cars that are sold each year. PE under 1 is not overvalued by any metrics",1,0.8176,0.1,0.10813712514936924,Extremely Positive,Neutral,Neutral,Positive,bullish or favorable stance
+2021-11-19,Buying TSLA calls at the dip to $990 would have netted you $8k anyways ¯\_(ツ)_/¯,-5,0.0,0.0,-0.05610073357820511,Neutral,Neutral,Neutral,Positive,bullish or favorable stance
+2021-09-23,"Holding!
+
+This is my TSLA like stock💰",2,0.4199,0.0,0.03514794073998928,Positive,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2022-01-22,Tsla msft clov,3,0.0,0.0,0.03206613101065159,Neutral,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2021-12-23,TSLA expected to increase sales by over 40%,2,0.3182,-0.1,0.9342074617743492,Positive,Neutral,Extremely Positive,Positive,bullish or favorable stance
+2022-03-26,"Still a lot of shit out there with PE ratios in the single digits.
+
+You could actually invest in non retard shit instead of chasing all the other lemmings off a TSLA cliff.",0,-0.891,-0.2494047619047619,0.02739076130092144,Extremely Negative,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2021-12-30,Todays most active stock options $AAPL $TSLA $NIO $CCL $AMC $NVDA $DIS $PINS,2,0.4576,0.1833333333333333,0.0607000235468149,Positive,Neutral,Neutral,Neutral,question or mechanics only
+2021-12-27,I’m this close 🤏🏽 to jumping ship TSLA,3,0.0,0.0,0.14796781912446022,Neutral,Neutral,Neutral,Negative,bearish or critical stance
+2022-06-15,"There’s nothing quantitative to what you’re saying mate. 
+
+One thing that’s consistent with my critics is it’s all talk. 
+
+There’s no actual numbers behind their judgment. 
+
+Have I got all my trades right? No of course not. No one does! But my win rate is positive and that’s what’s got me to where I am. 
+
+So when you say about my post history you should explain what you mean? 
+
+Z1P? 
+
+TSLA? 
+
+Gold? 
+
+Oil? 
+
+Housing?",1,0.9,0.1317022263450835,0.0032779499888420105,Extremely Positive,Neutral,Neutral,Neutral,question or mechanics only
+2021-10-02,Tesla TSLA Q3 2021 vehicle delivery numbers #Autos #BreakingNewsTechnology #businessnews #climate #delivery #ElonMusk #Environment #Numbers #technology #Tesla #TeslaInc #TSLA #vehicle,1,0.0,0.0,-0.006214752793312,Neutral,Neutral,Neutral,Neutral,ticker list or market data
+2022-01-10,Tsla pulling people in before it takes its final shit,1,-0.5574,-0.1,0.004241280257701874,Negative,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2022-06-16,Yah but those companies are garbage where as Tsla is not.,4,0.0,0.0,-0.03884090296924114,Neutral,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2022-01-14,"If its a tsla or gme ad no, anything else yes",1,0.4019,0.0,-0.021329466253519058,Positive,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2021-10-15,Wow Tsla behaving like a beast today!,1,0.7644,0.125,-0.48620501533150673,Extremely Positive,Neutral,Negative,Positive,bullish or favorable stance
+2022-02-23,Big bois are starting to break down. CRM and TSLA -40% from high. 2021 gains wiped.,8,0.34,0.0011111111111111,-0.7436726838350296,Positive,Neutral,Negative,Positive,bullish or favorable stance
+2021-08-16,"I’m long on TSLA, If it dips hard enough i will add a share or two on my ROTH IRA . I’m not buying more on RH",3,0.2023,0.0395833333333333,0.035941554233431816,Neutral,Neutral,Neutral,Positive,bullish or favorable stance
+2021-12-21,I am upping the stakes.  Yesterday I said I would suck 25 mall Santa cocks for TSLA 800 this week.  I raise myself to 100 mall Santa cocks.,4,-0.4404,0.0,0.09576224535703659,Negative,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2022-03-15,"They are all alive and well.  
+
+The underlying security keeps trading, just like TSLA.  
+
+Swings in value may be more pronounced, and less related to VX futures, because demand or exits of stock, are not counter balanced by creation and extinguishing of stock.",3,0.891,0.1083333333333333,0.02689625322818756,Extremely Positive,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2021-11-06,"GME has never even gotten close to $1000 when TSLA does it every other year why should i give a fuck about GME? 
+
+Hint: I shouldn’t",-2,-0.5423,-0.2625,-0.02818526327610016,Negative,Negative,Neutral,Positive,bullish or favorable stance
+2022-06-27,"Some advice to the noobs 
+
+Only buy TSLA stock 
+
+This is financial advice",0,0.0,0.0,-0.00790558010339737,Neutral,Neutral,Neutral,Positive,bullish or favorable stance
+2021-08-20,"&gt;One con would be Elon Musk getting people to believe that he is actually profitable selling cars when he’s not.
+
+Tesla is profitable selling cars. In fact, they always have been. The losses they were taking until 2019 (they have been profitable for 2 years now) were because of other things than auto sales.
+
+And anyway, what does this have to do with Elon? Elon isn't the one writing the quarterly report.
+
+&gt;TSLA receives ZEV’s or credits for zero emission vehicles since all it makes is electric vehicle",1,0.4929,-0.0625,-0.00011913478374481201,Positive,Neutral,Neutral,Positive,bullish or favorable stance
+2022-06-06,"Either the market is efficient in which case you'd never have gotten the opportunity to invest in TSLA, or it's not efficient and you can't really complain about short term positions not working out. You can't have both.
+
+The fact that there is a big misunderstanding of TSLA results in a wide variety of opinions on the market cap, which leads to extreme volatility as the side that is doing most of the short term buying or selling will determine the stock price. My holds aren't affecting the stock price at a",20,0.4205,0.0678571428571428,-0.2685623075813055,Positive,Neutral,Negative,Negative,bearish or critical stance
+2022-04-30,"He is litterly gripping tsla by the cock, I bet he gonna make it",1,-0.1531,0.5,0.11729365400969982,Neutral,Positive,Neutral,Neutral,unclear or mixed sentiment
+2021-11-09,TSLA $690 is not a meme,5,0.0,0.0,-0.012461468577384949,Neutral,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2022-05-03,"Every time some TSLAQ bear posts this, TSLA typically rockets up 40% in about a week. Thank you sir!",7,0.4199,-0.2083333333333333,0.7612945083528757,Positive,Neutral,Extremely Positive,Positive,bullish or favorable stance
+2021-09-20,I just need TMC to triple so I have enough to YOLO into one December TSLA $725 Call.,0,0.4278,0.0,0.08206372335553169,Positive,Neutral,Neutral,Positive,bullish or favorable stance
+2022-01-06,I was first on today’s thread and tomorrow is my birthday plus snow day so no work. imma celebrate. Don’t care what happens with tsla ticker til at least 28. Only progress and this moment matters,3,0.7866,-0.0166666666666666,-0.011467933654785156,Extremely Positive,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2021-11-09,100k TSLA put play closed.,1,0.34,-0.1,-0.0989668220281601,Positive,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2021-11-12,"What you determine as fair - tough question - do research, what could you do as an alternative move, financials, do you believe in the product, watch the chart - develop a feeling how it moves, reacts on earnings - you still might be wrong.
+
+What I meant was actually more not to gamble for a discount, or make rash decisions on a crash - don't trade on emotions
+
+Take JnJ as an example, I wanted to buy for 160, it came close but I wanted to save that 30 bucks because I was greedy, Yesterday it rose 2% and tod",1,-0.1901,0.1822222222222222,0.06051405146718025,Neutral,Neutral,Neutral,Negative,bearish or critical stance
+2022-01-02,**Ban Bet Created:** **/u/herefortheraffs** bet **TSLA** goes from **1062.6** to **1089.0** before **2022-01-06 18:33:16.927407-05:00**,6,-0.3818,0.0,0.09444691427052021,Negative,Neutral,Neutral,Positive,bullish ban bet target
+2022-03-02,"Good idea, but waiting to see if TSLA holds 800",1,0.2382,0.7,0.10928171314299107,Neutral,Positive,Neutral,Positive,bullish or favorable stance
+2021-12-15,"TSLA, AAPL, GOOG all same dildo which probs caused the SPY dildo. So much fucking crime",8,-0.6195,-0.3,-0.030497461557388306,Negative,Negative,Neutral,Neutral,unclear or mixed sentiment
+2022-05-03,"Positions or ban!
+
+I assume you’re short TSLA?",4,-0.5983,0.0,-0.055583374574780464,Negative,Neutral,Neutral,Negative,bearish or critical stance
+2022-04-19,"Tweet Mirror:[@StockMKTNewz](https://twitter.com/StockMKTNewz/status/1516549087214112773)
+
+    Largest stocks that report earnings tomorrow
+    
+    Tesla $TSLA
+    Procter &amp;amp; Gamble $PG
+    $ASML
+    Abbott $ABT
+    Anthem $ANTM
+    Crown Castle $CCI
+    $CSX
+    Lam Research $LRCX
+    Kinder Morgan $KMI
+    Baker Hughes $BKR
+    Nasdaq $NDAQ
+    Rogers $RCI
+    M&amp;amp;T Bank $MTB
+    Equifax $EFX
+    Carvana $CVNA
+    Steel Dynamics $STLD
+    $AA",2,0.6486,0.0,0.002725791186094284,Positive,Neutral,Neutral,Neutral,ticker list or market data
+2021-11-07,"[The most entertaining outcome is the most likely.](https://twitter.com/elonmusk/status/1359612035374473217?t=NJy1pb0fxpQLYWAw2d6XRw&amp;s=19)
+
+TSLA ATH Monday",3,0.4927,0.5,-0.02578643336892128,Positive,Positive,Neutral,Positive,bullish or favorable stance
+2022-05-13,Twitter deal will resume soon. Shall wait for TSLA sales..,1,0.0,0.0,0.007777925580739975,Neutral,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2022-02-01,"Why didn’t that happen for AAPL or TSLA, and wouldn’t smart money wait to buy the dip after the carnage?",2,0.4019,0.2142857142857142,-0.036337099969387054,Positive,Neutral,Neutral,Positive,bullish or favorable stance
+2021-09-07,"It is. Where you are might be a supercharger desert, but it’s often cited in car reviews, TSLA company outlooks, and EV road-trip trials/reviews that the SC network is huge, convenient and a big advantage to owning a Tesla.",2,0.6652,0.1999999999999999,0.17969140131026506,Positive,Neutral,Neutral,Positive,bullish or favorable stance
+2022-01-13,"Good question…Most mentioned tickets I’ve seen recently are LCID, BABA, NVDA, TSLA, and APPL (Honorable mention to TSM tonight since I’ve seen it a bunch of times this evening)",1,0.7506,0.35,0.041190771386027336,Extremely Positive,Positive,Neutral,Positive,bullish or favorable stance
+2022-01-11,"Yeah but out of all the other Congresspeople only 33/434 beat the market (which shows how impossible beating the market really is). 
+
+Also like 90% of her gains were because she went long on AAPL and TSLA which was smart but I’m not sure what inside information could possibly be available on those particular companies. Not like she’s investing in some obscure semi-conductor startup the military is buying or something 
+
+I agree it should be banned but it doesn’t seem like Congresspeople are really getting ri",20,0.6471,-0.0009740259740259,0.04883207194507122,Positive,Neutral,Neutral,Positive,bullish or favorable stance
+2022-01-16,"[Isn't DAS the platform not the broker? You can use DAS with TDA or IBKR. I've heard fills are faster with IBKR but you have to pay commissions.](/r/Daytrading/comments/s50b9y/is_going_the_dastrader_route_necessary/hsul5c5/)
+
+NYSE:TDA DATE : Sun Jan 16 02:24:28 2022 SUBREDDIT : Daytrading
+
+
+
+[You can apply for cheaper options on TDA. I barely traded them and was able to get $0.40/contract. I know some people at $0.30.  If you’re certain you want to switch brokers I’ve heard IBK is good for day trading optio",1,0.7469,0.3660714285714286,0.08126615360379219,Positive,Positive,Neutral,Positive,bullish or favorable stance
+2021-09-03,I have 5 TSLA 755c 9/10. Average cost 3.66,2,0.0,-0.15,0.014232050627470016,Neutral,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2021-12-29,"Pros:
+
+* *As long as you can pay less than 100% collateral on the put*, the net cost to open can be lower than 100 shares. Put another way, net cost to open + collateral on the put MUST BE LESS THAN the cost of 100 shares of stock, or it's not worth it.
+
+* You can often get these for net-zero or a net credit.
+
+Cons:
+
+* Synthetics expire, shares don't.
+
+* If the stock pays dividends, the synthetic doesn't.
+
+* You have to trade 100 share blocks, no odd lots or fractional shares. This can make high priced stoc",1,0.8124,-0.0263636363636363,-0.03372881934046745,Extremely Positive,Neutral,Neutral,Neutral,question or mechanics only
+2022-01-03,Is it retarded to fomo into TSLA calls now? or we going to 2K EOW? 🤔🤔,3,-0.6199,-0.8,-0.04785873368382454,Negative,Extremely Negative,Neutral,Positive,bullish or favorable stance
+2022-06-12,"I'm talking about the underlying stock. 
+
+When doing spreads, the costs of the individual legs isn't particularly relevant IMO. All you care about is the difference between the two. Like any short selling, the goal is to sell your spread and then buy it back when it's cheaper, for a net profit (I and most thetagangers would say to never let anything expire).
+
+Let's say you have a really tight spread on some expensive stock. And you're selling a spread with a 2 month expiry. Whether it's a put or call doesn'",2,0.8225,0.0276785714285714,-0.068649061024189,Extremely Positive,Neutral,Neutral,Neutral,question or mechanics only
+2021-11-18,"Unmmmmmmmmmmmmmm what? That may have been true 20 years ago. But try telling a TSLA investor that she should be buying FORD instead. Try telling an NVIDIA investor that he should be buying Texas instruments stock. Try telling an Alphabet investor that he should really be putting his money in Wells Fargo. 
+
+Like what?
+
+Yeah there's concentration. But these companies are exactly where our economy is growing the fastest.",1,0.897,0.2666666666666666,0.06102196127176285,Extremely Positive,Positive,Neutral,Neutral,unclear or mixed sentiment
+2022-01-03,"Ya, basically, but I have TSLA shares too.",16,0.4215,0.0,0.021100686863064766,Positive,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2021-11-02,"On the most basic level you are gambling that a stock will rise (calls) or fall (puts) by a certain amount by a specific date.  Once you have your mind made up on what you think a specific stock will do you buy that option.  Most stock options expire on Fridays with a few exceptions.  If you have chosen correctly, you make money.  You can close your position at any time or choose to exercise your option of buying or selling the 100 shares.  (Most people simply sell their option once they have made money) He",10,0.5106,0.1682539682539682,-0.06050214171409607,Positive,Neutral,Neutral,Neutral,question or mechanics only
+2022-06-03,"Shill or not, are we really bashing someone for providing links/sources? Holy shit.
+
+He may just want tsla stock price to go up.",0,-0.5106,0.0,-0.2402568832039833,Negative,Neutral,Neutral,Positive,bullish or favorable stance
+2021-07-26,"Some very encouraging figures, especially given the numerous supply issues over the last 6 months. 
+
+Still seems overvalued and the price reflects what people want the company to be, not what it is or is likely to be in the future. It will be interesting to see how they cope when the traditional car makers efforts to move to EV bring greater competition over the coming few years.
+
+I have no interest in buying at these prices but would also probably hold if I already had a position. 
+
+Like the company or not",58,0.7654,0.1,0.11885953973978758,Extremely Positive,Neutral,Neutral,Neutral,question or mechanics only
+2022-06-24,Long TSLA 727.5 for 7.70,1,0.0,-0.05,-0.0011498183012008667,Neutral,Neutral,Neutral,Positive,bullish or favorable stance
+2022-05-01,He could have played with earnings to disqualify TSLA from SnP500. Risky game though,2,0.1531,-0.4,-0.20682623982429504,Neutral,Negative,Neutral,Negative,bearish or critical stance
+2021-12-10,Wow. Tsla stock split but still red? Why,-6,0.34,0.05,-0.020471185445785522,Positive,Neutral,Neutral,Neutral,question or mechanics only
+2022-01-24,"I feel like its worth noting that TSLA calls are worth a lot more than TSLA puts at the moment. I think the market is expecting a rebound, and I don't think that's going to happen. Not being a bear about it, just what I think is going to happen based on what's been going on lately both with that company and the overall economy.",2,0.6486,0.16,0.15771974623203278,Positive,Neutral,Neutral,Negative,bearish or critical stance
+2022-05-21,Lots of shareholders that are pigeon holed on one stock who haven't looked at the rest of the tech sector. TSLA being down has nothing to do with Musk.,2,0.0,-0.1555555555555555,-0.42412359453737736,Neutral,Neutral,Negative,Neutral,unclear or mixed sentiment
+2022-05-21,Todays 50% TSLA loss is tomorrows 150% gain…,1,-0.3182,0.0,-0.8301935791969299,Negative,Neutral,Extremely Negative,Neutral,unclear or mixed sentiment
+2022-01-21,"Bruh same with me on TSLA! Sounds like we both like actually MAKING money hahaha 
+
+Nice moves bro. I think your plays will pay off big time!",1,0.9115,0.16,0.7606008620932698,Extremely Positive,Neutral,Extremely Positive,Neutral,unclear or mixed sentiment
+2022-03-24,send it tsla!,6,0.0,0.0,0.008477352559566498,Neutral,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2022-01-22,**Ban Bet Created:** **/u/Jt0323** bet **TSLA** goes from **936.0** to **842.4** before **2022-02-05 11:10:49.029020-05:00**,2,-0.3818,0.0,0.10746629163622856,Negative,Neutral,Neutral,Negative,bearish ban bet target
+2021-09-24,Is TSLA really going back to $800?? Damn,6,-0.4696,0.1,0.01886633411049843,Negative,Neutral,Neutral,Neutral,unclear or mixed sentiment
+2022-01-04,"Still in TSLA short, watching it AH",1,0.0,0.0,0.009123526513576508,Neutral,Neutral,Neutral,Negative,bearish or critical stance
+2022-05-24,have a limit order in of $630 for another 10 shares. i still like tsla. im still ahead bought my first 100 shares at $ 50 a share. then the split.,2,0.7964,0.25,0.01473851129412651,Extremely Positive,Positive,Neutral,Positive,bullish or favorable stance
+2022-01-19,"I scalped some intraday puts on NVDA and TSLA and took the rest of the day off.  If you're holding anything overnight (other than a well thought out ER play) you're exposing your capital to unnecessary risk.
+
+My question is how long are we going to play the downside.  
+
+What tickers are you going short on?",6,0.1779,-0.14375,-0.3383604772388935,Neutral,Neutral,Negative,Positive,bullish or favorable stance
+2021-11-08,feel like tsla green and all other red,2,0.3612,-0.1083333333333333,0.025984259322285652,Positive,Neutral,Neutral,Positive,bullish or favorable stance
